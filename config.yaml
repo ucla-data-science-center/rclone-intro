@@ -15,13 +15,13 @@
 carpentry: 'incubator'
 
 # Alt-text description of the lesson.
-carpentry_description: 'Lesson Description'
+carpentry_description: 'Introduction to using rclone.'
 
 # Overall title for pages.
 title: 'Introduction to Rclone' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME
+created: 2025-01-16 ~ # FIXME
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software, data, rclone, The Carpentries' # FIXME
