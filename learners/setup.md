@@ -1,54 +1,38 @@
 ---
-title: Setup
+title: Setup and Installation
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
+Rclone is a cross-platform application. It runs on Linux, Windows and
+MacOS. The installation files for different systems can be found on the
+Rclone download page.
 
-## Data Sets
-
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
+![Rclone downloads for various OS](rclone-download.jpg)
 
 ## Software Setup
 
-::::::::::::::::::::::::::::::::::::::: discussion
-
+::: discussion
 ### Details
 
-Setup for different systems can be presented in dropdown menus via a `spoiler`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+[Rclone downloads for various OS](https://rclone.org/downloads/)
+:::
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::: spoiler
-
+::: spoiler
 ### Windows
 
-Use PuTTY
+[Windows installation](https://rclone.org/install/#windows)
+:::
 
-::::::::::::::::::::::::
-
-:::::::::::::::: spoiler
-
+::: spoiler
 ### MacOS
 
-Use Terminal.app
+[macOS installation}(<https://rclone.org/install/#macos>)
+:::
 
-::::::::::::::::::::::::
-
-
-:::::::::::::::: spoiler
-
+::: spoiler
 ### Linux
 
-Use Terminal
-
-::::::::::::::::::::::::
-
+[Linux installation](https://rclone.org/install/#linux)
+:::
