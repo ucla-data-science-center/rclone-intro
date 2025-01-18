@@ -1,15 +1,9 @@
 ---
 title: "Using Rclone"
 teaching: 6
-exercises: 2## Rclone command syntax
-
-##### rclone [command] source:source-folder  destination:destination-folder 
-
-
-List of rclone commands: [https://rclone.org/commands/](https://rclone.org/commands/) 
-
-
+exercises: 2
 ---
+
 
 :::::: questions
  -  What is rclone?
