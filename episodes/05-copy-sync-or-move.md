@@ -4,9 +4,15 @@ output: html_document
 date: "2024-03-22"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+:::::: questions
+ - question 1
+ - question 2
+::::::
+
+:::::: objectives
+ - objective 1
+ - objective 2
+::::::
 
 ## Move vs Copy vs Sync: what is the difference
 
@@ -48,4 +54,7 @@ To move single files, use the moveto command instead.
 
 ## Reference:  [https://rclone.org/commands/rclone_move/](https://rclone.org/commands/rclone_move/)
 
-
+:::::: keypoints
+ - keypoint 1
+ - keypoint 2
+::::::

@@ -4,6 +4,15 @@ output: html_document
 date: "2024-03-21"
 ---
 
+:::::: questions
+ - question 1
+ - question 2
+::::::
+
+:::::: objectives
+ - objective 1
+ - objective 2
+::::::
 
 ## rclone config command: 
 
@@ -26,10 +35,13 @@ There are numerous command flags but these three are especially worth rememberin
 - **-i, --interactive**     Enable interactive mode
 - **-v, --verbose count**   Print lots more stuff (repeat for more) - useful when debugging
 
-
-
 ## References
 
 [https://rclone.org/commands/rclone_config/](https://rclone.org/commands/rclone_config/)
 
 [https://rclone.org/flags/#important](https://rclone.org/flags/#important)
+
+:::::: keypoints
+ - keypoint 1
+ - keypoint 2
+::::::

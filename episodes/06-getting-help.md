@@ -4,10 +4,20 @@ output: html_document
 date: "2024-03-21"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-## R Markdown
+:::::: questions
+ - question 1
+ - question 2
+::::::
 
-put in the syntax for getting help on a command
+:::::: objectives
+ - objective 1
+ - objective 2
+::::::
+
+<!-- EPISODE CONTENT HERE -->
+
+:::::: keypoints
+ - keypoint 1
+ - keypoint 2
+::::::

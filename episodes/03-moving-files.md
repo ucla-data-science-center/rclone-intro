@@ -4,6 +4,17 @@ output: html_document
 date: "2024-03-26"
 ---
 
+
+:::::: questions
+ - question 1
+ - question 2
+::::::
+
+:::::: objectives
+ - objective 1
+ - objective 2
+::::::
+
 ## moving files around
 
 Rclone is most frequently used to move files, individually or as a group from one place to another.
@@ -43,4 +54,9 @@ Linux syntax:  rclone ls /mnt/c/Users/jjamison/rclone
 
 Windows [https://rclone.org/docs/#windows](https://rclone.org/docs/#windows)   
 
-Linux  [https://rclone.org/docs/#linux-osx](https://rclone.org/docs/#linux-osx)   
+Linux  [https://rclone.org/docs/#linux-osx](https://rclone.org/docs/#linux-osx)
+
+:::::: keypoints
+ - keypoint 1
+ - keypoint 2
+::::::
