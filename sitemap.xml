@@ -1,45 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/404.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/CODE_OF_CONDUCT.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/02-configure-rclone.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/LICENSE.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/03-moving-files.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/index.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/04-creating-connections.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/404.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/05-copy-sync-or-move.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/06-getting-help.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/LICENSE.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/404.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/index.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/introduction.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/profiles.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/aio.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/instructor/reference.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/images.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/introduction.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/index.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/profiles.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/01-introduction.html</loc>
   </url>
   <url>
-    <loc>https://carpentries.github.io/workbench-template-md/reference.html</loc>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/02-configure-rclone.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/03-moving-files.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/04-creating-connections.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/05-copy-sync-or-move.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/06-getting-help.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/404.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/CODE_OF_CONDUCT.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/images.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/key-points.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/reference.html</loc>
   </url>
 </urlset>
