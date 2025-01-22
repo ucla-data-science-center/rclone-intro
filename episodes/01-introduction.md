@@ -7,15 +7,15 @@ exercises: 2
 
 :::::: questions  
  -  What is rclone?  
--   Why might you need to use this?  
+-   Why might you use this application?  
 -   How could rclone help you manage your data?   
 ::::::  
 
 :::::: objectives
+-   Basic knowledge of rclone usage
 -   Be able to transfer data from the command line using rclone
 -   Know where to get help and examples
--   [add one]
-::::::
+    ::::::
 
 ## Introduction
 
@@ -25,9 +25,10 @@ Rclone is a *command line* program to manage files on cloud storage. After downl
 
 ## Challenge 1: What can you do with Rclone?
 
-What can you do with Rclone?
+How might you use Rclone?
 
 ::::::::::::::::::::::::::::::::::::: solution
+
 Move files both local and online
 
 ## Discussion: How do you think you might use rclone?  

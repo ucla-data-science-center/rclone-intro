@@ -68,7 +68,8 @@ episodes:
 - 01-introduction.md
 - 02-configure-rclone.md
 - 03-moving-files.md
-- 04-creating-connections.md
+- 04-creating-connections.md 
+- 05-rclone-move-command.md
 - 05-copy-sync-or-move.md
 - 06-getting-help.md
 
