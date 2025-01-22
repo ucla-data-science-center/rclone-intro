@@ -7,7 +7,7 @@ editor_options:
 
 ## Software Setup
 
-Rclone is a cross-platform application. It runs on Linux, Windows and
+rclone is a cross-platform application. It runs on Linux, Windows and
 MacOS. 
 
 The installation files for different systems can be found on the
@@ -15,7 +15,7 @@ rclone download page.
 
 [Rclone downloads for various OS](https://rclone.org/downloads/) 
 
-![Rclone downloads for various OS](rclone-download.jpg)
+## rclone downloads for various OS 
 
 ### Windows
 
