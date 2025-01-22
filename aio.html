@@ -267,7 +267,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03-moving-files.html">3. moving files around</a>
+        <a href="03-moving-files.html">3. moving files around and knowing what is already there</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -279,7 +279,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04-creating-connections.html">4. Creating Connections</a>
+        <a href="05-rclone-move-command.html">4. move command vs moveto</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -291,7 +291,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="05-rclone-move-command.html">5. move command</a>
+        <a href="06-copy-sync-or-move.html">5. copy-sync or-move</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -303,7 +303,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-copy-sync-or-move.html">6. copy-sync or-move</a>
+        <a href="04-creating-connections.html">6. Creating Connections</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -439,7 +439,7 @@ the various subcommands, the various options, and more.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Move files both local and online</p>
 <div class="section level2">
@@ -487,7 +487,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-02-configure-rclone"><p>Content from <a href="02-configure-rclone.html">rclone config command</a></p>
 <hr>
-<p>Last updated on 2025-01-18 |
+<p>Last updated on 2025-01-22 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/02-configure-rclone.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -501,8 +501,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>question 1</li>
-<li>question 2</li>
+<li>Once installed, how is rclone setup or configured?</li>
+<li>How to check for and edit existing configurations</li>
 </ul>
 </div>
 </div>
@@ -512,8 +512,8 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>objective 1</li>
-<li>objective 2</li>
+<li>Be able to configure rclone</li>
+<li>Knowledge of useful command flags (or ‘options’)</li>
 </ul>
 </div>
 </div>
@@ -524,17 +524,17 @@ any links that you are not going to use.
 </h2>
 <hr class="half-width">
 <p>Enter an interactive configuration session where you can setup new
-remotes and manage existing ones. You may also set or remove a password
-to protect your configuration.</p>
-<div class="section level5">
-<h5 id="syntax-rclone-config-flags">syntax: rclone config [flags]<a class="anchor" aria-label="anchor" href="#syntax-rclone-config-flags"></a>
-</h5>
+remotes and manage existing ones.</p>
+<p>You may also set or remove a password to protect your
+configuration.</p>
+</section><section><h2 class="section-heading" id="syntax">syntax:<a class="anchor" aria-label="anchor" href="#syntax"></a>
+</h2>
+<hr class="half-width">
+<p><strong>rclone config [flags]</strong></p>
 <p><img src="rclone-config-screen-image.jpg" alt="rclone config" class="figure"><br>
 sand</p>
 <figure><img src="rclone-config-interactive.JPG" alt="rclone config edit" class="figure mx-auto d-block"><div class="figcaption">rclone config edit</div>
-</figure>
-</div>
-</section><section><h2 class="section-heading" id="rclone-command-flags">rclone command flags<a class="anchor" aria-label="anchor" href="#rclone-command-flags"></a>
+</figure></section><section><h2 class="section-heading" id="rclone-command-flags">rclone command flags<a class="anchor" aria-label="anchor" href="#rclone-command-flags"></a>
 </h2>
 <hr class="half-width">
 <p>There are numerous command flags but these three are especially worth
@@ -561,8 +561,11 @@ for more) - useful when debugging</li>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>keypoint 1</li>
-<li>keypoint 2</li>
+<li>Understand how configuration is used.<br>
+</li>
+<li>Familiar with useful command flags: dry-run, interactive and
+verbose.</li>
+<li>Know where to get help.</li>
 </ul>
 </div>
 </div>
@@ -571,9 +574,9 @@ for more) - useful when debugging</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-03-moving-files"><p>Content from <a href="03-moving-files.html">moving files around</a></p>
+</section></section><section id="aio-03-moving-files"><p>Content from <a href="03-moving-files.html">moving files around and knowing what is already there</a></p>
 <hr>
-<p>Last updated on 2025-01-18 |
+<p>Last updated on 2025-01-22 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/03-moving-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -611,35 +614,42 @@ any links that you are not going to use.
 <hr class="half-width">
 <p>Rclone is most frequently used to move files, individually or as a
 group from one place to another.</p>
-<p>The syntax for the places, to or from is:</p>
-<p>source:folder destination:folder</p>
-<p>or</p>
-<p>local/path remote/path</p>
+</section><section><h2 class="section-heading" id="the-syntax-for-the-places-to-or-from-is">The syntax for the places, to or from is:<a class="anchor" aria-label="anchor" href="#the-syntax-for-the-places-to-or-from-is"></a>
+</h2>
+<hr class="half-width">
+<p><strong>source:folder destination:folder</strong></p>
+<div class="section level4">
+<h4 id="or">or<a class="anchor" aria-label="anchor" href="#or"></a>
+</h4>
+<p><strong>local/path remote/path</strong></p>
+</div>
+</section><section><h2 class="section-heading" id="examples">Examples:<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h2>
+<hr class="half-width">
+<div class="section level4">
+<h4 id="my-home-backup-of-local-to-an-external-drive-windows-using-linux-subsystem">My home backup of local to an external drive (windows using linux
+subsystem)<a class="anchor" aria-label="anchor" href="#my-home-backup-of-local-to-an-external-drive-windows-using-linux-subsystem"></a>
+</h4>
+<p>rclone copy /mnt/d/work-related /mnt/f/work-related-backup</p>
+</div>
+</section><section><h2 class="section-heading" id="note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
+different syntax<a class="anchor" aria-label="anchor" href="#note-different-operating-systems-have-slightly-different-syntax"></a>
+</h2>
+<hr class="half-width">
+<p>Windows syntax: rclone ls C: Linux syntax: rclone ls
+/mnt/c/Users/jjamison/rclone</p>
 </section><section><h2 class="section-heading" id="valid-remote-names">valid remote names<a class="anchor" aria-label="anchor" href="#valid-remote-names"></a>
 </h2>
 <hr class="half-width">
 <p><a href="https://rclone.org/docs/#valid-remote-names" class="external-link">https://rclone.org/docs/#valid-remote-names</a></p>
-<div class="section level5">
-<h5 id="more-examples">more examples:<a class="anchor" aria-label="anchor" href="#more-examples"></a>
-</h5>
+</section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a>
+</h2>
+<hr class="half-width">
 <p>rclone <strong>ls</strong> remote:path # <strong>lists contents of a
 remote</strong> rclone <strong>copy</strong> /local/path remote:path #
 <strong>copies&amp;&amp; /local/path to the remote rclone
 </strong>sync** –interactive /local/path remote:path #
 <strong>syncs</strong> /local/path to the remote</p>
-</div>
-<div class="section level5">
-<h5 id="my-home-backup-to-an-external-drive-windows-using-linux-subsystem">my home backup to an external drive (windows using linux
-subsystem)<a class="anchor" aria-label="anchor" href="#my-home-backup-to-an-external-drive-windows-using-linux-subsystem"></a>
-</h5>
-<p>rclone sync /mnt/d/work-related /mnt/f/work-related-backup</p>
-</div>
-</section><section><h2 class="section-heading" id="different-operating-systems-have-slightly-different-syntax">Different operating systems have <strong>slightly</strong> different
-syntax<a class="anchor" aria-label="anchor" href="#different-operating-systems-have-slightly-different-syntax"></a>
-</h2>
-<hr class="half-width">
-<p>Windows syntax: rclone ls C: Linux syntax: rclone ls
-/mnt/c/Users/jjamison/rclone</p>
 </section><section><h2 class="section-heading" id="reference">Reference:<a class="anchor" aria-label="anchor" href="#reference"></a>
 </h2>
 <hr class="half-width">
@@ -664,66 +674,7 @@ syntax<a class="anchor" aria-label="anchor" href="#different-operating-systems-h
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-04-creating-connections"><p>Content from <a href="04-creating-connections.html">Creating Connections</a></p>
-<hr>
-<p>Last updated on 2025-01-18 |
-
-        <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/04-creating-connections.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>question 1</li>
-<li>question 2</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>objective 1</li>
-<li>objective 2</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="creating-a-connection">Creating a connection<a class="anchor" aria-label="anchor" href="#creating-a-connection"></a>
-</h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a>
-</h2>
-<hr class="half-width">
-<p><a href="https://rclone.org/commands/rclone_config/" class="external-link">https://rclone.org/commands/rclone_config/</a></p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
-<div class="callout-content">
-<ul>
-<li>keypoint 1</li>
-<li>keypoint 2</li>
-</ul>
-</div>
-</div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-05-rclone-move-command"><p>Content from <a href="05-rclone-move-command.html">move command</a></p>
+</section></section><section id="aio-05-rclone-move-command"><p>Content from <a href="05-rclone-move-command.html">move command vs moveto</a></p>
 <hr>
 <p>Last updated on 2025-01-22 |
 
@@ -840,6 +791,65 @@ the –dry-run or the –interactive/-i flag##.</p>
 <a class="anchor" aria-label="anchor" href="#reference-httpsrclone-orgcommandsrclone_move"></a>
 </h2>
 <hr class="half-width">
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>keypoint 1</li>
+<li>keypoint 2</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-04-creating-connections"><p>Content from <a href="04-creating-connections.html">Creating Connections</a></p>
+<hr>
+<p>Last updated on 2025-01-18 |
+
+        <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/04-creating-connections.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>question 1</li>
+<li>question 2</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>objective 1</li>
+<li>objective 2</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="creating-a-connection">Creating a connection<a class="anchor" aria-label="anchor" href="#creating-a-connection"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a>
+</h2>
+<hr class="half-width">
+<p><a href="https://rclone.org/commands/rclone_config/" class="external-link">https://rclone.org/commands/rclone_config/</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
