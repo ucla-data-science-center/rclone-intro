@@ -16,7 +16,16 @@
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/05-copy-sync-or-move.html</loc>
   </url>
   <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/05-rclone-move-command.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/06-copy-sync-or-move.html</loc>
+  </url>
+  <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/06-getting-help.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/07-getting-help.html</loc>
   </url>
   <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/404.html</loc>
@@ -52,7 +61,16 @@
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/05-copy-sync-or-move.html</loc>
   </url>
   <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/05-rclone-move-command.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/06-copy-sync-or-move.html</loc>
+  </url>
+  <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/06-getting-help.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/07-getting-help.html</loc>
   </url>
   <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/404.html</loc>
