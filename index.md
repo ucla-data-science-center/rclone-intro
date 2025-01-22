@@ -2,8 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-This is a new lesson built with [The Carpentries Workbench][workbench]. 
+Note: This is a new lesson built with [The Carpentries Workbench][workbench].
 
-
-[workbench]: https://carpentries.github.io/sandpaper-docs
+Rclone is a *command line* application for managing and moving files on cloud and local storage. It  specifically designed for copying files between cloud servers and another server or workstation.
 

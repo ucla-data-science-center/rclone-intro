@@ -1,5 +1,5 @@
 ---
-title: "Using Rclone"
+title: "What is rclone"
 teaching: 6
 exercises: 2
 ---
@@ -17,11 +17,14 @@ exercises: 2
 -   Know where to get help and examples
     ::::::
 
-## Introduction
+## Introduction: What is rclone?
 
 Rclone is a *command line* program to manage files on cloud storage. After download and install, continue here to learn how to use it: Initial configuration, what the basic syntax looks like, describes the various subcommands, the various options, and more.
 
 ![Test Illustration](test-illustration.jpg)
+
+## Disambiguation:  rclone and rsync
+Is this section necessary?  Should I explain the difference
 
 ## Challenge 1: What can you do with Rclone?
 
