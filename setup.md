@@ -13,9 +13,9 @@ MacOS.
 The installation files for different systems can be found on the
 rclone download page. 
 
-[Rclone downloads for various OS](https://rclone.org/downloads/) 
+[rclone downloads for various OS](https://rclone.org/downloads/) 
 
-## rclone downloads for various OS 
+### rclone downloads for various OS 
 
 ### Windows
 
@@ -23,7 +23,7 @@ rclone download page.
 
 ### MacOS
 
-[macOS installation}(<https://rclone.org/install/#macos>)
+[macOS installation](<https://rclone.org/install/#macos>)
 
 ### Linux
 
