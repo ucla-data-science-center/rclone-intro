@@ -1,24 +1,26 @@
 ---
 title: "rclone config command"
 output: html_document
-date: "2024-03-21"
 ---
 
 :::::: questions
- - question 1
- - question 2
+ - Once installed, how is rclone setup or configured?
+ - How to check for and edit existing configurations
 ::::::
 
 :::::: objectives
- - objective 1
- - objective 2
+ - Be able to configure rclone
+ - Knowledge of useful command flags (or 'options')
 ::::::
 
 ## rclone config command: 
 
-Enter an interactive configuration session where you can setup new remotes and manage existing ones. You may also set or remove a password to protect your configuration.
+Enter an interactive configuration session where you can setup new remotes and manage existing ones. 
 
-##### syntax:  rclone config [flags]
+You may also set or remove a password to protect your configuration.
+
+## syntax:  
+**rclone config [flags]**
  
 ![rclone config ](rclone-config-screen-image.jpg)  
 sand
@@ -42,6 +44,7 @@ There are numerous command flags but these three are especially worth rememberin
 [https://rclone.org/flags/#important](https://rclone.org/flags/#important)
 
 :::::: keypoints
- - keypoint 1
- - keypoint 2
+ - Understand how configuration is used.  
+ - Familiar with useful command flags: dry-run, interactive and verbose.
+ - Know where to get help.
 ::::::

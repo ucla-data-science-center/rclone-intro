@@ -1,5 +1,5 @@
 ---
-title: "moving files around"
+title: "moving files around and knowing what is already there"
 output: html_document
 date: "2024-03-26"
 ---
@@ -20,34 +20,33 @@ date: "2024-03-26"
 Rclone is most frequently used to move files, individually or as a group from one place to another.
 
 
-The syntax for the places, to or from is:
+## The syntax for the places, to or from is:
 
-source:folder     destination:folder   
+**source:folder     destination:folder**  
 
-or
+#### or
 
-local/path  remote/path
+**local/path  remote/path**   
 
-## valid remote names  
-[https://rclone.org/docs/#valid-remote-names](https://rclone.org/docs/#valid-remote-names)
+## Examples:
 
-
-##### more examples:
-
-rclone **ls** remote:path # **lists contents of a remote**
-rclone **copy** /local/path remote:path # **copies&& /local/path to the remote
-rclone **sync** --interactive /local/path remote:path # **syncs** /local/path to the remote
+#### My home backup of local to an external drive (windows using linux subsystem)
+rclone copy /mnt/d/work-related /mnt/f/work-related-backup
 
 
-##### my home backup to an external drive (windows using linux subsystem)
-rclone sync /mnt/d/work-related /mnt/f/work-related-backup
-
-
-## Different operating systems have __slightly__ different syntax 
+## Note: Different operating systems have __slightly__ different syntax 
 
 Windows syntax:   rclone ls C:\Users\jjamison\rclone
 Linux syntax:  rclone ls /mnt/c/Users/jjamison/rclone
 
+
+## valid remote names  
+[https://rclone.org/docs/#valid-remote-names](https://rclone.org/docs/#valid-remote-names)
+
+## Moving, syncing and knowing what is already there  
+rclone **ls** remote:path # **lists contents of a remote**
+rclone **copy** /local/path remote:path # **copies&& /local/path to the remote
+rclone **sync** --interactive /local/path remote:path # **syncs** /local/path to the remote
 
 ## Reference:
 [https://rclone.org/docs/#subcommands](https://rclone.org/docs/#subcommands)
