@@ -5,8 +5,8 @@ date: "2024-03-21"
 ---
 
 :::::: questions
- - question 1
- - question 2
+ - What are rclone remotes?
+ - What/how are they used?
 ::::::
 
 :::::: objectives
@@ -14,8 +14,11 @@ date: "2024-03-21"
  - objective 2
 ::::::
 
-## Creating a connection
+## Creating a remote connection
 
+An rclone remote is a storage service or device that's not part of the local machine, but can be accessed using the rclone command line tool. Rclone remotes can be used to transfer and synchronize files between cloud storage services, servers, and machines. 
+
+![rclone connections](rclone-connections.jpg)
 
 
 ## Reference
