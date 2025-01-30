@@ -16,6 +16,7 @@ date: "2024-03-21"
 
 ## Creating a connection
 
+![rclone connections](rclone-connections.jpg)
 
 
 ## Reference
