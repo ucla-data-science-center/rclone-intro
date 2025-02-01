@@ -9,7 +9,7 @@ output: html_document
 ::::::
 
 :::::: objectives
- - Be able to configure rclone
+ - Use config to create remote connections
  - Knowledge of useful command flags (or 'options')
 ::::::
 
@@ -46,5 +46,6 @@ There are numerous command flags but these three are especially worth rememberin
 :::::: keypoints
  - Understand how configuration is used.  
  - Familiar with useful command flags: dry-run, interactive and verbose.
+ - Use config to create remote connections
  - Know where to get help.
 ::::::
