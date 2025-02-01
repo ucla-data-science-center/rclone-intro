@@ -1,5 +1,5 @@
 ---
-title: "Creating Connections"
+title: "Creating Remote Connections"
 output: html_document
 date: "2024-03-21"
 ---
@@ -10,8 +10,8 @@ date: "2024-03-21"
 ::::::
 
 :::::: objectives
- - objective 1
- - objective 2
+ - Understand the concept of a remote or local connection
+ - 
 ::::::
 
 ## Creating a remote connection
@@ -25,6 +25,6 @@ An rclone remote is a storage service or device that's not part of the local mac
 [https://rclone.org/commands/rclone_config/](https://rclone.org/commands/rclone_config/)
 
 :::::: keypoints
- - keypoint 1
+ - Remote and local rclone connections
  - keypoint 2
 ::::::

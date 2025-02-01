@@ -2,7 +2,6 @@
 episodes/*html
 site/*
 !site/README.md
-rclone-lesson-notes.R
 
 # History files
 .Rhistory
