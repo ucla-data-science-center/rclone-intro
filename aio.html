@@ -430,10 +430,13 @@ the various subcommands, the various options, and more.</p>
 <h3 id="disambiguation-rclone-and-rsync">Disambiguation: rclone and rsync<a class="anchor" aria-label="anchor" href="#disambiguation-rclone-and-rsync"></a>
 </h3>
 <p>Note: Is this section necessary? Should I explain the difference
-&gt;Rclone and rsync are command-line tools. Rclone is designed for
+between rclone and rsync</p>
+<blockquote>
+<p>Rclone and rsync are command-line tools. Rclone is designed for
 copying files between cloud servers and a different server or
 workstation, while rsync offers more advanced features for file
 synchronization.</p>
+</blockquote>
 </div>
 </section><section><h2 class="section-heading" id="challenge-1">Challenge 1:<a class="anchor" aria-label="anchor" href="#challenge-1"></a>
 </h2>
@@ -465,10 +468,10 @@ fast</li>
 </section><section><h2 class="section-heading" id="rclone-command-syntax">rclone command syntax<a class="anchor" aria-label="anchor" href="#rclone-command-syntax"></a>
 </h2>
 <hr class="half-width">
-<div class="section level5">
-<h5 id="rclone-command-sourcesource-folder-destinationdestination-folder">rclone [command] source:source-folder
+<div class="section level3">
+<h3 id="rclone-command-sourcesource-folder-destinationdestination-folder">rclone [command] source:source-folder
 destination:destination-folder<a class="anchor" aria-label="anchor" href="#rclone-command-sourcesource-folder-destinationdestination-folder"></a>
-</h5>
+</h3>
 <p>List of rclone commands: <a href="https://rclone.org/commands/" class="external-link">https://rclone.org/commands/</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -492,7 +495,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-04-creating-connections"><p>Content from <a href="04-creating-connections.html">Creating Remote Connections</a></p>
 <hr>
-<p>Last updated on 2025-02-01 |
+<p>Last updated on 2025-02-07 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/04-creating-connections.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -507,7 +510,7 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>What are rclone remotes?</li>
-<li>What/how are they used?</li>
+<li>How are they used?</li>
 </ul>
 </div>
 </div>
@@ -529,16 +532,14 @@ any links that you are not going to use.
 <section><h2 class="section-heading" id="creating-a-remote-connection">Creating a remote connection<a class="anchor" aria-label="anchor" href="#creating-a-remote-connection"></a>
 </h2>
 <hr class="half-width">
-<p>An rclone remote is a storage service or device that’s not part of
-the local machine, but can be accessed using the rclone command line
-tool. Rclone remotes can be used to transfer and synchronize files
+<p>An rclone <em>remote</em> is a storage service or device that’s not
+part of the local machine, but can be accessed using the rclone command
+line tool. Rclone remotes can be used to transfer and synchronize files
 between cloud storage services, servers, and machines.</p>
+<p>This can be an S3 bucket, google drive, box or even a local
+machine.</p>
 <figure><img src="rclone-connections.jpg" alt="rclone connections" class="figure mx-auto d-block"><div class="figcaption">rclone connections</div>
-</figure></section><section><h2 class="section-heading" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a>
-</h2>
-<hr class="half-width">
-<p><a href="https://rclone.org/commands/rclone_config/" class="external-link">https://rclone.org/commands/rclone_config/</a></p>
-<div id="keypoints1" class="callout keypoints">
+</figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -546,8 +547,8 @@ between cloud storage services, servers, and machines.</p>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Remote and local rclone connections</li>
-<li>keypoint 2</li>
+<li>rclone remote and local connections</li>
+<li>Types of cloud storage services that can be connected</li>
 </ul>
 </div>
 </div>
@@ -558,7 +559,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-configure-rclone"><p>Content from <a href="02-configure-rclone.html">rclone config command</a></p>
 <hr>
-<p>Last updated on 2025-02-01 |
+<p>Last updated on 2025-02-07 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/02-configure-rclone.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -574,6 +575,7 @@ any links that you are not going to use.
 <ul>
 <li>Once installed, how is rclone setup or configured?</li>
 <li>How to check for and edit existing configurations</li>
+<li>what is a remote/headless machine</li>
 </ul>
 </div>
 </div>
@@ -585,6 +587,8 @@ any links that you are not going to use.
 <ul>
 <li>Use config to create remote connections</li>
 <li>Knowledge of useful command flags (or ‘options’)</li>
+<li>Configure a remote connection for a machine with no browser
+available (ie. headless)</li>
 </ul>
 </div>
 </div>
@@ -594,10 +598,9 @@ any links that you are not going to use.
 <section><h2 class="section-heading" id="rclone-config-command">rclone config command:<a class="anchor" aria-label="anchor" href="#rclone-config-command"></a>
 </h2>
 <hr class="half-width">
-<p>Enter an interactive configuration session where you can setup new
-remotes and manage existing ones.</p>
-<p>You may also set or remove a password to protect your
-configuration.</p>
+<p>The *rclone config” command enteres an interactive configuration
+session where you can setup new remotes, edit and manage existing
+ones.</p>
 </section><section><h2 class="section-heading" id="syntax">syntax:<a class="anchor" aria-label="anchor" href="#syntax"></a>
 </h2>
 <hr class="half-width">
@@ -619,9 +622,26 @@ changes</li>
 <li>
 <strong>-v, –verbose count</strong> Print lots more stuff (repeat
 for more) - useful when debugging</li>
-</ul></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</ul>
+<p>[live-code a setting up a simple remote]</p>
+</section><section><h2 class="section-heading" id="walk-through-configuring-a-local-machine">Walk through configuring a local machine<a class="anchor" aria-label="anchor" href="#walk-through-configuring-a-local-machine"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="walk-through-configuring-a-remote-that-requires-authorization">Walk through configuring a remote that requires authorization<a class="anchor" aria-label="anchor" href="#walk-through-configuring-a-remote-that-requires-authorization"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="configuring-rclone-on-a-remoteheadless-machine">Configuring rclone on a remote/headless machine<a class="anchor" aria-label="anchor" href="#configuring-rclone-on-a-remoteheadless-machine"></a>
 </h2>
 <hr class="half-width">
+<p>A <em>headless</em> machine is one that has no browser available. For
+example you are using Windows WSL2 Linux subsystem.</p>
+<p>Some of the configurations (those involving oauth2) require an
+Internet connected web browser.</p>
+<p>We are going to walk through this but here is an example from the
+rclone documentation <a href="https://rclone.org/remote_setup/#configuring-using-rclone-authorizef" class="external-link">https://rclone.org/remote_setup/#configuring-using-rclone-authorize</a>.</p>
+<figure><img src="headless-machine.jpg" alt="rclone config with headless machine" class="figure mx-auto d-block"><div class="figcaption">rclone config with headless machine</div>
+</figure></section><section><h2 class="section-heading" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a>
+</h2>
+<hr class="half-width">
+<p><a href="https://rclone.org/remote_setup/" class="external-link">https://rclone.org/remote_setup/</a></p>
 <p><a href="https://rclone.org/commands/rclone_config/" class="external-link">https://rclone.org/commands/rclone_config/</a></p>
 <p><a href="https://rclone.org/flags/#important" class="external-link">https://rclone.org/flags/#important</a></p>
 <div id="keypoints1" class="callout keypoints">

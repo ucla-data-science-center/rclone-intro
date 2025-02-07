@@ -237,7 +237,10 @@
         <ul><li><a href="#rclone-config-command">rclone config command:</a></li>
 <li><a href="#syntax">syntax:</a></li>
 <li><a href="#rclone-command-flags">rclone command flags</a></li>
-<li><a href="#references">References</a></li>
+<li><a href="#walk-through-configuring-a-local-machine">Walk through configuring a local machine</a></li>
+<li><a href="#walk-through-configuring-a-remote-that-requires-authorization">Walk through configuring a remote that requires authorization</a></li>
+<li><a href="#configuring-rclone-on-a-remoteheadless-machine">Configuring rclone on a remote/headless machine</a></li>
+<li><a href="#reference">Reference</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -338,7 +341,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>rclone config command</h1>
-        <p>Last updated on 2025-02-01 |
+        <p>Last updated on 2025-02-07 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/02-configure-rclone.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -359,6 +362,7 @@
 <h3 class="card-title">Questions</h3>
 <ul><li>Once installed, how is rclone setup or configured?</li>
 <li>How to check for and edit existing configurations</li>
+<li>what is a remote/headless machine</li>
 </ul></div>
 </div>
 </div>
@@ -368,16 +372,17 @@
 <h3 class="card-title">Objectives</h3>
 <ul><li>Use config to create remote connections</li>
 <li>Knowledge of useful command flags (or ‘options’)</li>
+<li>Configure a remote connection for a machine with no browser
+available (ie. headless)</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
 <section><h2 class="section-heading" id="rclone-config-command">rclone config command:<a class="anchor" aria-label="anchor" href="#rclone-config-command"></a></h2>
-<hr class="half-width"><p>Enter an interactive configuration session where you can setup new
-remotes and manage existing ones.</p>
-<p>You may also set or remove a password to protect your
-configuration.</p>
+<hr class="half-width"><p>The *rclone config” command enteres an interactive configuration
+session where you can setup new remotes, edit and manage existing
+ones.</p>
 </section><section><h2 class="section-heading" id="syntax">syntax:<a class="anchor" aria-label="anchor" href="#syntax"></a></h2>
 <hr class="half-width"><p><strong>rclone config [flags]</strong></p>
 <p><img src="rclone-config-screen-image.jpg" alt="rclone config" class="figure"><br>
@@ -394,8 +399,20 @@ changes</li>
 <li>
 <strong>-v, –verbose count</strong> Print lots more stuff (repeat
 for more) - useful when debugging</li>
-</ul></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-<hr class="half-width"><p><a href="https://rclone.org/commands/rclone_config/" class="external-link">https://rclone.org/commands/rclone_config/</a></p>
+</ul><p>[live-code a setting up a simple remote]</p>
+</section><section><h2 class="section-heading" id="walk-through-configuring-a-local-machine">Walk through configuring a local machine<a class="anchor" aria-label="anchor" href="#walk-through-configuring-a-local-machine"></a></h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="walk-through-configuring-a-remote-that-requires-authorization">Walk through configuring a remote that requires authorization<a class="anchor" aria-label="anchor" href="#walk-through-configuring-a-remote-that-requires-authorization"></a></h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="configuring-rclone-on-a-remoteheadless-machine">Configuring rclone on a remote/headless machine<a class="anchor" aria-label="anchor" href="#configuring-rclone-on-a-remoteheadless-machine"></a></h2>
+<hr class="half-width"><p>A <em>headless</em> machine is one that has no browser available. For
+example you are using Windows WSL2 Linux subsystem.</p>
+<p>Some of the configurations (those involving oauth2) require an
+Internet connected web browser.</p>
+<p>We are going to walk through this but here is an example from the
+rclone documentation <a href="https://rclone.org/remote_setup/#configuring-using-rclone-authorizef" class="external-link">https://rclone.org/remote_setup/#configuring-using-rclone-authorize</a>.</p>
+<figure><img src="headless-machine.jpg" alt="rclone config with headless machine" class="figure mx-auto d-block"><div class="figcaption">rclone config with headless machine</div>
+</figure></section><section><h2 class="section-heading" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a></h2>
+<hr class="half-width"><p><a href="https://rclone.org/remote_setup/" class="external-link">https://rclone.org/remote_setup/</a></p>
+<p><a href="https://rclone.org/commands/rclone_config/" class="external-link">https://rclone.org/commands/rclone_config/</a></p>
 <p><a href="https://rclone.org/flags/#important" class="external-link">https://rclone.org/flags/#important</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -474,7 +491,7 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro.git/02-configure-rclone.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro.git/02-configure-rclone.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-01",
+  "dateModified": "2025-02-07",
   "datePublished": "2025-02-07"
 }
 
