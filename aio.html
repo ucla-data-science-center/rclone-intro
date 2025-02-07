@@ -668,7 +668,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03-moving-files"><p>Content from <a href="03-moving-files.html">moving files around and knowing what is already there</a></p>
 <hr>
-<p>Last updated on 2025-01-22 |
+<p>Last updated on 2025-02-07 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/03-moving-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -682,8 +682,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>question 1</li>
-<li>question 2</li>
+<li>How are files moved or copied</li>
+<li>What does the <em>rclone sync</em> do</li>
+<li>How do you see what is already in the destination</li>
 </ul>
 </div>
 </div>
@@ -693,8 +694,9 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>objective 1</li>
-<li>objective 2</li>
+<li>Understand the difference between copy and sync</li>
+<li>Be able to see what is already in the destination</li>
+<li>Command line using Linux vs Windows WSL2 subsystem linux</li>
 </ul>
 </div>
 </div>
@@ -714,35 +716,44 @@ group from one place to another.</p>
 <h4 id="or">or<a class="anchor" aria-label="anchor" href="#or"></a>
 </h4>
 <p><strong>local/path remote/path</strong></p>
+<p><em>Examples:</em></p>
 </div>
-</section><section><h2 class="section-heading" id="examples">Examples:<a class="anchor" aria-label="anchor" href="#examples"></a>
-</h2>
-<hr class="half-width">
-<div class="section level4">
-<h4 id="my-home-backup-of-local-to-an-external-drive-windows-using-linux-subsystem">My home backup of local to an external drive (windows using linux
+<div class="section level3">
+<h3 id="my-home-backup-of-local-to-an-external-drive-windows-using-linux-subsystem">My home backup of local to an external drive (windows using linux
 subsystem)<a class="anchor" aria-label="anchor" href="#my-home-backup-of-local-to-an-external-drive-windows-using-linux-subsystem"></a>
-</h4>
+</h3>
+<blockquote>
 <p>rclone copy /mnt/d/work-related /mnt/f/work-related-backup</p>
+</blockquote>
+<p>[add 2 more examples]</p>
 </div>
 </section><section><h2 class="section-heading" id="note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
 different syntax<a class="anchor" aria-label="anchor" href="#note-different-operating-systems-have-slightly-different-syntax"></a>
 </h2>
 <hr class="half-width">
-<p>Windows syntax: rclone ls C: Linux syntax: rclone ls
-/mnt/c/Users/jjamison/rclone</p>
-</section><section><h2 class="section-heading" id="valid-remote-names">valid remote names<a class="anchor" aria-label="anchor" href="#valid-remote-names"></a>
+<ul>
+<li>Windows syntax: rclone ls C:</li>
+<li>
+<em>Windows WSL2 Linux subsystem</em> Linux* syntax: rclone ls
+/mnt/c/Users/jjamison/rclone</li>
+<li>Linux and macOS: [add this one]</li>
+</ul></section><section><h2 class="section-heading" id="valid-remote-names">valid remote names<a class="anchor" aria-label="anchor" href="#valid-remote-names"></a>
 </h2>
 <hr class="half-width">
 <p><a href="https://rclone.org/docs/#valid-remote-names" class="external-link">https://rclone.org/docs/#valid-remote-names</a></p>
 </section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a>
 </h2>
 <hr class="half-width">
-<p>rclone <strong>ls</strong> remote:path # <strong>lists contents of a
-remote</strong> rclone <strong>copy</strong> /local/path remote:path #
-<strong>copies&amp;&amp; /local/path to the remote rclone
-</strong>sync** –interactive /local/path remote:path #
-<strong>syncs</strong> /local/path to the remote</p>
-</section><section><h2 class="section-heading" id="reference">Reference:<a class="anchor" aria-label="anchor" href="#reference"></a>
+<ul>
+<li>rclone <strong>ls</strong> remote:path # <strong>lists contents of a
+remote</strong>.<br>
+</li>
+<li>rclone <strong>copy</strong> /local/path remote:path #
+**copies&amp;&amp; /local/path to the remote<br>
+</li>
+<li>rclone <strong>sync</strong> –interactive /local/path remote:path #
+<strong>syncs</strong> /local/path to the remote</li>
+</ul></section><section><h2 class="section-heading" id="reference">Reference:<a class="anchor" aria-label="anchor" href="#reference"></a>
 </h2>
 <hr class="half-width">
 <p><a href="https://rclone.org/docs/#subcommands" class="external-link">https://rclone.org/docs/#subcommands</a></p>
@@ -756,8 +767,9 @@ remote</strong> rclone <strong>copy</strong> /local/path remote:path #
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>keypoint 1</li>
-<li>keypoint 2</li>
+<li>Difference between Copy and Sync<br>
+</li>
+<li>See what is already in the destination</li>
 </ul>
 </div>
 </div>
