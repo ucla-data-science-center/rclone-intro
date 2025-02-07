@@ -6,7 +6,7 @@ date: "2024-03-21"
 
 :::::: questions
  - What are rclone remotes?
- - What/how are they used?
+ - How are they used?
 ::::::
 
 :::::: objectives
@@ -16,15 +16,15 @@ date: "2024-03-21"
 
 ## Creating a remote connection
 
-An rclone remote is a storage service or device that's not part of the local machine, but can be accessed using the rclone command line tool. Rclone remotes can be used to transfer and synchronize files between cloud storage services, servers, and machines. 
+An rclone *remote* is a storage service or device that's not part of the local machine, but can be accessed using the rclone command line tool. Rclone remotes can be used to transfer and synchronize files between cloud storage services, servers, and machines. 
+
+This can be an S3 bucket, google drive, box or even a local machine. 
 
 ![rclone connections](rclone-connections.jpg)
 
 
-## Reference
-[https://rclone.org/commands/rclone_config/](https://rclone.org/commands/rclone_config/)
 
 :::::: keypoints
- - Remote and local rclone connections
- - keypoint 2
+ - rclone remote and local connections
+ - Types of cloud storage services that can be connected
 ::::::

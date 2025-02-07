@@ -24,8 +24,10 @@ rclone is a *command line* program to manage files on cloud storage. After downl
 ![Test Illustration](test-illustration.jpg)
 
 ### Disambiguation:  rclone and rsync
-Note: Is this section necessary?  Should I explain the difference
->Rclone and rsync are command-line tools. Rclone is designed for copying files between cloud servers and a different server or workstation, while rsync offers more advanced features for file synchronization.
+Note: Is this section necessary?  Should I explain the difference between rclone and rsync
+
+>Rclone and rsync are command-line tools. Rclone is designed for copying files between cloud servers and a different server or workstation, while rsync offers more advanced features for file synchronization.  
+
 
 ## Challenge 1: 
 
@@ -45,7 +47,7 @@ How do you think you might use rclone?
 
 ## rclone command syntax
 
-##### rclone [command] source:source-folder  destination:destination-folder 
+### rclone [command] source:source-folder  destination:destination-folder 
 
 
 List of rclone commands: [https://rclone.org/commands/](https://rclone.org/commands/) 

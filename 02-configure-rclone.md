@@ -6,18 +6,21 @@ output: html_document
 :::::: questions
  - Once installed, how is rclone setup or configured?
  - How to check for and edit existing configurations
+ - what is a remote/headless machine 
+ 
 ::::::
 
 :::::: objectives
  - Use config to create remote connections
- - Knowledge of useful command flags (or 'options')
+ - Knowledge of useful command flags (or 'options') 
+ - Configure a remote connection for a machine with no browser available (ie. headless) 
+ 
 ::::::
 
 ## rclone config command: 
 
-Enter an interactive configuration session where you can setup new remotes and manage existing ones. 
+The *rclone config" command enteres an interactive configuration session where you can setup new remotes, edit and manage existing ones. 
 
-You may also set or remove a password to protect your configuration.
 
 ## syntax:  
 **rclone config [flags]**
@@ -35,9 +38,31 @@ There are numerous command flags but these three are especially worth rememberin
 
 - **-n, --dry-run**         Do a trial run with no permanent changes
 - **-i, --interactive**     Enable interactive mode
-- **-v, --verbose count**   Print lots more stuff (repeat for more) - useful when debugging
+- **-v, --verbose count**   Print lots more stuff (repeat for more) - useful when debugging  
 
-## References
+[live-code a setting up a simple remote]
+
+## Walk through configuring a local machine
+
+## Walk through configuring a remote that requires authorization
+
+
+## Configuring rclone on a remote/headless machine  
+
+A *headless* machine is one that has no browser available.  For example you are using Windows WSL2 Linux subsystem. 
+
+Some of the configurations (those involving oauth2) require an Internet connected web browser.
+
+We are going to walk through this but here is an example from the rclone documentation [https://rclone.org/remote_setup/#configuring-using-rclone-authorize](https://rclone.org/remote_setup/#configuring-using-rclone-authorizef).
+
+![rclone config with headless machine ](headless-machine.jpg)  
+
+
+
+
+## Reference   
+
+[https://rclone.org/remote_setup/](https://rclone.org/remote_setup/)  
 
 [https://rclone.org/commands/rclone_config/](https://rclone.org/commands/rclone_config/)
 
