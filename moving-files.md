@@ -28,13 +28,19 @@ Rclone is most frequently used to move files, individually or as a group from on
 
 **source:folder     destination:folder**  
 
-#### or
 
-**local/path  remote/path**   
+## Moving, syncing and knowing what is already there  
+
+- rclone **ls** remote:path # **lists contents of a remote**.  
+- rclone **copy** /local/path remote:path # **copies&& /local/path to the remote   
+- rclone **sync** --interactive /local/path remote:path # **syncs** /local/path to the remote  
+
+
 
 *Examples:*
 
 My home backup of local to an external drive (windows using linux subsystem)  
+
 >rclone copy /mnt/d/work-related /mnt/f/work-related-backup 
 
 [add 2 more examples]
@@ -50,11 +56,6 @@ My home backup of local to an external drive (windows using linux subsystem)
 ## valid remote names  
 [https://rclone.org/docs/#valid-remote-names](https://rclone.org/docs/#valid-remote-names)
 
-## Moving, syncing and knowing what is already there  
-
-- rclone **ls** remote:path # **lists contents of a remote**.  
-- rclone **copy** /local/path remote:path # **copies&& /local/path to the remote   
-- rclone **sync** --interactive /local/path remote:path # **syncs** /local/path to the remote  
 
 ## Reference:   
 
