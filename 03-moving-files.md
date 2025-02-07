@@ -34,7 +34,7 @@ Rclone is most frequently used to move files, individually or as a group from on
 
 *Examples:*
 
-### My home backup of local to an external drive (windows using linux subsystem)
+My home backup of local to an external drive (windows using linux subsystem)  
 >rclone copy /mnt/d/work-related /mnt/f/work-related-backup 
 
 [add 2 more examples]
@@ -42,7 +42,7 @@ Rclone is most frequently used to move files, individually or as a group from on
 
 ## Note: Different operating systems have __slightly__ different syntax 
 
-- Windows syntax:   rclone ls C:\Users\jjamison\rclone   
+- Windows syntax:   rclone ls C:\Users\jjamison\rclone    
 - *Windows WSL2 Linux subsystem* Linux* syntax:  rclone ls /mnt/c/Users/jjamison/rclone
 - Linux and macOS:   [add this one]  
 
