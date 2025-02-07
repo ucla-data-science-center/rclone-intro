@@ -40,6 +40,18 @@
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/aio.html</loc>
   </url>
   <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/configure-rclone.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/copy-sync-or-move.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/creating-connections.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/getting-help.html</loc>
+  </url>
+  <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/images.html</loc>
   </url>
   <url>
@@ -85,6 +97,18 @@
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/aio.html</loc>
   </url>
   <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/configure-rclone.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/copy-sync-or-move.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/creating-connections.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/getting-help.html</loc>
+  </url>
+  <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/images.html</loc>
   </url>
   <url>
@@ -100,7 +124,13 @@
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/key-points.html</loc>
   </url>
   <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/moving-files.html</loc>
+  </url>
+  <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/rclone-mount.html</loc>
   </url>
   <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/instructor/reference.html</loc>
@@ -115,7 +145,13 @@
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/key-points.html</loc>
   </url>
   <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/moving-files.html</loc>
+  </url>
+  <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/profiles.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro.git/rclone-mount.html</loc>
   </url>
   <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro.git/reference.html</loc>
