@@ -715,16 +715,26 @@ group from one place to another.</p>
 </h2>
 <hr class="half-width">
 <p><strong>source:folder destination:folder</strong></p>
-<div class="section level4">
-<h4 id="or">or<a class="anchor" aria-label="anchor" href="#or"></a>
-</h4>
-<p><strong>local/path remote/path</strong></p>
+</section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a>
+</h2>
+<hr class="half-width">
+<ul>
+<li>rclone <strong>ls</strong> remote:path # <strong>lists contents of a
+remote</strong>.<br>
+</li>
+<li>rclone <strong>copy</strong> /local/path remote:path #
+**copies&amp;&amp; /local/path to the remote<br>
+</li>
+<li>rclone <strong>sync</strong> –interactive /local/path remote:path #
+<strong>syncs</strong> /local/path to the remote</li>
+</ul>
 <p><em>Examples:</em></p>
 <p>My home backup of local to an external drive (windows using linux
-subsystem)<br>
-&gt;rclone copy /mnt/d/work-related /mnt/f/work-related-backup</p>
+subsystem)</p>
+<blockquote>
+<p>rclone copy /mnt/d/work-related /mnt/f/work-related-backup</p>
+</blockquote>
 <p>[add 2 more examples]</p>
-</div>
 </section><section><h2 class="section-heading" id="note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
 different syntax<a class="anchor" aria-label="anchor" href="#note-different-operating-systems-have-slightly-different-syntax"></a>
 </h2>
@@ -739,19 +749,7 @@ different syntax<a class="anchor" aria-label="anchor" href="#note-different-oper
 </h2>
 <hr class="half-width">
 <p><a href="https://rclone.org/docs/#valid-remote-names" class="external-link">https://rclone.org/docs/#valid-remote-names</a></p>
-</section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a>
-</h2>
-<hr class="half-width">
-<ul>
-<li>rclone <strong>ls</strong> remote:path # <strong>lists contents of a
-remote</strong>.<br>
-</li>
-<li>rclone <strong>copy</strong> /local/path remote:path #
-**copies&amp;&amp; /local/path to the remote<br>
-</li>
-<li>rclone <strong>sync</strong> –interactive /local/path remote:path #
-<strong>syncs</strong> /local/path to the remote</li>
-</ul></section><section><h2 class="section-heading" id="reference">Reference:<a class="anchor" aria-label="anchor" href="#reference"></a>
+</section><section><h2 class="section-heading" id="reference">Reference:<a class="anchor" aria-label="anchor" href="#reference"></a>
 </h2>
 <hr class="half-width">
 <p><a href="https://rclone.org/docs/#subcommands" class="external-link">https://rclone.org/docs/#subcommands</a></p>
