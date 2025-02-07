@@ -17,3 +17,20 @@ After attending this training, participants will be able to:
 - Mount remote storage as a local file system using the rclone mount command.  
 - Navigate and utilize rclone documentation and online resources for troubleshooting.
 
+::::::::::::::::::::::::::::::::::::::::::  prereq
+
+## Prerequisites
+
+Before joining the rclone Training Workshop, participants should be able to:
+
+- Navigate a command-line interface (e.g., Terminal on macOS/Linux or Command Prompt/PowerShell on Windows).
+- Understand basic file system operations such as copying, moving, and listing directory contents.
+- Download and install software on their operating system.
+- Comprehend basic cloud storage concepts, including the differences between local and remote storage.
+
+See [Shell Novice by Software Carpentry](https://swcarpentry.github.io/shell-novice/) for a helpful introduction to using the command line.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
