@@ -12,8 +12,8 @@ exercises: 2
 ::::::  
 
 :::::: objectives  
--   Basic knowledge of rclone usage 
--   Be able to transfer data from the command line using rclone 
+-   Basic understanding of rclone usage 
+-   Know where to download the software and documentation
 -   Know where to get help and examples 
 ::::::
 
@@ -23,8 +23,9 @@ rclone is a *command line* program to manage files on cloud storage. After downl
 
 ![Test Illustration](test-illustration.jpg)
 
-## Disambiguation:  rclone and rsync
-Is this section necessary?  Should I explain the difference
+### Disambiguation:  rclone and rsync
+Note: Is this section necessary?  Should I explain the difference
+>Rclone and rsync are command-line tools. Rclone is designed for copying files between cloud servers and a different server or workstation, while rsync offers more advanced features for file synchronization.
 
 ## Challenge 1: 
 
