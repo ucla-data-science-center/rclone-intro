@@ -65,13 +65,13 @@ contact: 'jamison@library.ucla.edu'
 
 # Order of episodes in your lesson
 episodes:
-- 01-introduction.md
-- 04-creating-connections.md
-- 02-configure-rclone.md
-- 03-moving-files.md
-- 05-rclone-move-command.md
-- 06-copy-sync-or-move.md
-- 07-getting-help.md
+- introduction.md
+- creating-connections.md
+- configure-rclone.md
+- moving-files.md
+- copy-sync-or-move.md
+- rclone-mount
+- getting-help.md
 
 # Information for Learners
 learners:
