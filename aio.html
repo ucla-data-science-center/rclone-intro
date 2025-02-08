@@ -668,7 +668,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-moving-files"><p>Content from <a href="moving-files.html">moving files around and knowing what is already there</a></p>
 <hr>
-<p>Last updated on 2025-02-07 |
+<p>Last updated on 2025-02-08 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/moving-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -737,11 +737,16 @@ different syntax<a class="anchor" aria-label="anchor" href="#note-different-oper
 </h2>
 <hr class="half-width">
 <ul>
-<li>Windows syntax: rclone ls C:</li>
+<li>Windows syntax: rclone ls C:\Users\jjamison\rclone<br>
+</li>
 <li>
 <em>Windows WSL2 Linux subsystem</em> Linux* syntax: rclone ls
-/mnt/c/Users/jjamison/rclone</li>
-<li>Linux and macOS: [add this one]</li>
+/mnt/c/Users/jjamison/rclone<br>
+</li>
+<li>Linux and macOS: rclone copy rclone-intro-box:rclone-intro
+rclone-intro-google:rclone-intro-google<br>
+rclone copy rclone-intro-box:rclone-intro
+rclone-intro-google:rclone-intro-google -n</li>
 </ul></section><section><h2 class="section-heading" id="valid-remote-names">valid remote names<a class="anchor" aria-label="anchor" href="#valid-remote-names"></a>
 </h2>
 <hr class="half-width">
@@ -1046,8 +1051,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro.git/aio.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro.git/aio.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-07",
-  "datePublished": "2025-02-07"
+  "dateModified": "2025-02-08",
+  "datePublished": "2025-02-08"
 }
 
   </script><script>

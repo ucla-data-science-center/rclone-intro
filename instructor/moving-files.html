@@ -341,7 +341,7 @@ different syntax</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>moving files around and knowing what is already there</h1>
-        <p>Last updated on 2025-02-07 |
+        <p>Last updated on 2025-02-08 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/moving-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -401,11 +401,14 @@ subsystem)</p>
 <p>[add 2 more examples]</p>
 </section><section><h2 class="section-heading" id="note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
 different syntax<a class="anchor" aria-label="anchor" href="#note-different-operating-systems-have-slightly-different-syntax"></a></h2>
-<hr class="half-width"><ul><li>Windows syntax: rclone ls C:</li>
+<hr class="half-width"><ul><li>Windows syntax: rclone ls C:\Users\jjamison\rclone<br></li>
 <li>
 <em>Windows WSL2 Linux subsystem</em> Linux* syntax: rclone ls
-/mnt/c/Users/jjamison/rclone</li>
-<li>Linux and macOS: [add this one]</li>
+/mnt/c/Users/jjamison/rclone<br></li>
+<li>Linux and macOS: rclone copy rclone-intro-box:rclone-intro
+rclone-intro-google:rclone-intro-google<br>
+rclone copy rclone-intro-box:rclone-intro
+rclone-intro-google:rclone-intro-google -n</li>
 </ul></section><section><h2 class="section-heading" id="valid-remote-names">valid remote names<a class="anchor" aria-label="anchor" href="#valid-remote-names"></a></h2>
 <hr class="half-width"><p><a href="https://rclone.org/docs/#valid-remote-names" class="external-link">https://rclone.org/docs/#valid-remote-names</a></p>
 </section><section><h2 class="section-heading" id="reference">Reference:<a class="anchor" aria-label="anchor" href="#reference"></a></h2>
@@ -486,8 +489,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro.git/instructor/moving-files.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro.git/instructor/moving-files.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-07",
-  "datePublished": "2025-02-07"
+  "dateModified": "2025-02-08",
+  "datePublished": "2025-02-08"
 }
 
   </script><script>
