@@ -48,9 +48,11 @@ My home backup of local to an external drive (windows using linux subsystem)
 
 ## Note: Different operating systems have __slightly__ different syntax 
 
-- Windows syntax:   rclone ls C:\Users\jjamison\rclone    
-- *Windows WSL2 Linux subsystem* Linux* syntax:  rclone ls /mnt/c/Users/jjamison/rclone
-- Linux and macOS:   [add this one]  
+- Windows syntax:   rclone ls C:\\Users\\jjamison\\rclone    
+- *Windows WSL2 Linux subsystem* Linux* syntax:  rclone ls /mnt/c/Users/jjamison/rclone   
+- Linux and macOS:    rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google    
+                      rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google -n   
+
 
 
 ## valid remote names  
