@@ -237,9 +237,8 @@
         <ul><li><a href="#rclone-config-command">rclone config command:</a></li>
 <li><a href="#syntax">syntax:</a></li>
 <li><a href="#rclone-command-flags">rclone command flags</a></li>
-<li><a href="#walk-through-configuring-a-local-machine">Walk through configuring a local machine</a></li>
-<li><a href="#walk-through-configuring-a-remote-that-requires-authorization">Walk through configuring a remote that requires authorization</a></li>
 <li><a href="#configuring-rclone-on-a-remoteheadless-machine">Configuring rclone on a remote/headless machine</a></li>
+<li><a href="#documentation-specific-to-remote">Documentation Specific to Remote</a></li>
 <li><a href="#reference">Reference</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -341,7 +340,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>rclone config command</h1>
-        <p>Last updated on 2025-02-07 |
+        <p>Last updated on 2025-02-08 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/configure-rclone.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -402,9 +401,10 @@ changes</li>
 <strong>-v, –verbose count</strong> Print lots more stuff (repeat
 for more) - useful when debugging</li>
 </ul><p>[live-code a setting up a simple remote]</p>
-</section><section><h2 class="section-heading" id="walk-through-configuring-a-local-machine">Walk through configuring a local machine<a class="anchor" aria-label="anchor" href="#walk-through-configuring-a-local-machine"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="walk-through-configuring-a-remote-that-requires-authorization">Walk through configuring a remote that requires authorization<a class="anchor" aria-label="anchor" href="#walk-through-configuring-a-remote-that-requires-authorization"></a></h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="configuring-rclone-on-a-remoteheadless-machine">Configuring rclone on a remote/headless machine<a class="anchor" aria-label="anchor" href="#configuring-rclone-on-a-remoteheadless-machine"></a></h2>
+<p><strong>Walk through configuring a local machine</strong></p>
+<p><strong>Walk through configuring a remote that requires
+authorization</strong></p>
+</section><section><h2 class="section-heading" id="configuring-rclone-on-a-remoteheadless-machine">Configuring rclone on a remote/headless machine<a class="anchor" aria-label="anchor" href="#configuring-rclone-on-a-remoteheadless-machine"></a></h2>
 <hr class="half-width"><p>A <em>headless</em> machine is one that has no browser available. For
 example you are using Windows WSL2 Linux subsystem.</p>
 <p>Some of the configurations (those involving oauth2) require an
@@ -412,7 +412,15 @@ Internet connected web browser.</p>
 <p>We are going to walk through this but here is an example from the
 rclone documentation <a href="https://rclone.org/remote_setup/#configuring-using-rclone-authorizef" class="external-link">https://rclone.org/remote_setup/#configuring-using-rclone-authorize</a>.</p>
 <figure><img src="../headless-machine.jpg" alt="rclone config with headless machine" class="figure mx-auto d-block"><div class="figcaption">rclone config with headless machine</div>
-</figure></section><section><h2 class="section-heading" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a></h2>
+</figure></section><section><h2 class="section-heading" id="documentation-specific-to-remote">Documentation Specific to Remote<a class="anchor" aria-label="anchor" href="#documentation-specific-to-remote"></a></h2>
+<hr class="half-width"><p>rclone includes extensive documentation that is specific to
+particular remotes.</p>
+<p>Examples:</p>
+<ul><li>box: <a href="https://rclone.org/box/" class="external-link">https://rclone.org/box/</a><br></li>
+<li>google drive: <a href="https://rclone.org/drive/" class="external-link">https://rclone.org/drive/</a><br></li>
+<li>S3 bucket: <a href="https://rclone.org/s3/" class="external-link">https://rclone.org/s3/</a>
+</li>
+</ul></section><section><h2 class="section-heading" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a></h2>
 <hr class="half-width"><p><a href="https://rclone.org/remote_setup/" class="external-link">https://rclone.org/remote_setup/</a></p>
 <p><a href="https://rclone.org/commands/rclone_config/" class="external-link">https://rclone.org/commands/rclone_config/</a></p>
 <p><a href="https://rclone.org/flags/#important" class="external-link">https://rclone.org/flags/#important</a></p>
@@ -493,7 +501,7 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro.git/instructor/configure-rclone.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro.git/instructor/configure-rclone.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-07",
+  "dateModified": "2025-02-08",
   "datePublished": "2025-02-08"
 }
 
