@@ -447,7 +447,7 @@ synchronization.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Move files both local and online</p>
 <div class="section level2">
@@ -888,7 +888,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-rclone-mount"><p>Content from <a href="rclone-mount.html">rclone mount</a></p>
 <hr>
-<p>Last updated on 2025-02-07 |
+<p>Last updated on 2025-02-08 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro.git/edit/main/episodes/rclone-mount.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -902,8 +902,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>question 1</li>
-<li>question 2</li>
+<li>How does rclone mount differ from an rclone remote</li>
+<li>What is a mountpoint</li>
+<li>Why might this be useful</li>
 </ul>
 </div>
 </div>
@@ -913,7 +914,7 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>objective 1</li>
+<li>Define “mountpoint”</li>
 <li>objective 2</li>
 </ul>
 </div>
@@ -924,8 +925,18 @@ any links that you are not going to use.
 <section><h2 class="section-heading" id="rclone-mount">rclone mount<a class="anchor" aria-label="anchor" href="#rclone-mount"></a>
 </h2>
 <hr class="half-width">
-<p>Mount the remote (connection) as a file system on a mountpoint.
-Rclone mount allows Linux, FreeBSD, macOS and Windows to mount any of
+<p>Mount the remote (connection) as a file system on a
+<em>mountpoint</em>.</p>
+<blockquote>
+<p>“Mounting a file system on a mountpoint” means making a file system
+from a storage device (like a hard drive partition or a network share)
+accessible to the operating system by attaching it to a specific
+directory on the local system, called a “mount point,” allowing users to
+access the files within that file system as if they were in the local
+directory itself; essentially, it’s a way to virtually connect a remote
+file system to your computer for use.”</p>
+</blockquote>
+<p>Rclone mount allows Linux, FreeBSD, macOS and Windows to mount any of
 Rclone’s cloud storage systems as a file system with FUSE.</p>
 <p>rclone mount remote:path/to/files /path/to/local/mount</p>
 <p>rclone mount remote:path/to/files *<br>
@@ -944,9 +955,9 @@ rclone mount remote:path/to/files C: rclone mount remote:path/to/files
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>keynote 1<br>
+<li>Reasons to use rclone mount vs rclone config remote<br>
 </li>
-<li>keynote 2</li>
+<li>Understand the concept of mountpoints</li>
 </ul>
 </div>
 </div>
