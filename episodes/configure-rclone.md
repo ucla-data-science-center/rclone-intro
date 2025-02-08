@@ -42,9 +42,9 @@ There are numerous command flags but these three are especially worth rememberin
 
 [live-code a setting up a simple remote]
 
-## Walk through configuring a local machine
+**Walk through configuring a local machine**
 
-## Walk through configuring a remote that requires authorization
+**Walk through configuring a remote that requires authorization**
 
 
 ## Configuring rclone on a remote/headless machine  
@@ -58,7 +58,15 @@ We are going to walk through this but here is an example from the rclone documen
 ![rclone config with headless machine ](headless-machine.jpg)  
 
 
+## Documentation Specific to Remote    
 
+rclone includes extensive documentation that is specific to particular remotes.
+
+Examples:   
+
+- box: [https://rclone.org/box/](https://rclone.org/box/)  
+- google drive: [https://rclone.org/drive/](https://rclone.org/drive/)  
+- S3 bucket: [https://rclone.org/s3/](https://rclone.org/s3/)  
 
 ## Reference   
 
