@@ -381,11 +381,21 @@ between cloud storage services, servers, and machines.</p>
 <p>This can be an S3 bucket, google drive, box or even a local
 machine.</p>
 <figure><img src="../rclone-connections.jpg" alt="rclone connections" class="figure mx-auto d-block"><div class="figcaption">rclone connections</div>
-</figure><div class="codewrapper sourceCode" id="cb1">
+</figure><p>Below is an example of how to start creating and managing remote
+connections with rclone. A remote is any storage service or device
+that’s accessed via rclone rather than being directly on your local
+machine.</p>
+<p>To begin configuring a remote connection, open your terminal and run
+the following command:</p>
+<div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">(</span><span class="ex">base</span><span class="kw">)</span> <span class="ex">➜</span>  ~ rclone config</span></code></pre>
 </div>
+<p>After running this command, you’ll see output similar to the
+following. This interactive interface lists your current remotes and
+provides options for editing, adding, deleting, renaming, copying, or
+setting a configuration password.</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
