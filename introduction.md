@@ -45,9 +45,9 @@ Note: Is this section necessary?  Should I explain the difference between rclone
 :::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::: discussion
-## Discussion:  
-  
-How do you think you might use rclone?  
+## How do you think you might use rclone?  
+
+Consider the specific challenges you face with file transfers or cloud storage, and share how you might use rclone to address these issues.
 
 ::::::::::::::::::::::::::::::
 
