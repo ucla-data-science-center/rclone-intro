@@ -1,8 +1,8 @@
-# rclone Intro
+# Rclone Intro
 
 [![Build and Deploy Site](https://github.com/ucla-data-science-center/rclone-intro/actions/workflows/sandpaper-main.yaml/badge.svg)](https://github.com/ucla-data-science-center/rclone-intro/actions/workflows/sandpaper-main.yaml)
 
-This curriculum provides an introduction to **rclone**, a powerful command-line tool for managing files on cloud storage. The lesson covers installation, configuration, basic command syntax, file transfers, and advanced features such as mounting remote storage as a local file system.
+This curriculum provides an introduction to **Rclone**, a powerful command-line tool for managing files on cloud storage. The lesson covers installation, configuration, basic command syntax, file transfers, and advanced features such as mounting remote storage as a local file system.
 
 The lesson is available at: [rclone Intro Workshop](https://ucla-data-science-center.github.io/rclone-intro/).
 
