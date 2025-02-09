@@ -28,6 +28,7 @@ Note: Is this section necessary?  Should I explain the difference between rclone
 
 >Rclone and rsync are command-line tools. Rclone is designed for copying files between cloud servers and a different server or workstation, while rsync offers more advanced features for file synchronization.  
 
+:::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: 
 
@@ -37,13 +38,19 @@ What can you do with rclone?
 
 Move files both local and online
 
+::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::: discussion
 ## Discussion:  
   
 How do you think you might use rclone?  
 
 - For large files and/or multiple files rclone is efficient and fast
 - Backup work   
-:::
+
+::::::::::::::::::::::::::::::
 
 ## rclone command syntax
 
