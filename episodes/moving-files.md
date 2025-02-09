@@ -43,15 +43,14 @@ Rclone commands are often similar to bash commands, such as _ls_ command.   Howe
 My home backup of local to an external drive (windows using linux subsystem)  
 ```bash
 > rclone copy /mnt/d/work-related /mnt/f/work-related-backup   
-```
 
 Copying files from google drive and filtering for '*.txt"    
-```
+
 > rclone copy rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro --include "*.txt"  
-```
+
 
 Checking a result before running by using the _-n_ flag
-```
+
 > rclone sync rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro -n    
 2025/02/09 14:52:11 NOTICE: Beans, Snap and Italian – Pieces, Green and Wax - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 91.581Ki)
 2025/02/09 14:52:11 NOTICE: For Safety's Sake - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 69.982Ki)
@@ -74,7 +73,7 @@ Elapsed time:         2.0s
 ## Note: Different operating systems have __slightly__ different syntax 
 
 - Windows syntax:   rclone ls C:\\Users\\jjamison\\rclone    
-- *Windows WSL2 Linux subsystem* Linux* syntax:  rclone ls /mnt/c/Users/jjamison/rclone   
+- Windows WSL2 Linux subsystem* Linux syntax:  rclone ls /mnt/c/Users/jjamison/rclone   
 - Linux and macOS:    rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google    
                       rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google -n   
 
