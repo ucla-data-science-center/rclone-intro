@@ -30,13 +30,15 @@ Note: Is this section necessary?  Should I explain the difference between rclone
 
 :::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge 1: 
-
-What can you do with rclone?
+## What can you do with rclone?
 
 ::::::::::::::::::::::::::::::::::::: solution
 
-Move files both local and online
+- Rclone enables efficient file handling for quickly transferring large or multiple files.
+- It lets you create reliable backups to secure your data.
+- You can perform file transfers seamlessly between your local system and cloud storage.
+- It supports directory synchronization to keep folders identical across locations.
+- It facilitates direct cloud migration by copying files directly between cloud providers.
 
 ::::::::::::::::::::::::::
 
@@ -47,18 +49,13 @@ Move files both local and online
   
 How do you think you might use rclone?  
 
-- For large files and/or multiple files rclone is efficient and fast
-- Backup work   
-
 ::::::::::::::::::::::::::::::
 
 ## rclone command syntax
 
-### rclone [command] source:source-folder  destination:destination-folder 
-
+### ```rclone [command] source:source-folder  destination:destination-folder``` 
 
 List of rclone commands: [https://rclone.org/commands/](https://rclone.org/commands/) 
-
 
 
 :::::: keypoints
