@@ -33,6 +33,14 @@ rclone mount remote:path/to/files C:\path\parent\mount
 rclone mount remote:path/to/files \\cloud\remote  
 
 
+## rclone mount vs rclone sync/copy
+
+>rclone mount vs rclone sync/copy
+File systems expect things to be 100% reliable, whereas cloud storage systems are a long way from 100% reliable. The rclone sync/copy commands cope with this with lots of retries. However rclone mount can't use retries in the same way without making local copies of the uploads. Look at the VFS File Caching for solutions to make mount more reliable.
+
+
+
+
 ## Reference:  [https://rclone.org/commands/rclone_mount/](https://rclone.org/commands/rclone_mount/)
 
 :::::: keypoints
