@@ -1,22 +1,14 @@
-# This template CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to replace its contents
-# with information about your lesson.
-# Remember to update this file periodically, 
-# ensuring that the author list and other fields remain accurate.
-
 cff-version: 1.2.0
-title: FIXME
+title: rclone Intro
 message: >-
-  Please cite this lesson using the information in this file
-  when you refer to it in publications, and/or if you
-  re-use, adapt, or expand on the content in your own
-  training material.
-type: dataset
+  Please cite this lesson using the information in this file when referring to it in publications,
+  or if you re-use, adapt, or expand on its content in your own training material.
+type: lesson
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Jamie
+    family-names: Jamison
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  This lesson introduces rclone, a command-line tool for managing files on cloud storage.
+  It covers installation, configuration, basic command syntax, file transfers, and advanced features
+  such as mounting remote storage as a local file system.
 license: CC-BY-4.0
