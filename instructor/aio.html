@@ -456,7 +456,7 @@ synchronization.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Rclone enables efficient file handling for quickly transferring
@@ -704,7 +704,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-moving-files"><p>Content from <a href="moving-files.html">moving files around and knowing what is already there</a></p>
 <hr>
-<p>Last updated on 2025-02-08 |
+<p>Last updated on 2025-02-09 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/moving-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -747,26 +747,27 @@ group from one place to another.</p>
 </section><section><h2 class="section-heading" id="the-syntax-for-the-places-to-or-from-is">The syntax for the places, to or from is:<a class="anchor" aria-label="anchor" href="#the-syntax-for-the-places-to-or-from-is"></a>
 </h2>
 <hr class="half-width">
-<p><strong>source:folder destination:folder</strong></p>
+<p><strong><code>source:folder  destination:folder</code></strong></p>
 </section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a>
 </h2>
 <hr class="half-width">
 <ul>
-<li>rclone <strong>ls</strong> remote:path # <strong>lists contents of a
-remote</strong>.<br>
+<li>
+<code>rclone **ls** remote:path # **lists contents of a remote**</code>.<br>
 </li>
-<li>rclone <strong>copy</strong> /local/path remote:path #
-**copies&amp;&amp; /local/path to the remote<br>
+<li>
+<code>rclone **copy** /local/path remote:path # **copies&amp;&amp; /local/path to the remote</code><br>
 </li>
-<li>rclone <strong>sync</strong> –interactive /local/path remote:path #
-<strong>syncs</strong> /local/path to the remote</li>
+<li><code>rclone **sync** --interactive /local/path remote:path # **syncs** /local/path to the remote</code></li>
 </ul>
 <p><em>Examples:</em></p>
 <p>My home backup of local to an external drive (windows using linux
 subsystem)</p>
-<blockquote>
-<p>rclone copy /mnt/d/work-related /mnt/f/work-related-backup</p>
-</blockquote>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="ex">copy</span> /mnt/d/work-related /mnt/f/work-related-backup</span></code></pre>
+</div>
 <p>[add 2 more examples]</p>
 </section><section><h2 class="section-heading" id="note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
 different syntax<a class="anchor" aria-label="anchor" href="#note-different-operating-systems-have-slightly-different-syntax"></a>
