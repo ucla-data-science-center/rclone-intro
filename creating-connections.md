@@ -22,9 +22,14 @@ This can be an S3 bucket, google drive, box or even a local machine.
 
 ![rclone connections](rclone-connections.jpg)
 
+Below is an example of how to start creating and managing remote connections with rclone. A remote is any storage service or device that's accessed via rclone rather than being directly on your local machine.
+
+To begin configuring a remote connection, open your terminal and run the following command:
+
 ```bash
 (base) ➜  ~ rclone config
 ```
+After running this command, you'll see output similar to the following. This interactive interface lists your current remotes and provides options for editing, adding, deleting, renaming, copying, or setting a configuration password.
 
 ```output
 Current remotes:
