@@ -7,6 +7,7 @@ type: lesson
 authors:
   - given-names: Jamie
     family-names: Jamison
+    orcid: http://orcid.org/0000-0002-5116-5724
 abstract: >-
   This lesson introduces rclone, a command-line tool for managing files on cloud storage.
   It covers installation, configuration, basic command syntax, file transfers, and advanced features
