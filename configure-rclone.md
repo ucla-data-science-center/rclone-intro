@@ -49,7 +49,7 @@ There are numerous command flags but these three are especially worth rememberin
 
 ## Configuring rclone on a remote/headless machine  
 
-A *headless* machine is one that has no browser available.  For example you are using Windows WSL2 Linux subsystem. 
+A *headless* machine is one that has no browser available.  For example you are using Windows WSL2 Linux subsystem or you logged into a remote machine (HPC, AWS, etc.) using your termnial client. 
 
 Some of the configurations (those involving oauth2) require an Internet connected web browser.
 
