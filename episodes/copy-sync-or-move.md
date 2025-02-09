@@ -18,17 +18,22 @@ date: "2024-03-22"
 
 ## Copy vs Sync vs Movd: what is the difference
 
+When managing your files with rclone, you have three primary commands to choose from: copy, sync, and move. Each command handles data differently, so it’s important to understand their behaviors before deciding which one to use.
+
 ### Copy 
 
-- Copy files from source to dest, skipping identical files.  
-- Copy the source to the destination. Does not transfer files that are identical on source and destination, testing by size and modification time or MD5SUM. Doesn't delete files from the destination. If you want to also delete files from destination, to make it match source, use the sync command instead.  
+The ```copy``` command duplicates files from the source to the destination. It compares files (using size, modification time, or MD5 checksum) and only transfers those that differ. Importantly, copy does not remove any files from the destination, making it a safe choice when you want to update or add files without risking the loss of existing data.
 
-#####  syntax: ```rclone copy source:sourcepath dest:destpath``` 
+**Syntax:** 
 
-Note that it is always the contents of the directory that is synced, not the directory itself. So when source:path is a directory, it's the contents of source:path that are copied, not the directory name and contents.
+```bash 
+rclone copy source:sourcepath dest:destpath
+``` 
+**Notes:**
 
-- To copy single files, use the copyto command instead.  
-- If dest:path doesn't exist, it is created and the source:path contents go there.  
+- Only the contents of a directory are copied — not the directory itself.
+- Use the ```copyto``` command for copying single files.
+- If the destination path does not exist, it will be created.
 
 ### Sync 
 
