@@ -1,7 +1,7 @@
 ---
 title: "Creating Remote Connections"
-output: html_document
-date: "2024-03-21"
+teaching: 5   # teaching time in minutes
+exercises: 10 # exercise time in minutes
 ---
 
 :::::: questions
@@ -22,6 +22,28 @@ This can be an S3 bucket, google drive, box or even a local machine.
 
 ![rclone connections](rclone-connections.jpg)
 
+```bash
+(base) ➜  ~ rclone config
+```
+
+```output
+Current remotes:
+
+Name                 Type
+====                 ====
+box                  box
+gdrive               drive
+mydrive              drive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q>
+```
 
 
 :::::: keypoints
