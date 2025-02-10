@@ -441,7 +441,7 @@ synchronization.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Rclone enables efficient file handling for quickly transferring
@@ -688,7 +688,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-moving-files"><p>Content from <a href="moving-files.html">moving files around and knowing what is already there</a></p>
 <hr>
-<p>Last updated on 2025-02-09 |
+<p>Last updated on 2025-02-10 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/moving-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -723,7 +723,7 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="moving-files-around">moving files around<a class="anchor" aria-label="anchor" href="#moving-files-around"></a>
+<section><h2 class="section-heading" id="moving-files-around">Moving files around<a class="anchor" aria-label="anchor" href="#moving-files-around"></a>
 </h2>
 <hr class="half-width">
 <p>Rclone is most frequently used to move files, individually or as a
@@ -731,26 +731,65 @@ group from one place to another.</p>
 </section><section><h2 class="section-heading" id="the-syntax-for-the-places-to-or-from-is">The syntax for the places, to or from is:<a class="anchor" aria-label="anchor" href="#the-syntax-for-the-places-to-or-from-is"></a>
 </h2>
 <hr class="half-width">
-<p><strong><code>source:folder  destination:folder</code></strong></p>
-</section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a>
-</h2>
-<hr class="half-width">
-<ul>
-<li>
-<code>rclone **ls** remote:path # **lists contents of a remote**</code>.<br>
-</li>
-<li>
-<code>rclone **copy** /local/path remote:path # **copies&amp;&amp; /local/path to the remote</code><br>
-</li>
-<li><code>rclone **sync** --interactive /local/path remote:path # **syncs** /local/path to the remote</code></li>
-</ul>
-<p><em>Examples:</em></p>
-<p>My home backup of local to an external drive (windows using linux
-subsystem)</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="ex">copy</span> /mnt/d/work-related /mnt/f/work-related-backup</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">source:folder</span>  destination:folder</span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a>
+</h2>
+<hr class="half-width">
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">rclone</span> _ls_ remote:path <span class="co"># **lists contents of a remote</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">rclone</span> _copy_ /local/path remote:path <span class="co"># **copies&amp;&amp; /local/path to the remote</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">rclone</span> _sync_ <span class="at">--interactive</span> /local/path remote:path <span class="co"># **syncs** /local/path to the remote</span></span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="filtering">Filtering<a class="anchor" aria-label="anchor" href="#filtering"></a>
+</h2>
+<hr class="half-width">
+<p>Rclone commands are often similar to bash commands, such as
+<em>ls</em> command. However, Rclone files using the –include flag.</p>
+<p><strong>Examples:</strong></p>
+<p>My home backup of local to an external drive (windows using linux
+subsystem)</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="ex">copy</span> /mnt/d/work-related /mnt/f/work-related-backup   </span></code></pre>
+</div>
+<p>Copying files from google drive and filtering for ’*.txt”</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="ex">copy</span> rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro <span class="at">--include</span> <span class="st">"*.txt"</span>  </span></code></pre>
+</div>
+<p>Checking a result before running by using the <em>-n</em> flag</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="fu">sync</span> rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro <span class="at">-n</span>    </span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="ex">2025/02/09</span> 14:52:11 NOTICE: Beans, Snap and Italian – Pieces, Green and Wax <span class="at">-</span> National Center for Home Food Preservation.pdf: Skipped copy as <span class="at">--dry-run</span> is set <span class="er">(</span><span class="fu">size</span> 91.581Ki<span class="kw">)</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="ex">2025/02/09</span> 14:52:11 NOTICE: For Safety<span class="st">'s Sake - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 69.982Ki)</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Preserving_Food__Using_Pressure_Canners.pdf: Skipped copy as --dry-run is set (size 3.839Mi)</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Selecting the Correct Processing Time - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 123.316Ki)</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: test01.txt.docx: Skipped copy as --dry-run is set</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: USDA-Complete-Guide-to-Home-Canning-2015-revision.pdf: Skipped copy as --dry-run is set (size 16.518Mi)</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Potatoes, Sweet – Pieces or Whole - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 87.602Ki)</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE:</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="st">Transferred:       21.079 MiB / 21.079 MiB, 100%, 0 B/s, ETA -</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="st">Checks:                 3 / 3, 100%</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="st">Transferred:            8 / 8, 100%</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="st">Elapsed time:         2.0s</span></span></code></pre>
 </div>
 <p>[add 2 more examples]</p>
 </section><section><h2 class="section-heading" id="note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
@@ -760,8 +799,7 @@ different syntax<a class="anchor" aria-label="anchor" href="#note-different-oper
 <ul>
 <li>Windows syntax: rclone ls C:\Users\jjamison\rclone<br>
 </li>
-<li>
-<em>Windows WSL2 Linux subsystem</em> Linux* syntax: rclone ls
+<li>Windows WSL2 Linux subsystem* Linux syntax: rclone ls
 /mnt/c/Users/jjamison/rclone<br>
 </li>
 <li>Linux and macOS: rclone copy rclone-intro-box:rclone-intro
@@ -799,7 +837,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-copy-sync-or-move"><p>Content from <a href="copy-sync-or-move.html">copy-sync or-move</a></p>
 <hr>
-<p>Last updated on 2025-02-07 |
+<p>Last updated on 2025-02-10 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/copy-sync-or-move.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -814,7 +852,7 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>What is the difference between copy, sync and move</li>
-<li>question 2</li>
+<li>When should you choose one command over the others?</li>
 </ul>
 </div>
 </div>
@@ -825,7 +863,8 @@ any links that you are not going to use.
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Be able to pick the most appropriate command to mvoe file(s)</li>
-<li>objective 2</li>
+<li>Determine which command is most appropriate for different file
+management scenarios.</li>
 </ul>
 </div>
 </div>
@@ -835,30 +874,39 @@ any links that you are not going to use.
 <section><h2 class="section-heading" id="copy-vs-sync-vs-movd-what-is-the-difference">Copy vs Sync vs Movd: what is the difference<a class="anchor" aria-label="anchor" href="#copy-vs-sync-vs-movd-what-is-the-difference"></a>
 </h2>
 <hr class="half-width">
-<p><strong>Copy</strong> - Copy files from source to dest, skipping
-identical files.</p>
+<p>When managing your files with rclone, you have three primary commands
+to choose from: copy, sync, and move. Each command handles data
+differently, so it’s important to understand their behaviors before
+deciding which one to use.</p>
+<div class="section level3">
+<h3 id="copy">Copy<a class="anchor" aria-label="anchor" href="#copy"></a>
+</h3>
+<p>The <code>copy</code> command duplicates files from the source to the
+destination. It compares files (using size, modification time, or MD5
+checksum) and only transfers those that differ. Importantly, copy does
+not remove any files from the destination, making it a safe choice when
+you want to update or add files without risking the loss of existing
+data.</p>
+<p><strong>Syntax:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">rclone</span> copy source:sourcepath dest:destpath</span></code></pre>
+</div>
+<p><strong>Notes:</strong></p>
 <ul>
-<li>Copy the source to the destination. Does not transfer files that are
-identical on source and destination, testing by size and modification
-time or MD5SUM. Doesn’t delete files from the destination. If you want
-to also delete files from destination, to make it match source, use the
-sync command instead.</li>
+<li>Only the contents of a directory are copied — not the directory
+itself.</li>
+<li>Use the <code>copyto</code> command for copying single files.</li>
+<li>If the destination path does not exist, it will be created.</li>
 </ul>
-<div class="section level5">
-<h5 id="syntax-rclone-copy-sourcesourcepath-destdestpath">syntax: rclone copy source:sourcepath dest:destpath<a class="anchor" aria-label="anchor" href="#syntax-rclone-copy-sourcesourcepath-destdestpath"></a>
-</h5>
-<p>Note that it is always the contents of the directory that is synced,
-not the directory itself. So when source:path is a directory, it’s the
-contents of source:path that are copied, not the directory name and
-contents.</p>
+</div>
+<div class="section level3">
+<h3 id="sync">Sync<a class="anchor" aria-label="anchor" href="#sync"></a>
+</h3>
 <ul>
-<li><p>To copy single files, use the copyto command instead.</p></li>
-<li><p>If dest:path doesn’t exist, it is created and the source:path
-contents go there.</p></li>
-</ul>
-<p><strong>Sync</strong> - Make source and dest identical, modifying
-destination only.</p>
-<ul>
+<li>Make source and dest identical, modifying destination only.<br>
+</li>
 <li>Sync the source to the destination, changing the destination only.
 Doesn’t transfer files that are identical on source and destination,
 testing by size and modification time or MD5SUM. Destination is updated
@@ -867,22 +915,31 @@ objects, see below). <em>If you don’t want to delete files from
 destination, use the copy command instead.</em>
 </li>
 </ul>
-<p><em>syntax: rclone sync source:path dest:path</em></p>
+<p><strong>Syntax:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">rclone</span> sync source:path dest:path</span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="rclone-move-command">rclone move command<a class="anchor" aria-label="anchor" href="#rclone-move-command"></a>
-</h2>
-<hr class="half-width">
+</div>
+<div class="section level3">
+<h3 id="rclone-move-command">Rclone move command<a class="anchor" aria-label="anchor" href="#rclone-move-command"></a>
+</h3>
 <ul>
-<li><p>Moves the contents of the source directory to the destination
+<li>Moves the contents of the source directory to the destination
 directory. Rclone will error if the source and destination overlap and
-the remote does not support a server-side directory move
-operation.</p></li>
-<li><p>To move single files, use the <em>moveto</em> command
-instead.</p></li>
+the remote does not support a server-side directory move operation.</li>
+<li>To move single files, use the <em>moveto</em> command instead.</li>
 </ul>
-<p>##Important Note:## Since this can cause data loss, ##test first with
-the –dry-run or the –interactive/-i flag##.</p>
-<p><em>syntax: rclone move source:path dest:path [flags]</em></p>
+<p><strong>Important Note:</strong> Since this can cause data loss, test
+first with the –dry-run or the –interactive/-i flag.</p>
+<p><strong>Syntax:</strong></p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">rclone</span> move source:path dest:path <span class="pp">[</span><span class="ss">flags</span><span class="pp">]</span></span></code></pre>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="reference-httpsrclone-orgcommandsrclone_move">Reference: <a href="https://rclone.org/commands/rclone_move/" class="external-link">https://rclone.org/commands/rclone_move/</a>
 <a class="anchor" aria-label="anchor" href="#reference-httpsrclone-orgcommandsrclone_move"></a>
 </h2>
@@ -1003,8 +1060,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/aio.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/aio.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-09",
-  "datePublished": "2025-02-09"
+  "dateModified": "2025-02-10",
+  "datePublished": "2025-02-10"
 }
 
   </script><script>

@@ -118,11 +118,11 @@
   Introduction to Rclone
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 52%" class="percentage">
-    52%
+<aside class="col-md-12 lesson-progress"><div style="width: 42%" class="percentage">
+    42%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 52%" aria-valuenow="52" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 42%" aria-valuenow="42" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -243,9 +243,10 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#moving-files-around">moving files around</a></li>
+        <ul><li><a href="#moving-files-around">Moving files around</a></li>
 <li><a href="#the-syntax-for-the-places-to-or-from-is">The syntax for the places, to or from is:</a></li>
 <li><a href="#moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there</a></li>
+<li><a href="#filtering">Filtering</a></li>
 <li><a href="#note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
 different syntax</a></li>
 <li><a href="#valid-remote-names">valid remote names</a></li>
@@ -332,7 +333,7 @@ different syntax</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>moving files around and knowing what is already there</h1>
-        <p>Last updated on 2025-02-09 |
+        <p>Last updated on 2025-02-10 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/moving-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -371,31 +372,71 @@ different syntax</a></li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="moving-files-around">moving files around<a class="anchor" aria-label="anchor" href="#moving-files-around"></a></h2>
+<section><h2 class="section-heading" id="moving-files-around">Moving files around<a class="anchor" aria-label="anchor" href="#moving-files-around"></a></h2>
 <hr class="half-width"><p>Rclone is most frequently used to move files, individually or as a
 group from one place to another.</p>
 </section><section><h2 class="section-heading" id="the-syntax-for-the-places-to-or-from-is">The syntax for the places, to or from is:<a class="anchor" aria-label="anchor" href="#the-syntax-for-the-places-to-or-from-is"></a></h2>
-<hr class="half-width"><p><strong><code>source:folder  destination:folder</code></strong></p>
-</section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a></h2>
-<hr class="half-width"><ul><li>
-<code>rclone **ls** remote:path # **lists contents of a remote**</code>.<br></li>
-<li>
-<code>rclone **copy** /local/path remote:path # **copies&amp;&amp; /local/path to the remote</code><br></li>
-<li><code>rclone **sync** --interactive /local/path remote:path # **syncs** /local/path to the remote</code></li>
-</ul><p><em>Examples:</em></p>
-<p>My home backup of local to an external drive (windows using linux
-subsystem)</p>
-<div class="codewrapper sourceCode" id="cb1">
+<hr class="half-width"><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="ex">copy</span> /mnt/d/work-related /mnt/f/work-related-backup</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">source:folder</span>  destination:folder</span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a></h2>
+<hr class="half-width"><div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">rclone</span> _ls_ remote:path <span class="co"># **lists contents of a remote</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">rclone</span> _copy_ /local/path remote:path <span class="co"># **copies&amp;&amp; /local/path to the remote</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">rclone</span> _sync_ <span class="at">--interactive</span> /local/path remote:path <span class="co"># **syncs** /local/path to the remote</span></span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="filtering">Filtering<a class="anchor" aria-label="anchor" href="#filtering"></a></h2>
+<hr class="half-width"><p>Rclone commands are often similar to bash commands, such as
+<em>ls</em> command. However, Rclone files using the –include flag.</p>
+<p><strong>Examples:</strong></p>
+<p>My home backup of local to an external drive (windows using linux
+subsystem)</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="ex">copy</span> /mnt/d/work-related /mnt/f/work-related-backup   </span></code></pre>
+</div>
+<p>Copying files from google drive and filtering for ’*.txt”</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="ex">copy</span> rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro <span class="at">--include</span> <span class="st">"*.txt"</span>  </span></code></pre>
+</div>
+<p>Checking a result before running by using the <em>-n</em> flag</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="fu">sync</span> rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro <span class="at">-n</span>    </span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="ex">2025/02/09</span> 14:52:11 NOTICE: Beans, Snap and Italian – Pieces, Green and Wax <span class="at">-</span> National Center for Home Food Preservation.pdf: Skipped copy as <span class="at">--dry-run</span> is set <span class="er">(</span><span class="fu">size</span> 91.581Ki<span class="kw">)</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="ex">2025/02/09</span> 14:52:11 NOTICE: For Safety<span class="st">'s Sake - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 69.982Ki)</span></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Preserving_Food__Using_Pressure_Canners.pdf: Skipped copy as --dry-run is set (size 3.839Mi)</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Selecting the Correct Processing Time - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 123.316Ki)</span></span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: test01.txt.docx: Skipped copy as --dry-run is set</span></span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: USDA-Complete-Guide-to-Home-Canning-2015-revision.pdf: Skipped copy as --dry-run is set (size 16.518Mi)</span></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Potatoes, Sweet – Pieces or Whole - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 87.602Ki)</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE:</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="st">Transferred:       21.079 MiB / 21.079 MiB, 100%, 0 B/s, ETA -</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="st">Checks:                 3 / 3, 100%</span></span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="st">Transferred:            8 / 8, 100%</span></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="st">Elapsed time:         2.0s</span></span></code></pre>
 </div>
 <p>[add 2 more examples]</p>
 </section><section><h2 class="section-heading" id="note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
 different syntax<a class="anchor" aria-label="anchor" href="#note-different-operating-systems-have-slightly-different-syntax"></a></h2>
 <hr class="half-width"><ul><li>Windows syntax: rclone ls C:\Users\jjamison\rclone<br></li>
-<li>
-<em>Windows WSL2 Linux subsystem</em> Linux* syntax: rclone ls
+<li>Windows WSL2 Linux subsystem* Linux syntax: rclone ls
 /mnt/c/Users/jjamison/rclone<br></li>
 <li>Linux and macOS: rclone copy rclone-intro-box:rclone-intro
 rclone-intro-google:rclone-intro-google<br>
@@ -481,8 +522,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/instructor/moving-files.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/instructor/moving-files.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-09",
-  "datePublished": "2025-02-09"
+  "dateModified": "2025-02-10",
+  "datePublished": "2025-02-10"
 }
 
   </script><script>

@@ -118,11 +118,11 @@
   Introduction to Rclone
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 68%" class="percentage">
-    68%
+<aside class="col-md-12 lesson-progress"><div style="width: 55%" class="percentage">
+    55%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 68%" aria-valuenow="68" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 55%" aria-valuenow="55" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -253,7 +253,6 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#copy-vs-sync-vs-movd-what-is-the-difference">Copy vs Sync vs Movd: what is the difference</a></li>
-<li><a href="#rclone-move-command">rclone move command</a></li>
 <li><a href="#reference-httpsrclone.orgcommandsrclone_move">Reference: </a><a href="https://rclone.org/commands/rclone_move/" class="external-link">https://rclone.org/commands/rclone_move/</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -328,13 +327,13 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>copy-sync or-move</h1>
-        <p>Last updated on 2025-02-07 |
+        <p>Last updated on 2025-02-10 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/copy-sync-or-move.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
-
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -350,7 +349,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>What is the difference between copy, sync and move</li>
-<li>question 2</li>
+<li>When should you choose one command over the others?</li>
 </ul></div>
 </div>
 </div>
@@ -359,50 +358,70 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Be able to pick the most appropriate command to mvoe file(s)</li>
-<li>objective 2</li>
+<li>Determine which command is most appropriate for different file
+management scenarios.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
 <section><h2 class="section-heading" id="copy-vs-sync-vs-movd-what-is-the-difference">Copy vs Sync vs Movd: what is the difference<a class="anchor" aria-label="anchor" href="#copy-vs-sync-vs-movd-what-is-the-difference"></a></h2>
-<hr class="half-width"><p><strong>Copy</strong> - Copy files from source to dest, skipping
-identical files.</p>
-<ul><li>Copy the source to the destination. Does not transfer files that are
-identical on source and destination, testing by size and modification
-time or MD5SUM. Doesn’t delete files from the destination. If you want
-to also delete files from destination, to make it match source, use the
-sync command instead.</li>
-</ul><div class="section level5">
-<h5 id="syntax-rclone-copy-sourcesourcepath-destdestpath">syntax: rclone copy source:sourcepath dest:destpath<a class="anchor" aria-label="anchor" href="#syntax-rclone-copy-sourcesourcepath-destdestpath"></a></h5>
-<p>Note that it is always the contents of the directory that is synced,
-not the directory itself. So when source:path is a directory, it’s the
-contents of source:path that are copied, not the directory name and
-contents.</p>
-<ul><li><p>To copy single files, use the copyto command instead.</p></li>
-<li><p>If dest:path doesn’t exist, it is created and the source:path
-contents go there.</p></li>
-</ul><p><strong>Sync</strong> - Make source and dest identical, modifying
-destination only.</p>
-<ul><li>Sync the source to the destination, changing the destination only.
+<hr class="half-width"><p>When managing your files with rclone, you have three primary commands
+to choose from: copy, sync, and move. Each command handles data
+differently, so it’s important to understand their behaviors before
+deciding which one to use.</p>
+<div class="section level3">
+<h3 id="copy">Copy<a class="anchor" aria-label="anchor" href="#copy"></a></h3>
+<p>The <code>copy</code> command duplicates files from the source to the
+destination. It compares files (using size, modification time, or MD5
+checksum) and only transfers those that differ. Importantly, copy does
+not remove any files from the destination, making it a safe choice when
+you want to update or add files without risking the loss of existing
+data.</p>
+<p><strong>Syntax:</strong></p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">rclone</span> copy source:sourcepath dest:destpath</span></code></pre>
+</div>
+<p><strong>Notes:</strong></p>
+<ul><li>Only the contents of a directory are copied — not the directory
+itself.</li>
+<li>Use the <code>copyto</code> command for copying single files.</li>
+<li>If the destination path does not exist, it will be created.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="sync">Sync<a class="anchor" aria-label="anchor" href="#sync"></a></h3>
+<ul><li>Make source and dest identical, modifying destination only.<br></li>
+<li>Sync the source to the destination, changing the destination only.
 Doesn’t transfer files that are identical on source and destination,
 testing by size and modification time or MD5SUM. Destination is updated
 to match source, including deleting files if necessary (except duplicate
 objects, see below). <em>If you don’t want to delete files from
 destination, use the copy command instead.</em>
 </li>
-</ul><p><em>syntax: rclone sync source:path dest:path</em></p>
+</ul><p><strong>Syntax:</strong></p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">rclone</span> sync source:path dest:path</span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="rclone-move-command">rclone move command<a class="anchor" aria-label="anchor" href="#rclone-move-command"></a></h2>
-<hr class="half-width"><ul><li><p>Moves the contents of the source directory to the destination
+</div>
+<div class="section level3">
+<h3 id="rclone-move-command">Rclone move command<a class="anchor" aria-label="anchor" href="#rclone-move-command"></a></h3>
+<ul><li>Moves the contents of the source directory to the destination
 directory. Rclone will error if the source and destination overlap and
-the remote does not support a server-side directory move
-operation.</p></li>
-<li><p>To move single files, use the <em>moveto</em> command
-instead.</p></li>
-</ul><p>##Important Note:## Since this can cause data loss, ##test first with
-the –dry-run or the –interactive/-i flag##.</p>
-<p><em>syntax: rclone move source:path dest:path [flags]</em></p>
+the remote does not support a server-side directory move operation.</li>
+<li>To move single files, use the <em>moveto</em> command instead.</li>
+</ul><p><strong>Important Note:</strong> Since this can cause data loss, test
+first with the –dry-run or the –interactive/-i flag.</p>
+<p><strong>Syntax:</strong></p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">rclone</span> move source:path dest:path <span class="pp">[</span><span class="ss">flags</span><span class="pp">]</span></span></code></pre>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="reference-httpsrclone-orgcommandsrclone_move">Reference: <a href="https://rclone.org/commands/rclone_move/" class="external-link">https://rclone.org/commands/rclone_move/</a>
 <a class="anchor" aria-label="anchor" href="#reference-httpsrclone-orgcommandsrclone_move"></a></h2>
 <hr class="half-width"><div id="keypoints1" class="callout keypoints">
@@ -479,8 +498,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/instructor/copy-sync-or-move.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/instructor/copy-sync-or-move.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-07",
-  "datePublished": "2025-02-09"
+  "dateModified": "2025-02-10",
+  "datePublished": "2025-02-10"
 }
 
   </script><script>
