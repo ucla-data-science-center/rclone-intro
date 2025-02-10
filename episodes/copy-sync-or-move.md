@@ -1,14 +1,12 @@
 ---
 title: "copy-sync or-move"
-output: html_document
-date: "2024-03-22"
+teaching: 15
+exercises: 10
 ---
 
 :::::: questions
 - What is the difference between copy, sync and move
 - When should you choose one command over the others?
-::::::
- 
 ::::::
 
 :::::: objectives
