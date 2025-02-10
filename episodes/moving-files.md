@@ -19,21 +19,27 @@ date: "2024-03-26"
  
 ::::::
 
-## moving files around
+## Moving files around
 
 Rclone is most frequently used to move files, individually or as a group from one place to another.
 
 
 ## The syntax for the places, to or from is:
 
-**```source:folder  destination:folder```**
-
-
+```bash
+source:folder  destination:folder
+```
 ## Moving, syncing and knowing what is already there  
 
-- ```rclone _ls_ remote:path # **lists contents of a remote**```.  
-- ```rclone _copy_ /local/path remote:path # **copies&& /local/path to the remote ```  
-- ```rclone _sync_ --interactive /local/path remote:path # **syncs** /local/path to the remote ```  
+```bash
+rclone _ls_ remote:path # **lists contents of a remote
+```  
+```bash
+rclone _copy_ /local/path remote:path # **copies&& /local/path to the remote
+```  
+```bash
+rclone _sync_ --interactive /local/path remote:path # **syncs** /local/path to the remote
+```  
 
 ## Filtering 
 Rclone commands are often similar to bash commands, such as _ls_ command.   However, Rclone files using the  --include flag.
@@ -41,16 +47,19 @@ Rclone commands are often similar to bash commands, such as _ls_ command.   Howe
 **Examples:**
 
 My home backup of local to an external drive (windows using linux subsystem)  
+
 ```bash
 > rclone copy /mnt/d/work-related /mnt/f/work-related-backup   
+```
 
 Copying files from google drive and filtering for '*.txt"    
 
+```bash
 > rclone copy rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro --include "*.txt"  
-
-
+```
 Checking a result before running by using the _-n_ flag
 
+```bash
 > rclone sync rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro -n    
 2025/02/09 14:52:11 NOTICE: Beans, Snap and Italian – Pieces, Green and Wax - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 91.581Ki)
 2025/02/09 14:52:11 NOTICE: For Safety's Sake - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 69.982Ki)
@@ -64,11 +73,9 @@ Transferred:       21.079 MiB / 21.079 MiB, 100%, 0 B/s, ETA -
 Checks:                 3 / 3, 100%
 Transferred:            8 / 8, 100%
 Elapsed time:         2.0s
-
 ```
 
 [add 2 more examples]
-
 
 ## Note: Different operating systems have __slightly__ different syntax 
 
