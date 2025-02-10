@@ -1,11 +1,11 @@
 ---
-title: "copy-sync or-move"
+title: "Choosing the Right rclone Command: Copy, Sync, or Move"
 teaching: 15
 exercises: 10
 ---
 
 :::::: questions
-- What is the difference between copy, sync and move
+- What is the difference between copy, sync and move?
 - When should you choose one command over the others?
 ::::::
 
@@ -14,13 +14,13 @@ exercises: 10
 - Determine which command is most appropriate for different file management scenarios.
 ::::::::::::
 
-## Copy vs Sync vs Movd: what is the difference
+## Copy, Sync, or Move
 
-When managing your files with rclone, you have three primary commands to choose from: copy, sync, and move. Each command handles data differently, so it’s important to understand their behaviors before deciding which one to use.
+When managing your files with rclone, you have three primary commands: **copy**, **sync**, and **move**. Each command handles your data differently, so it's important to know their unique behaviors to choose the right one for your task.
 
 ### Copy 
 
-The ```copy``` command duplicates files from the source to the destination. It compares files (using size, modification time, or MD5 checksum) and only transfers those that differ. Importantly, copy does not remove any files from the destination, making it a safe choice when you want to update or add files without risking the loss of existing data.
+The `copy` command duplicates files from the source to the destination. It compares files (by size, modification time, or MD5 checksum) and transfers only those that are new or have changed. Copying does not delete any files at the destination, making it safe when you simply want to update or add files.
 
 **Syntax:** 
 
@@ -35,8 +35,7 @@ rclone copy source:sourcepath dest:destpath
 
 ### Sync 
 
-- Make source and dest identical, modifying destination only.  
--  Sync the source to the destination, changing the destination only. Doesn't transfer files that are identical on source and destination, testing by size and modification time or MD5SUM. Destination is updated to match source, including deleting files if necessary (except duplicate objects, see below). *If you don't want to delete files from destination, use the copy command instead.*
+The sync command makes the destination an exact mirror of the source. It copies new or updated files and deletes files in the destination that are not present in the source. Use sync when you need both locations to be identical, but be cautious as it can remove files from the destination.
 
 **Syntax:** 
 
@@ -44,10 +43,9 @@ rclone copy source:sourcepath dest:destpath
 rclone sync source:path dest:path
 ```
 
-### Rclone move command
+### Move 
 
-- Moves the contents of the source directory to the destination directory. Rclone will error if the source and destination overlap and the remote does not support a server-side directory move operation. 
-- To move single files, use the *moveto* command instead.
+The move command transfers files from the source to the destination and then deletes them from the source after a successful transfer. This is useful when you want to relocate files rather than keep copies in both places.
 
 **Important Note:** Since this can cause data loss, test first with the --dry-run or the --interactive/-i flag.
 
