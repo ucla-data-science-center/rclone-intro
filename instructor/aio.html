@@ -280,7 +280,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="moving-files.html">4. moving files around and knowing what is already there</a>
+        <a href="moving-files.html">4. File Transfers, Listing, and Verification</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -716,11 +716,12 @@ verbose.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-moving-files"><p>Content from <a href="moving-files.html">moving files around and knowing what is already there</a></p>
+</section></section><section id="aio-moving-files"><p>Content from <a href="moving-files.html">File Transfers, Listing, and Verification</a></p>
 <hr>
 <p>Last updated on 2025-02-10 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/moving-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -732,9 +733,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How are files moved or copied</li>
-<li>What does the <em>rclone sync</em> do</li>
-<li>How do you see what is already in the destination</li>
+<li>How are files moved or copied?</li>
+<li>What does the <em>rclone sync</em> do?</li>
+<li>How do you see what is already in the destination?</li>
 </ul>
 </div>
 </div>
@@ -745,7 +746,7 @@ any links that you are not going to use.
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Understand the difference between copy and sync</li>
-<li>Be able to see what is already in the destination</li>
+<li>Be able to list what is already in the destination</li>
 <li>Command line using Linux vs Windows WSL2 subsystem linux</li>
 </ul>
 </div>
@@ -769,20 +770,23 @@ group from one place to another.</p>
 </section><section><h2 class="section-heading" id="moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there<a class="anchor" aria-label="anchor" href="#moving-syncing-and-knowing-what-is-already-there"></a>
 </h2>
 <hr class="half-width">
+<p>Lists contents of a remote:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">rclone</span> _ls_ remote:path <span class="co"># **lists contents of a remote</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="fu">ls</span> remote:path</span></code></pre>
 </div>
+<p>Copy local files to remote:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">rclone</span> _copy_ /local/path remote:path <span class="co"># copies&amp;&amp; /local/path to the remote</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="ex">copy</span> /local/path remote:path <span class="co"># copies /local/path to the remote</span></span></code></pre>
 </div>
+<p>Sync local files to remote:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">rclone</span> _sync_ <span class="at">--interactive</span> /local/path remote:path <span class="co"># **syncs** /local/path to the remote</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="fu">sync</span> <span class="at">--interactive</span> /local/path remote:path <span class="co"># syncs /local/path to the remote</span></span></code></pre>
 </div>
 </section><section><h2 class="section-heading" id="filtering">Filtering<a class="anchor" aria-label="anchor" href="#filtering"></a>
 </h2>
