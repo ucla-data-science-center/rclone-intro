@@ -315,7 +315,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2025-01-18 |
+        <p>Last updated on 2025-02-10 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -329,21 +329,47 @@
 
         
 
-<section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
-<hr class="half-width"><p>copy sync</p>
-<ul><li>Copy – new or changed files to cloud storage</li>
-<li>Sync – (one way) to make a directory identical</li>
-<li>Move – files to cloud storage, deleting the local after
-verification</li>
-<li>Check hashes and for missing/extra files</li>
-</ul></section><section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+<section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
 <hr class="half-width"><p>Rclond page: <a href="https://rclone.org/" class="external-link">https://rclone.org/</a></p>
 <p>Rclone commands: <a href="https://rclone.org/commands/" class="external-link">https://rclone.org/commands/</a></p>
-<!--
+</section><section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
+<hr class="half-width"><dl><dt>Copy</dt>
+<dd>
+A command that transfers new or changed files from the source to the
+destination without removing any existing files at the destination.
+</dd>
+<dt>Move</dt>
+<dd>
+A command that transfers files from the source to the destination and
+then deletes them from the source after verifying a successful transfer.
+</dd>
+<dt>Sync</dt>
+<dd>
+A command that makes the destination an exact mirror of the source by
+copying new or updated files and deleting files in the destination that
+are no longer present in the source.
+</dd>
+<dt>Remote</dt>
+<dd>
+A storage service or device that is not part of your local machine but
+can be accessed using the rclone command-line tool. This includes cloud
+services like Google Drive, Dropbox, or Amazon S3, as well as remote
+servers and external drives.
+</dd>
+<dt>Local</dt>
+<dd>
+Refers to the files and directories on your own computer.
+</dd>
+<dt>Filtering</dt>
+<dd>
+The process of selecting specific files for an operation based on
+criteria, such as filename patterns. In rclone, this is often achieved
+using flags like <code>--include</code>.
+</dd>
+</dl><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -401,7 +427,7 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/instructor/reference.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/instructor/reference.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-01-18",
+  "dateModified": "2025-02-10",
   "datePublished": "2025-02-10"
 }
 
