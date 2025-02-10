@@ -35,16 +35,17 @@ source:folder  destination:folder
 rclone _ls_ remote:path # **lists contents of a remote
 ```  
 ```bash
-rclone _copy_ /local/path remote:path # **copies&& /local/path to the remote
+rclone _copy_ /local/path remote:path # copies&& /local/path to the remote
 ```  
 ```bash
 rclone _sync_ --interactive /local/path remote:path # **syncs** /local/path to the remote
 ```  
 
 ## Filtering 
+
 Rclone commands are often similar to bash commands, such as _ls_ command.   However, Rclone files using the  --include flag.
 
-**Examples:**
+**Some Examples:**
 
 My home backup of local to an external drive (windows using linux subsystem)  
 
@@ -60,7 +61,9 @@ Copying files from google drive and filtering for '*.txt"
 Checking a result before running by using the _-n_ flag
 
 ```bash
-> rclone sync rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro -n    
+> rclone sync rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro -n
+```
+```output    
 2025/02/09 14:52:11 NOTICE: Beans, Snap and Italian – Pieces, Green and Wax - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 91.581Ki)
 2025/02/09 14:52:11 NOTICE: For Safety's Sake - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 69.982Ki)
 2025/02/09 14:52:11 NOTICE: Preserving_Food__Using_Pressure_Canners.pdf: Skipped copy as --dry-run is set (size 3.839Mi)
@@ -77,18 +80,28 @@ Elapsed time:         2.0s
 
 [add 2 more examples]
 
-## Note: Different operating systems have __slightly__ different syntax 
+## Different operating systems have __slightly__ different syntax 
 
-- Windows syntax:   rclone ls C:\\Users\\jjamison\\rclone    
-- Windows WSL2 Linux subsystem* Linux syntax:  rclone ls /mnt/c/Users/jjamison/rclone   
-- Linux and macOS:    rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google    
-                      rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google -n   
+Windows syntax:
+ 
+```bash
+rclone ls C:\\Users\\jjamison\\rclone
+```
+- Linux and macOS:
 
+```bash
+rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google    
+rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google -n   
+```
+Windows WSL2 Linux subsystem* Linux syntax:  
 
+```bash
+rclone ls /mnt/c/Users/jjamison/rclone   
+```
 
-## valid remote names  
+## Valid remote names  
+
 [https://rclone.org/docs/#valid-remote-names](https://rclone.org/docs/#valid-remote-names)
-
 
 ## Reference:   
 
