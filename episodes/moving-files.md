@@ -1,20 +1,20 @@
 ---
-title: "moving files around and knowing what is already there"
-output: html_document
-date: "2024-03-26"
+title: "File Transfers, Listing, and Verification"
+teaching: 15
+exercises: 10
 ---
 
 
 :::::: questions
- - How are files moved or copied
- - What does the *rclone sync* do
- - How do you see what is already in the destination 
+ - How are files moved or copied?
+ - What does the *rclone sync* do?
+ - How do you see what is already in the destination?  
  
 ::::::
 
 :::::: objectives
  - Understand the difference between copy and sync
- - Be able to see what is already in the destination
+ - Be able to list what is already in the destination
  - Command line using Linux vs Windows WSL2 subsystem linux
  
 ::::::
@@ -23,7 +23,6 @@ date: "2024-03-26"
 
 Rclone is most frequently used to move files, individually or as a group from one place to another.
 
-
 ## The syntax for the places, to or from is:
 
 ```bash
@@ -31,14 +30,21 @@ source:folder  destination:folder
 ```
 ## Moving, syncing and knowing what is already there  
 
+Lists contents of a remote: 
+
 ```bash
-rclone _ls_ remote:path # **lists contents of a remote
-```  
+> rclone ls remote:path
+```
+Copy local files to remote: 
+
 ```bash
-rclone _copy_ /local/path remote:path # copies&& /local/path to the remote
-```  
+> rclone copy /local/path remote:path # copies /local/path to the remote
+```
+
+Sync local files to remote: 
+
 ```bash
-rclone _sync_ --interactive /local/path remote:path # **syncs** /local/path to the remote
+> rclone sync --interactive /local/path remote:path # syncs /local/path to the remote
 ```  
 
 ## Filtering 
