@@ -1,9 +1,8 @@
 ---
 title: "Getting Help"
-output: html_document
-date: "2024-03-21"
+teaching: 10
+exercises: 5
 ---
-
 
 :::::: questions
  - question 1
