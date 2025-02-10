@@ -1,6 +1,7 @@
 ---
-title: "rclone config command"
-output: html_document
+title: "Rclone config command"
+teaching: 15
+exercises: 5
 ---
 
 :::::: questions
