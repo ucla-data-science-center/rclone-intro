@@ -18,7 +18,7 @@ exercises: 5
  
 ::::::
 
-## rclone config command: 
+## Rclone config command: 
 
 The *rclone config" command enteres an interactive configuration session where you can setup new remotes, edit and manage existing ones. 
 
@@ -32,7 +32,7 @@ sand
 ![rclone config edit ](rclone-config-interactive.JPG)
 
 
-## rclone command flags
+## Rclone command flags
 
 There are numerous command flags but these three are especially worth remembering:
 
