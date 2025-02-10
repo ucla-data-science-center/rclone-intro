@@ -19,9 +19,7 @@ exercises: 2
 
 ## Introduction: What is rclone?
 
-Rclone is a *command line* program to manage files on cloud storage. After download and install, continue here to learn how to use it: Initial configuration, what the basic syntax looks like, describes the various subcommands, the various options, and more.
-
-Rclone is primarily used for moving, copying, and synchronizing data between your local system and various cloud storage services, making it an essential tool for efficient data management and backups.
+Rclone is a *command line* program to manage files on cloud storage. Rclone is primarily used  for transferring, syncing, and moving data between local systems and various cloud storage services. 
 
 ![Test Illustration](test-illustration.jpg)
 
