@@ -247,9 +247,9 @@
 <li><a href="#the-syntax-for-the-places-to-or-from-is">The syntax for the places, to or from is:</a></li>
 <li><a href="#moving-syncing-and-knowing-what-is-already-there">Moving, syncing and knowing what is already there</a></li>
 <li><a href="#filtering">Filtering</a></li>
-<li><a href="#note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
-different syntax</a></li>
-<li><a href="#valid-remote-names">valid remote names</a></li>
+<li><a href="#different-operating-systems-have-slightly-different-syntax">Different operating systems have <strong>slightly</strong> different
+syntax</a></li>
+<li><a href="#valid-remote-names">Valid remote names</a></li>
 <li><a href="#reference">Reference:</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -388,7 +388,7 @@ group from one place to another.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">rclone</span> _copy_ /local/path remote:path <span class="co"># **copies&amp;&amp; /local/path to the remote</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">rclone</span> _copy_ /local/path remote:path <span class="co"># copies&amp;&amp; /local/path to the remote</span></span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -398,7 +398,7 @@ group from one place to another.</p>
 </section><section><h2 class="section-heading" id="filtering">Filtering<a class="anchor" aria-label="anchor" href="#filtering"></a></h2>
 <hr class="half-width"><p>Rclone commands are often similar to bash commands, such as
 <em>ls</em> command. However, Rclone files using the –include flag.</p>
-<p><strong>Examples:</strong></p>
+<p><strong>Some Examples:</strong></p>
 <p>My home backup of local to an external drive (windows using linux
 subsystem)</p>
 <div class="codewrapper sourceCode" id="cb5">
@@ -416,31 +416,47 @@ subsystem)</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="fu">sync</span> rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro <span class="at">-n</span>    </span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="ex">2025/02/09</span> 14:52:11 NOTICE: Beans, Snap and Italian – Pieces, Green and Wax <span class="at">-</span> National Center for Home Food Preservation.pdf: Skipped copy as <span class="at">--dry-run</span> is set <span class="er">(</span><span class="fu">size</span> 91.581Ki<span class="kw">)</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="ex">2025/02/09</span> 14:52:11 NOTICE: For Safety<span class="st">'s Sake - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 69.982Ki)</span></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Preserving_Food__Using_Pressure_Canners.pdf: Skipped copy as --dry-run is set (size 3.839Mi)</span></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Selecting the Correct Processing Time - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 123.316Ki)</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: test01.txt.docx: Skipped copy as --dry-run is set</span></span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: USDA-Complete-Guide-to-Home-Canning-2015-revision.pdf: Skipped copy as --dry-run is set (size 16.518Mi)</span></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE: Potatoes, Sweet – Pieces or Whole - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 87.602Ki)</span></span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="st">2025/02/09 14:52:11 NOTICE:</span></span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="st">Transferred:       21.079 MiB / 21.079 MiB, 100%, 0 B/s, ETA -</span></span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="st">Checks:                 3 / 3, 100%</span></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a><span class="st">Transferred:            8 / 8, 100%</span></span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a><span class="st">Elapsed time:         2.0s</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="op">&gt;</span> rclone <span class="fu">sync</span> rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro <span class="at">-n</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>2025/02/09 14:52:11 NOTICE: Beans, Snap and Italian – Pieces, Green and Wax - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 91.581Ki)
+2025/02/09 14:52:11 NOTICE: For Safety's Sake - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 69.982Ki)
+2025/02/09 14:52:11 NOTICE: Preserving_Food__Using_Pressure_Canners.pdf: Skipped copy as --dry-run is set (size 3.839Mi)
+2025/02/09 14:52:11 NOTICE: Selecting the Correct Processing Time - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 123.316Ki)
+2025/02/09 14:52:11 NOTICE: test01.txt.docx: Skipped copy as --dry-run is set
+2025/02/09 14:52:11 NOTICE: USDA-Complete-Guide-to-Home-Canning-2015-revision.pdf: Skipped copy as --dry-run is set (size 16.518Mi)
+2025/02/09 14:52:11 NOTICE: Potatoes, Sweet – Pieces or Whole - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 87.602Ki)
+2025/02/09 14:52:11 NOTICE:
+Transferred:       21.079 MiB / 21.079 MiB, 100%, 0 B/s, ETA -
+Checks:                 3 / 3, 100%
+Transferred:            8 / 8, 100%
+Elapsed time:         2.0s</code></pre>
 </div>
 <p>[add 2 more examples]</p>
-</section><section><h2 class="section-heading" id="note-different-operating-systems-have-slightly-different-syntax">Note: Different operating systems have <strong>slightly</strong>
-different syntax<a class="anchor" aria-label="anchor" href="#note-different-operating-systems-have-slightly-different-syntax"></a></h2>
-<hr class="half-width"><ul><li>Windows syntax: rclone ls C:\Users\jjamison\rclone<br></li>
-<li>Windows WSL2 Linux subsystem* Linux syntax: rclone ls
-/mnt/c/Users/jjamison/rclone<br></li>
-<li>Linux and macOS: rclone copy rclone-intro-box:rclone-intro
-rclone-intro-google:rclone-intro-google<br>
-rclone copy rclone-intro-box:rclone-intro
-rclone-intro-google:rclone-intro-google -n</li>
-</ul></section><section><h2 class="section-heading" id="valid-remote-names">valid remote names<a class="anchor" aria-label="anchor" href="#valid-remote-names"></a></h2>
+</section><section><h2 class="section-heading" id="different-operating-systems-have-slightly-different-syntax">Different operating systems have <strong>slightly</strong> different
+syntax<a class="anchor" aria-label="anchor" href="#different-operating-systems-have-slightly-different-syntax"></a></h2>
+<hr class="half-width"><p>Windows syntax:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">rclone</span> ls C:<span class="dt">\\</span>Users<span class="dt">\\</span>jjamison<span class="dt">\\</span>rclone</span></code></pre>
+</div>
+<ul><li>Linux and macOS:</li>
+</ul><div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">rclone</span> copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google    </span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="ex">rclone</span> copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google <span class="at">-n</span>   </span></code></pre>
+</div>
+<p>Windows WSL2 Linux subsystem* Linux syntax:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">rclone</span> ls /mnt/c/Users/jjamison/rclone   </span></code></pre>
+</div>
+</section><section><h2 class="section-heading" id="valid-remote-names">Valid remote names<a class="anchor" aria-label="anchor" href="#valid-remote-names"></a></h2>
 <hr class="half-width"><p><a href="https://rclone.org/docs/#valid-remote-names" class="external-link">https://rclone.org/docs/#valid-remote-names</a></p>
 </section><section><h2 class="section-heading" id="reference">Reference:<a class="anchor" aria-label="anchor" href="#reference"></a></h2>
 <hr class="half-width"><p><a href="https://rclone.org/docs/#subcommands" class="external-link">https://rclone.org/docs/#subcommands</a></p>
