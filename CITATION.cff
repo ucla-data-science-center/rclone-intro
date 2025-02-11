@@ -3,7 +3,7 @@ title: Introduction to Rclone
 message: >-
   Please cite this lesson using the information in this file when referring to it in publications,
   or if you re-use, adapt, or expand on its content in your own training material.
-type: lesson
+type: dataset
 authors:
   - given-names: Jamie
     family-names: Jamison
