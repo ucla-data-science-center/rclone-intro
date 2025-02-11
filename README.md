@@ -17,6 +17,7 @@ Also, check the current list of [issues](https://github.com/ucla-data-science-ce
 The current maintainer for this lesson is:
 
 * [Jamie Jamison](https://github.com/jmjamison)
+* [Tim Dennis](https://github.com/jt14den)
 
 ## Acknowledgements
 We thank everyone who contributed suggestions, reviews, and support for this lesson.
