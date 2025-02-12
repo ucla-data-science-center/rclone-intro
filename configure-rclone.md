@@ -26,10 +26,10 @@ The *rclone config" command enteres an interactive configuration session where y
 ## syntax:  
 **rclone config [flags]**
  
-![rclone config ](rclone-config-screen-image.jpg)  
+![rclone config ](fig/rclone-config-screen-image.jpg)  
 sand
 
-![rclone config edit ](rclone-config-interactive.JPG)
+![rclone config edit ](fig/rclone-config-interactive.JPG)
 
 
 ## Rclone command flags
