@@ -5,7 +5,7 @@ exercises: 5
 ---
 
 :::::: questions
- - Once installed, how is rclone setup or configured?
+ - Once installed, how is Rclone setup or configured?
  - How to check for and edit existing configurations
  - what is a remote/headless machine 
  
