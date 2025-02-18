@@ -5,7 +5,7 @@ exercises: 10 # exercise time in minutes
 ---
 
 :::::: questions
- - What are rclone remotes?
+ - What are Rclone remotes?
  - How are they used?
 ::::::
 
@@ -16,13 +16,13 @@ exercises: 10 # exercise time in minutes
 
 ## Creating a remote connection
 
-A remote is any storage location not on your local machine. Use rclone config to connect to services like Google Drive or Amazon S3. Rclone remotes can be used to transfer and synchronize files between cloud storage services, servers, and machines. 
+A remote is any storage location not on your local machine. Use Rclone config to connect to services like Google Drive or Amazon S3. Rclone remotes can be used to transfer and synchronize files between cloud storage services, servers, and machines. 
 
 This can be an S3 bucket, Google Drive, Box or even a local machine. 
 
 ![rclone connections](rclone-connections.jpg)
 
 :::::: keypoints
- - rclone remote and local connections
+ - Rclone remote and local connections
  - Types of cloud storage services that can be connected
 ::::::

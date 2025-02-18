@@ -1,5 +1,5 @@
 ---
-title: "Choosing the Right rclone Command: Copy, Sync, or Move"
+title: "Choosing the Right Rclone Command: Copy, Sync, or Move"
 teaching: 15
 exercises: 10
 ---

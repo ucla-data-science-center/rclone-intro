@@ -24,7 +24,7 @@ The *rclone config" command enteres an interactive configuration session where y
 
 
 ## syntax:  
-**rclone config [flags]**
+**Rclone config [flags]**
  
 ![rclone config ](fig/rclone-config-screen-image.jpg)  
 sand
@@ -54,14 +54,14 @@ A *headless* machine is one that has no browser available.  For example you are 
 
 Some of the configurations (those involving oauth2) require an Internet connected web browser.
 
-We are going to walk through this but here is an example from the rclone documentation [https://rclone.org/remote_setup/#configuring-using-rclone-authorize](https://rclone.org/remote_setup/#configuring-using-rclone-authorizef).
+We are going to walk through this but here is an example from the Rclone documentation [https://rclone.org/remote_setup/#configuring-using-rclone-authorize](https://rclone.org/remote_setup/#configuring-using-rclone-authorizef).
 
 ![rclone config with headless machine ](headless-machine.jpg)  
 
 
 ## Documentation Specific to Remote    
 
-rclone includes extensive documentation that is specific to particular remotes.
+Rclone includes extensive documentation that is specific to particular remotes.
 
 Examples:   
 
