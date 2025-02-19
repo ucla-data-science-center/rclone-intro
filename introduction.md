@@ -23,10 +23,6 @@ Rclone is a *command line* program to manage files on cloud storage. Rclone is p
 
 ![Test Illustration](test-illustration.jpg)
 
-### Disambiguation:  Rclone and Rsync
-Note: Is this section necessary?  Should I explain the difference between Rclone and Rsync
-
->Rclone and Rsync are command-line tools. Rclone is designed for copying files between cloud servers and a different server or workstation, while rsync offers more advanced features for file synchronization.  
 
 :::::::::::::::::::::::::::::::::::: challenge
 
