@@ -29,6 +29,14 @@ The *rclone config" command enteres an interactive configuration session where y
 ![rclone config ](fig/rclone-config-screen-image.jpg)  
 sand
 
+```bash
+rclone config
+```
+
+```output
+output goes here
+```
+
 ![rclone config edit ](fig/rclone-config-interactive.JPG)
 
 
