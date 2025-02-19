@@ -13,7 +13,8 @@ Rclone is a cross-platform application that runs on Linux, Windows, and macOS. B
 
 ## Rclone downloads for various OS 
 
-::::::::::::::::: tab
+
+::::::::::::::::::::: group-tab
     
 ### Windows
     
@@ -29,9 +30,9 @@ rclone version
 
 to verify the installation.
 
-:::::::::::::::::::::::::
 
-::::::::::::::::: tab
+
+
 
 ### macOS
 
@@ -49,9 +50,7 @@ or download the precompiled binary from the website.
 rclone version
 ```
 
-:::::::::::::::::::::::::
 
-::::::::::::::::: tab
 
 ### Linux
 
@@ -68,4 +67,5 @@ This downloads and installs the latest version of rclone.
 ```bash
 rclone version
 ```
-:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::
+
