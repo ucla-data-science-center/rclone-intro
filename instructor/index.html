@@ -441,33 +441,86 @@ any links that you are not going to use.
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
       </section><section id="setup"><section><h2 class="section-heading" id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
-<hr class="half-width"><p>Rclone is a cross-platform application. It runs on Linux, Windows and
-MacOS.</p>
-<p>The installation files for different systems can be found on the
-Rclone download page.</p>
-<p><a href="https://rclone.org/downloads/" class="external-link">rclone downloads for various
-OS</a></p>
+<hr class="half-width"><p>Rclone is a cross-platform application that runs on Linux, Windows,
+and macOS. Below you’ll find tailored installation instructions for your
+operating system. For more details or alternative methods, visit the <a href="https://rclone.org/downloads/" class="external-link">Rclone download page</a>.</p>
 <figure><img src="../rclone-download.jpg" alt="rclone download page" class="figure mx-auto d-block"><div class="figcaption">rclone download page</div>
 </figure></section><section><h2 class="section-heading" id="rclone-downloads-for-various-os">Rclone downloads for various OS<a class="anchor" aria-label="anchor" href="#rclone-downloads-for-various-os"></a></h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h3>
-<p><a href="https://rclone.org/install/#windows" class="external-link">Windows
-installation</a></p>
+<hr class="half-width"><div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-Windows" name="Windows" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Windows" type="button" role="tab" aria-controls="nav-tabpanel-1-Windows" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-Windows">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-macOS" name="macOS" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-macOS" type="button" role="tab" aria-controls="nav-tabpanel-1-macOS" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-macOS">
+  macOS
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-Linux" name="Linux" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Linux" type="button" role="tab" aria-controls="nav-tabpanel-1-Linux" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-Linux">
+  Linux
+  </h3>
+</button>
 </div>
-<div class="section level3">
-<h3 id="macos">MacOS<a class="anchor" aria-label="anchor" href="#macos"></a></h3>
-<p><a href="https://rclone.org/install/#macos" class="external-link">macOS
-installation</a></p>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
+<ol style="list-style-type: decimal"><li>Visit the <a href="https://rclone.org/install/#windows" class="external-link">Windows
+installation page</a>.</li>
+<li>Download the appropriate zip file for your system.</li>
+<li>Extract the downloaded zip file to a folder of your choice.</li>
+<li>(Optional) Add the folder to your system’s PATH environment variable
+for easy command-line access.</li>
+<li>Open Command Prompt or PowerShell and run:</li>
+</ol><div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">rclone</span> version</span></code></pre>
 </div>
-<div class="section level3">
-<h3 id="linux">Linux<a class="anchor" aria-label="anchor" href="#linux"></a></h3>
-<p><a href="https://rclone.org/install/#linux" class="external-link">Linux
-installation</a></p>
+<p>to verify the installation.</p>
+</div>
+<div id="nav-tabpanel-1-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-macOS">
+<ol style="list-style-type: decimal"><li>Go to the <a href="https://rclone.org/install/#macos" class="external-link">macOS
+installation page</a>.</li>
+<li>You can install rclone using Homebrew by running:</li>
+</ol><div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">brew</span> install rclone</span></code></pre>
+</div>
+<p>or download the precompiled binary from the website. 3. Verify your
+installation by opening Terminal and executing:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">rclone</span> version</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
+<ol style="list-style-type: decimal"><li>Visit the <a href="https://rclone.org/install/#linux" class="external-link">Linux
+installation page</a> for detailed instructions.</li>
+<li>The easiest installation method is using the provided script. Open
+your terminal and run:</li>
+</ol><div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">curl</span> https://rclone.org/install.sh <span class="kw">|</span> <span class="fu">sudo</span> bash</span></code></pre>
+</div>
+<p>This downloads and installs the latest version of rclone. 3. Confirm
+the installation by typing:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">rclone</span> version</span></code></pre>
+</div>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -495,7 +548,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.11" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.7" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.11" class="external-link">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -517,8 +570,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/instructor/index.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/instructor/index.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-19",
-  "datePublished": "2025-02-19"
+  "dateModified": "2025-03-04",
+  "datePublished": "2025-03-04"
 }
 
   </script><script>
