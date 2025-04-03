@@ -1,7 +1,7 @@
 ---
 title: "Creating Remote Connections"
-teaching: 5   # teaching time in minutes
-exercises: 10 # exercise time in minutes
+teaching: 5   
+exercises: 10
 ---
 
 :::::: questions
