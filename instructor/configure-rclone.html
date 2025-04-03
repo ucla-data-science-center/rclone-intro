@@ -235,7 +235,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#rclone-config-command">Rclone config command:</a></li>
-<li><a href="#syntax">syntax:</a></li>
+<li><a href="#syntax">Syntax:</a></li>
 <li><a href="#rclone-command-flags">Rclone command flags</a></li>
 <li><a href="#configuring-rclone-on-a-remoteheadless-machine">Configuring rclone on a remote/headless machine</a></li>
 <li><a href="#documentation-specific-to-remote">Documentation Specific to Remote</a></li>
@@ -331,7 +331,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Rclone config command</h1>
-        <p>Last updated on 2025-03-04 |
+        <p>Last updated on 2025-04-03 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/configure-rclone.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -375,10 +375,8 @@ available (ie. headless)</li>
 <hr class="half-width"><p>The *rclone config” command enteres an interactive configuration
 session where you can setup new remotes, edit and manage existing
 ones.</p>
-</section><section><h2 class="section-heading" id="syntax">syntax:<a class="anchor" aria-label="anchor" href="#syntax"></a></h2>
-<hr class="half-width"><p><strong>Rclone config [flags]</strong></p>
-<p><img src="../fig/rclone-config-screen-image.jpg" alt="rclone config" class="figure"><br>
-sand</p>
+</section><section><h2 class="section-heading" id="syntax">Syntax:<a class="anchor" aria-label="anchor" href="#syntax"></a></h2>
+<hr class="half-width"><p><strong><code>Rclone config [flags]</code></strong></p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -387,7 +385,14 @@ sand</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>output goes here</code></pre>
+<pre class="output" tabindex="0"><code>
+2025/04/03 07:25:18 NOTICE: Config file "/Users/timdennis/.config/rclone/rclone.conf" not found - using defaults
+No remotes found, make a new one?
+n) New remote
+s) Set configuration password
+q) Quit config
+n/s/q&gt;
+</code></pre>
 </div>
 <figure><img src="../fig/rclone-config-interactive.JPG" alt="rclone config edit" class="figure mx-auto d-block"><div class="figcaption">rclone config edit</div>
 </figure></section><section><h2 class="section-heading" id="rclone-command-flags">Rclone command flags<a class="anchor" aria-label="anchor" href="#rclone-command-flags"></a></h2>
@@ -503,7 +508,7 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/instructor/configure-rclone.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/instructor/configure-rclone.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-03-04",
+  "dateModified": "2025-04-03",
   "datePublished": "2025-04-03"
 }
 
