@@ -515,7 +515,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-creating-connections"><p>Content from <a href="creating-connections.html">Creating Remote Connections</a></p>
 <hr>
-<p>Last updated on 2025-02-19 |
+<p>Last updated on 2025-04-03 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/creating-connections.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -531,6 +531,8 @@ any links that you are not going to use.
 <ul>
 <li>What are Rclone remotes?</li>
 <li>How are they used?</li>
+<li>How do remotes facilitate file transfers and synchronization in
+rclone?</li>
 </ul>
 </div>
 </div>
@@ -540,9 +542,12 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Understand the concept of a remote or local connection</li>
-<li>
-</li>
+<li>Understand what a remote is and how it differs from a local
+connection.</li>
+<li>Demonstrate how to create and configure a remote connection using
+rclone config.</li>
+<li>Identify common cloud storage services (e.g., Google Drive, Amazon
+S3, Box) and understand their roles as remotes.</li>
 </ul>
 </div>
 </div>
@@ -559,12 +564,12 @@ cloud storage services, servers, and machines.</p>
 <p>This can be an S3 bucket, Google Drive, Box or even a local
 machine.</p>
 <figure><img src="rclone-connections.jpg" alt="rclone connections" class="figure mx-auto d-block"><div class="figcaption">rclone connections</div>
-</figure><div id="callout-callout" class="callout">
+</figure><div id="custom-credentials-and-rate-limiting" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="callout-callout" class="callout-inner">
-<h3 class="callout-title">CALLOUT (<code>callout</code>)</h3>
+<div id="custom-credentials-and-rate-limiting" class="callout-inner">
+<h3 class="callout-title">Custom Credentials and Rate Limiting</h3>
 <div class="callout-content">
 <p>By default, rclone uses its own <code>client_id</code> and
 <code>client_secret</code> for services like Google Workspace and Box.
@@ -586,8 +591,15 @@ documentation</a>.</p>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Rclone remote and local connections</li>
-<li>Types of cloud storage services that can be connected</li>
+<li>A remote is any storage location that is not part of your local
+machine but can be accessed via rclone.</li>
+<li>Remotes enable file transfers and synchronization between various
+systems, including cloud services (e.g., Google Drive, Amazon S3, Box)
+and local machines.</li>
+<li>The rclone config command is used to create, manage, and secure
+remote connections.</li>
+<li>Custom credentials may help avoid rate limiting when using certain
+cloud services.</li>
 </ul>
 </div>
 </div>
@@ -1114,8 +1126,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/aio.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/aio.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-04-01",
-  "datePublished": "2025-04-01"
+  "dateModified": "2025-04-03",
+  "datePublished": "2025-04-03"
 }
 
   </script><script>
