@@ -22,8 +22,8 @@ exercises: 5
 
 The *rclone config" command enteres an interactive configuration session where you can setup new remotes, edit and manage existing ones. 
 
-
 ## Syntax:  
+
 **`Rclone config [flags]`**
 
 ```bash
@@ -40,9 +40,6 @@ q) Quit config
 n/s/q> 
 
 ```
-
-![rclone config edit ](fig/rclone-config-interactive.JPG)
-
 
 ## Rclone command flags
 
@@ -77,8 +74,8 @@ Rclone includes extensive documentation that is specific to particular remotes.
 
 Examples:   
 
-- box: [https://rclone.org/box/](https://rclone.org/box/)  
-- google drive: [https://rclone.org/drive/](https://rclone.org/drive/)  
+- Box: [https://rclone.org/box/](https://rclone.org/box/)  
+- Google Drive: [https://rclone.org/drive/](https://rclone.org/drive/)  
 - S3 bucket: [https://rclone.org/s3/](https://rclone.org/s3/)  
 
 ## Reference   
