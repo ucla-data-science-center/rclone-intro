@@ -23,18 +23,22 @@ exercises: 5
 The *rclone config" command enteres an interactive configuration session where you can setup new remotes, edit and manage existing ones. 
 
 
-## syntax:  
-**Rclone config [flags]**
- 
-![rclone config ](fig/rclone-config-screen-image.jpg)  
-sand
+## Syntax:  
+**`Rclone config [flags]`**
 
 ```bash
 rclone config
 ```
 
 ```output
-output goes here
+
+2025/04/03 07:25:18 NOTICE: Config file "/Users/timdennis/.config/rclone/rclone.conf" not found - using defaults
+No remotes found, make a new one?
+n) New remote
+s) Set configuration password
+q) Quit config
+n/s/q> 
+
 ```
 
 ![rclone config edit ](fig/rclone-config-interactive.JPG)
