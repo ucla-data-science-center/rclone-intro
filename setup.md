@@ -38,6 +38,7 @@ brew install rclone
 ```
 
 or download the precompiled binary from the website.
+
 3. Verify your installation by opening Terminal and executing: 
 
 ```bash
@@ -56,6 +57,7 @@ curl https://rclone.org/install.sh | sudo bash
 ```
 
 This downloads and installs the latest version of rclone.
+
 3. Confirm the installation by typing: 
 
 ```bash

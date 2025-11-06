@@ -12,5 +12,5 @@
 "episodes/getting-help.md" "a28ba9b2ad6a05197af05b4b85cbe413" "site/built/getting-help.md" "2025-04-03"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2025-01-16"
 "learners/reference.md" "5fa95c8ebdf207e8daabe1c62ce31473" "site/built/reference.md" "2025-02-10"
-"learners/setup.md" "af6f5de998c11c573903afed44f9c376" "site/built/setup.md" "2025-04-03"
+"learners/setup.md" "dc7753e0c2461e1d07dd0ab5f11929cb" "site/built/setup.md" "2025-11-06"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2025-01-16"
