@@ -51,7 +51,7 @@ Consider the challenges you face with file transfers or cloud storage, and share
 
 ## Rclone command syntax
 
-### `rclone [command] source:source-folder  destination:destination-folder`
+## `rclone [command] source:source-folder  destination:destination-folder`
 
 List of Rclone commands: [https://rclone.org/commands/](https://rclone.org/commands/) 
 
