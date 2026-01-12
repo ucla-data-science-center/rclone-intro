@@ -52,20 +52,13 @@ There are numerous command flags but these three are especially worth rememberin
 
 [live-code a setting up a simple remote]
 
-**Walk through configuring a local machine**
+## Walk through configuring a local machine  
+ 
 
-**Walk through configuring a remote that requires authorization**
-
-
-## Configuring rclone on a remote/headless machine  
-
-A *headless* machine is one that has no browser available.  For example you are using Windows WSL2 Linux subsystem or you logged into a remote machine (HPC, AWS, etc.) using your termnial client. 
-
-Some of the configurations (those involving oauth2) require an Internet connected web browser.
+## Walk through configuring a remote that requires authorization   
+ 
 
 We are going to walk through this but here is an example from the Rclone documentation [https://rclone.org/remote_setup/#configuring-using-rclone-authorize](https://rclone.org/remote_setup/#configuring-using-rclone-authorizef).
-
-![rclone config with headless machine ](headless-machine.jpg)  
 
 
 ## Documentation Specific to Remote    
