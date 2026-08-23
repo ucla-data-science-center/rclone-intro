@@ -319,7 +319,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Creating Remote Connections</h1>
-        <p>Last updated on 2025-04-03 |
+        <p>Last updated on 2026-08-23 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/creating-connections.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -353,40 +353,62 @@ rclone?</li>
 <h3 class="card-title">Objectives</h3>
 <ul><li>Understand what a remote is and how it differs from a local
 connection.</li>
-<li>Demonstrate how to create and configure a remote connection using
-rclone config.</li>
-<li>Identify common cloud storage services (e.g., Google Drive, Amazon
-S3, Box) and understand their roles as remotes.</li>
+<li>Distinguish a local filesystem path from a remote path in the form
+<code>remote:path</code>.</li>
+<li>Identify common cloud storage services (e.g., Box, Google Drive,
+Amazon S3) and understand their roles as remotes.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
 <section><h2 class="section-heading" id="creating-a-remote-connection">Creating a remote connection<a class="anchor" aria-label="anchor" href="#creating-a-remote-connection"></a></h2>
-<hr class="half-width"><p>A remote is any storage location not on your local machine. Use
-Rclone config to connect to services like Google Drive or Amazon S3.
-Rclone remotes can be used to transfer and synchronize files between
-cloud storage services, servers, and machines.</p>
-<p>This can be an S3 bucket, Google Drive, Box or even a local
-machine.</p>
-<figure><img src="../rclone-connections.jpg" alt="rclone connections" class="figure mx-auto d-block"><div class="figcaption">rclone connections</div>
-</figure><div id="custom-credentials-and-rate-limiting" class="callout">
+<hr class="half-width"><p>A remote is a named storage configuration that rclone uses to connect
+to a storage location, such as a cloud service or another machine. You
+create a remote once using <code>rclone config</code>, then refer to it
+by name in commands as <code>remote:path</code> (for example,
+<code>mybox:documents</code>). This is different from a local filesystem
+path, such as <code>/Users/name/documents</code> or
+<code>C:\Users\name\Documents</code>, which refers to storage on your
+own machine and has no <code>remote:</code> prefix.</p>
+<p>Common remote types include cloud storage services such as Box,
+Google Drive, and Amazon S3, as well as other servers accessed over
+protocols such as SFTP.</p>
+<pre class="mermaid"><code>flowchart LR
+    accTitle: Rclone connects a local machine to one or more named remotes
+    accDescr {
+        A local machine connects through rclone to three example remotes, named mybox, mygdrive, and mys3, each labeled with the storage provider it points to. A dashed line shows that rclone can also transfer files directly between two remotes without passing through the local machine.
+    }
+    L["Local machine&lt;br&gt;/Users/you/documents"]
+    B["mybox:&lt;br&gt;(Box)"]
+    G["mygdrive:&lt;br&gt;(Google Drive)"]
+    S["mys3:&lt;br&gt;(Amazon S3)"]
+
+    L -- "copy / sync / move" --&gt; B
+    L -- "copy / sync / move" --&gt; G
+    L -- "copy / sync / move" --&gt; S
+    B &lt;-. "copy (remote-to-remote)" .-&gt; G</code></pre>
+<div id="custom-client-ids-google-drive-vs.-box" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <span class="callout-header">Callout</span>
-<div id="custom-credentials-and-rate-limiting" class="callout-inner">
-<h3 class="callout-title">Custom Credentials and Rate Limiting</h3>
+<div id="custom-client-ids-google-drive-vs.-box" class="callout-inner">
+<h3 class="callout-title">Custom client IDs: Google Drive vs. Box</h3>
 <div class="callout-content">
-<p>By default, rclone uses its own <code>client_id</code> and
-<code>client_secret</code> for services like Google Workspace and Box.
-This shared configuration can lead to rate limiting, which may slow down
-your transfers when many users are accessing these services. To improve
-performance, consider setting up your own <code>client_id</code> and
-<code>client_secret</code>. Detailed setup instructions are available in
-the <a href="https://rclone.org/drive/" class="external-link">rclone documentation</a> for
-Google Drive and the <a href="https://rclone.org/box/" class="external-link">Box
-documentation</a>.</p>
+<p>By default, rclone uses a shared <code>client_id</code> for both
+Google Drive and Box, so most learners do not need to set up their own
+credentials to complete this lesson.</p>
+<p>For <strong>Google Drive</strong>, rclone’s shared client ID is being
+retired and will stop working during 2026. Create and configure your own
+<code>client_id</code> and <code>client_secret</code> to avoid an
+interruption. See <a href="https://rclone.org/drive/#making-your-own-client-id" class="external-link">Making your
+own client ID</a> in the rclone documentation for details.</p>
+<p>For <strong>Box</strong>, the <a href="https://rclone.org/box/" class="external-link">Box
+documentation</a> notes that custom client credentials can normally be
+left blank. Most users do not need to set up their own
+<code>client_id</code> for Box; only do so if you hit rate limits or
+your organization requires it.</p>
 </div>
 </div>
 </div>
@@ -404,8 +426,8 @@ systems, including cloud services (e.g., Google Drive, Amazon S3, Box)
 and local machines.</li>
 <li>The rclone config command is used to create, manage, and secure
 remote connections.</li>
-<li>Custom credentials may help avoid rate limiting when using certain
-cloud services.</li>
+<li>Google Drive’s shared client ID is being retired in 2026 and needs
+your own credentials; Box’s client ID can normally stay blank.</li>
 </ul></div>
 </div>
 </div>
@@ -473,8 +495,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/instructor/creating-connections.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/instructor/creating-connections.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-04-03",
-  "datePublished": "2026-08-18"
+  "dateModified": "2026-08-23",
+  "datePublished": "2026-08-23"
 }
 
   </script><script>

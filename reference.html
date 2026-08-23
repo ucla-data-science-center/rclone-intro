@@ -300,7 +300,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Reference</h1>
-        <p>Last updated on 2025-02-10 |
+        <p>Last updated on 2026-08-23 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/learners/reference.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -313,7 +313,7 @@
         
 
 <section><h2 class="section-heading" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
-<hr class="half-width"><p>Rclond page: <a href="https://rclone.org/" class="external-link">https://rclone.org/</a></p>
+<hr class="half-width"><p>Rclone page: <a href="https://rclone.org/" class="external-link">https://rclone.org/</a></p>
 <p>Rclone commands: <a href="https://rclone.org/commands/" class="external-link">https://rclone.org/commands/</a></p>
 </section><section><h2 class="section-heading" id="glossary">Glossary<a class="anchor" aria-label="anchor" href="#glossary"></a></h2>
 <hr class="half-width"><dl><dt>Copy</dt>
@@ -334,14 +334,17 @@ are no longer present in the source.
 </dd>
 <dt>Remote</dt>
 <dd>
-A storage service or device that is not part of your local machine but
-can be accessed using the rclone command-line tool. This includes cloud
-services like Google Drive, Dropbox, or Amazon S3, as well as remote
-servers and external drives.
+A named storage configuration, created with <code>rclone config</code>,
+that rclone uses to connect to a storage location such as a cloud
+service or another machine. You refer to a remote in commands as
+<code>remote:path</code>, for example <code>mybox:documents</code>.
 </dd>
 <dt>Local</dt>
 <dd>
-Refers to the files and directories on your own computer.
+Refers to the files and directories on your own computer. A local path
+has no <code>remote:</code> prefix, for example
+<code>/Users/name/documents</code> or
+<code>C:\Users\name\Documents</code>.
 </dd>
 <dt>Filtering</dt>
 <dd>
@@ -407,8 +410,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/reference.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/reference.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-10",
-  "datePublished": "2026-08-18"
+  "dateModified": "2026-08-23",
+  "datePublished": "2026-08-23"
 }
 
   </script><script>

@@ -320,7 +320,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Choosing the Right Rclone Command: Copy, Sync, or Move</h1>
-        <p>Last updated on 2025-02-18 |
+        <p>Last updated on 2026-08-23 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/copy-sync-or-move.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -348,7 +348,7 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Be able to pick the most appropriate command to mvoe file(s)</li>
+<ul><li>Be able to pick the most appropriate command to move file(s)</li>
 <li>Determine which command is most appropriate for different file
 management scenarios.</li>
 </ul></div>
@@ -364,11 +364,13 @@ it’s important to know their unique behaviors to choose the right one
 for your task.</p>
 <div class="section level3">
 <h3 id="copy">Copy<a class="anchor" aria-label="anchor" href="#copy"></a></h3>
-<p>The <code>copy</code> command duplicates files from the source to the
-destination. It compares files (by size, modification time, or MD5
-checksum) and transfers only those that are new or have changed. Copying
-does not delete any files at the destination, making it safe when you
-simply want to update or add files.</p>
+<p>The <code>copy</code> command copies files from the source to the
+destination. It compares files by size, modification time, or checksum,
+and transfers only those that are new or have changed. Existing
+destination files that aren’t present at the source are left in place —
+<code>copy</code> does not delete them. Because of this,
+<code>copy</code> does not guarantee the destination matches the source,
+so running it once is not, by itself, a complete backup strategy.</p>
 <p><strong>Syntax:</strong></p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -488,8 +490,8 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/copy-sync-or-move.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/copy-sync-or-move.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-02-18",
-  "datePublished": "2026-08-18"
+  "dateModified": "2026-08-23",
+  "datePublished": "2026-08-23"
 }
 
   </script><script>
