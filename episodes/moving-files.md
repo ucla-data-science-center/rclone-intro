@@ -83,6 +83,74 @@ Transferred:            8 / 8, 100%
 Elapsed time:         2.0s
 ```
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Predict, then verify
+
+You have a disposable `rclone-workshop` folder with these files:
+
+```output
+source/notes.txt
+source/data.csv
+source/photo.jpg
+dest/old-report.pdf
+```
+
+`dest/old-report.pdf` does not exist in `source`.
+
+Before running anything, predict the answers:
+
+1. Will `rclone copy source dest --include "*.txt" --dry-run` touch `old-report.pdf`?
+2. Will `rclone sync source dest --dry-run` touch `old-report.pdf`? If so, how?
+
+Then run both commands against your own disposable folder and check your predictions against the real output.
+
+:::::::::::::::: hint
+
+`--dry-run` never changes anything on disk — it only reports what *would* happen, which makes it safe to run as many times as you like while you're predicting.
+
+::::::::::::::::::::::
+
+:::::::::::::::: solution
+
+```bash
+rclone copy source dest --include "*.txt" --dry-run -v
+```
+
+```output
+2026/08/23 13:37:13 NOTICE: notes.txt: Skipped copy as --dry-run is set (size 14)
+2026/08/23 13:37:13 NOTICE: 
+Transferred:   	         14 B / 14 B, 100%, 0 B/s, ETA -
+Checks:                 0 / 0, -, Listed 1
+Transferred:            1 / 1, 100%
+Elapsed time:         0.0s
+```
+
+`copy` never mentions `old-report.pdf` — it only ever adds or updates files, so anything already at the destination but missing from the source is simply left alone.
+
+```bash
+rclone sync source dest --dry-run -v
+```
+
+```output
+2026/08/23 13:37:14 NOTICE: notes.txt: Skipped copy as --dry-run is set (size 14)
+2026/08/23 13:37:14 NOTICE: photo.jpg: Skipped copy as --dry-run is set (size 6)
+2026/08/23 13:37:14 NOTICE: data.csv: Skipped copy as --dry-run is set (size 6)
+2026/08/23 13:37:14 NOTICE: old-report.pdf: Skipped delete as --dry-run is set (size 34)
+2026/08/23 13:37:14 NOTICE: 
+Transferred:   	         26 B / 26 B, 100%, 0 B/s, ETA -
+Checks:                 1 / 1, 100%, Listed 4
+Deleted:                1 (files), 0 (dirs), 34 B (freed)
+Transferred:            3 / 3, 100%
+Elapsed time:         0.0s
+```
+
+`sync` reports `old-report.pdf` as a file it would **delete**, because sync makes the destination an exact mirror of the source — this is exactly why sync exercises always need `--dry-run` or `--interactive` first.
+
+::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Different operating systems have __slightly__ different syntax 
 
 Windows syntax:
@@ -103,20 +171,11 @@ Windows Subsystem for Linux (WSL2) syntax:
 rclone ls /mnt/c/Users/jjamison/rclone   
 ```
 
-## Valid remote names  
-
-[https://rclone.org/docs/#valid-remote-names](https://rclone.org/docs/#valid-remote-names)
-
-## Reference:   
-
-[https://rclone.org/docs/#subcommands](https://rclone.org/docs/#subcommands)  
-
-Windows [https://rclone.org/docs/#windows](https://rclone.org/docs/#windows)    
-
-Linux  [https://rclone.org/docs/#linux-osx](https://rclone.org/docs/#linux-osx) 
+See the [Learner Reference](../learners/reference.md) page for valid remote names, subcommand syntax, and platform-specific notes.
 
 :::::: keypoints
  - Difference between Copy and Sync   
  - See what is already in the destination
+ - `--dry-run` shows what a command would do, including deletions, without changing anything on disk
  
 ::::::

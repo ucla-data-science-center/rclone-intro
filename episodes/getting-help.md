@@ -19,7 +19,7 @@ exercises: 5
 Rclone offers extensive documentation and community support to help you solve issues and learn advanced features. Here are some key resources:
 
 ### Official Documentation
-  Visit the [rclone documentation website](https://rclone.org/) for detailed guides on installation, configuration, and usage of various commands. Use the search feature to look up specific topics such as configuration commands or remote storage names.
+  Visit the [rclone documentation website][rclone-docs] for detailed guides on installation, configuration, and usage of various commands. Use the search feature to look up specific topics such as configuration commands or remote storage names.
 
 ### Community Forums and Support
 
@@ -29,19 +29,39 @@ Rclone offers extensive documentation and community support to help you solve is
 
 ### Command Help
 
-  For quick help on specific commands, you can run:
+  For a list of every available command, run:
   ```bash
   rclone help
   ```
-  or get details on a particular command by appending the command name:
+  or get details on a particular command, including its flags, by adding `--help` after the command name:
   ```bash
-  rclone help copy
+  rclone copy --help
   ```
 
 These resources are invaluable whether you’re troubleshooting an issue or looking to explore advanced functionality.
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Find a flag
+
+Run `rclone sync --help` and find the flag that lets you preview what a sync would do without actually deleting or transferring anything.
+
+:::::::::::::::: hint
+
+You've already used this flag several times earlier in the lesson.
+
+::::::::::::::::::::::
+
+:::::::::::::::: solution
+
+`-n, --dry-run` — the same flag introduced in [Creating and Configuring Remote Connections](creating-connections.html) and used throughout the transfer episodes. `rclone <command> --help` is the fastest way to rediscover a flag you've forgotten, without leaving the terminal.
+
+::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::: keypoints
-- Rclone’s official documentation is available at [rclone.org](https://rclone.org/).
+- Rclone’s official documentation is available at [rclone.org][rclone-docs].
 - Community support is accessible through GitHub, forums, and StackOverflow.
 - Use `rclone help` for quick command-line assistance.
 ::::::

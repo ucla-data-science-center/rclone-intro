@@ -4,9 +4,25 @@ title: 'Reference'
 
 ## References
 
-Rclone page:  [https://rclone.org/](https://rclone.org/)
+Rclone page:  [rclone.org][rclone-docs]
 
-Rclone commands: [https://rclone.org/commands/](https://rclone.org/commands/)
+Rclone commands: [rclone.org/commands/][rclone-commands]
+
+### Command reference
+
+- `rclone config` — [rclone.org/commands/rclone_config/](https://rclone.org/commands/rclone_config/)
+- `rclone listremotes` — [rclone.org/commands/rclone_listremotes/](https://rclone.org/commands/rclone_listremotes/)
+- `rclone config file` — [rclone.org/commands/rclone_config_file/](https://rclone.org/commands/rclone_config_file/)
+- `rclone move` — [rclone.org/commands/rclone_move/](https://rclone.org/commands/rclone_move/)
+- Important flags (`--dry-run`, `--interactive`, `--verbose`) — [rclone.org/flags/#important](https://rclone.org/flags/#important)
+- Remote setup, including headless authorization — [rclone.org/remote_setup/][rclone-remote-setup]
+
+### Platform-specific syntax
+
+- Valid remote names — [rclone.org/docs/#valid-remote-names](https://rclone.org/docs/#valid-remote-names)
+- Subcommand syntax — [rclone.org/docs/#subcommands](https://rclone.org/docs/#subcommands)
+- Windows — [rclone.org/docs/#windows](https://rclone.org/docs/#windows)
+- Linux/macOS — [rclone.org/docs/#linux-osx](https://rclone.org/docs/#linux-osx)
 
 ## Glossary
 
