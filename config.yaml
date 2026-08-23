@@ -67,9 +67,9 @@ contact: 'jamison@library.ucla.edu'
 episodes:
 - introduction.md
 - creating-connections.md
-- configure-rclone.md
 - moving-files.md
 - copy-sync-or-move.md
+- headless-configuration.md
 - getting-help.md
 
 # Information for Learners

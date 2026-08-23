@@ -70,7 +70,7 @@ Share one example in the chat or with a neighbor.
 
 ### `rclone [command] source:source-folder  destination:destination-folder`
 
-List of Rclone commands: [https://rclone.org/commands/](https://rclone.org/commands/) 
+List of Rclone commands: [rclone.org/commands/][rclone-commands]
 
 ## Real-World Scenarios for Using Rclone
 
