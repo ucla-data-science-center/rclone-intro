@@ -15,15 +15,14 @@ exercises: 10
 :::::: objectives
  - Understand the difference between copy and sync
  - Be able to list what is already in the destination
- - Command line using Linux vs Windows WSL2 subsystem linux
- 
+ - Compare rclone command syntax between Linux/macOS and Windows (including WSL2)
 ::::::
 
 ## Moving files around
 
 Rclone is most frequently used to move files, individually or as a group from one place to another.
 
-## The syntax for the places, to or from is:
+## Specifying source and destination paths
 
 ```bash
 source:folder  destination:folder
@@ -33,41 +32,41 @@ source:folder  destination:folder
 Lists contents of a remote: 
 
 ```bash
-> rclone ls remote:path
+rclone ls remote:path
 ```
 Copy local files to remote: 
 
 ```bash
-> rclone copy /local/path remote:path # copies /local/path to the remote
+rclone copy /local/path remote:path # copies /local/path to the remote
 ```
 
 Sync local files to remote: 
 
 ```bash
-> rclone sync --interactive /local/path remote:path # syncs /local/path to the remote
+rclone sync --interactive /local/path remote:path # syncs /local/path to the remote
 ```  
 
 ## Filtering 
 
-Rclone commands are often similar to bash commands, such as _ls_ command.   However, Rclone files using the  --include flag.
+Many rclone commands resemble their Unix counterparts, such as `ls`. Rclone selects which files a command applies to using flags such as `--include` and `--exclude`, rather than shell wildcard expansion, so quote the pattern (for example, `--include "*.txt"`) to keep your shell from expanding it first.
 
 **Some Examples:**
 
-My home backup of local to an external drive (windows using linux subsystem)  
+Copying local files to an external drive (Windows using the Linux subsystem)
 
 ```bash
-> rclone copy /mnt/d/work-related /mnt/f/work-related-backup   
+rclone copy /mnt/d/work-related /mnt/f/work-related-backup   
 ```
 
-Copying files from google drive and filtering for '*.txt"    
+Copying files from Google Drive and filtering for `*.txt`
 
 ```bash
-> rclone copy rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro --include "*.txt"  
+rclone copy rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro --include "*.txt"  
 ```
-Checking a result before running by using the _-n_ flag
+Checking a result before running by using the `-n` flag
 
 ```bash
-> rclone sync rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro -n
+rclone sync rclone-intro-google:rclone-intro-google rclone-intro-box:rclone-intro -n
 ```
 ```output    
 2025/02/09 14:52:11 NOTICE: Beans, Snap and Italian – Pieces, Green and Wax - National Center for Home Food Preservation.pdf: Skipped copy as --dry-run is set (size 91.581Ki)
@@ -84,14 +83,13 @@ Transferred:            8 / 8, 100%
 Elapsed time:         2.0s
 ```
 
-[add 2 more examples]
-
 ## Different operating systems have __slightly__ different syntax 
 
 Windows syntax:
  
 ```bash
-rclone ls C:\\Users\\jjamison\\rclone
+rclone ls C:\Users\jjamison\rclone
+rclone ls "C:\Users\jjamison\My Documents\rclone-workshop"
 ```
 - Linux and macOS:
 
@@ -99,7 +97,7 @@ rclone ls C:\\Users\\jjamison\\rclone
 rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google    
 rclone copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google -n   
 ```
-Windows WSL2 Linux subsystem* Linux syntax:  
+Windows Subsystem for Linux (WSL2) syntax:  
 
 ```bash
 rclone ls /mnt/c/Users/jjamison/rclone   
