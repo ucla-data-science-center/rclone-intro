@@ -248,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="creating-connections.html">2. Creating Remote Connections</a>
+        <a href="creating-connections.html">2. Creating and Configuring Remote Connections</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -260,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="configure-rclone.html">3. Rclone config command</a>
+        <a href="moving-files.html">3. File Transfers, Listing, and Verification</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -272,7 +272,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="moving-files.html">4. File Transfers, Listing, and Verification</a>
+        <a href="copy-sync-or-move.html">4. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -284,7 +284,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="copy-sync-or-move.html">5. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
+        <a href="headless-configuration.html">5. Optional: Configuring rclone on a Headless Machine</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -434,7 +434,7 @@ move any files.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The answer is C.</p>
 <p>Rclone is command-driven. It acts when you run
@@ -487,7 +487,7 @@ didn’t?</li>
 <h3 id="rclone-command-sourcesource-folder-destinationdestination-folder">
 <code>rclone [command] source:source-folder  destination:destination-folder</code><a class="anchor" aria-label="anchor" href="#rclone-command-sourcesource-folder-destinationdestination-folder"></a>
 </h3>
-<p>List of Rclone commands: <a href="https://rclone.org/commands/" class="external-link">https://rclone.org/commands/</a></p>
+<p>List of Rclone commands: <a href="https://rclone.org/commands/" class="external-link">rclone.org/commands/</a></p>
 </div>
 </section><section><h2 class="section-heading" id="real-world-scenarios-for-using-rclone">Real-World Scenarios for Using Rclone<a class="anchor" aria-label="anchor" href="#real-world-scenarios-for-using-rclone"></a>
 </h2>
@@ -533,7 +533,7 @@ files based on your needs.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-creating-connections"><p>Content from <a href="creating-connections.html">Creating Remote Connections</a></p>
+</section></section><section id="aio-creating-connections"><p>Content from <a href="creating-connections.html">Creating and Configuring Remote Connections</a></p>
 <hr>
 <p>Last updated on 2026-08-23 |
 
@@ -549,10 +549,9 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are Rclone remotes?</li>
-<li>How are they used?</li>
-<li>How do remotes facilitate file transfers and synchronization in
-rclone?</li>
+<li>What is an rclone remote, and how is it different from a local
+path?</li>
+<li>How do you create, list, and verify a remote connection?</li>
 </ul>
 </div>
 </div>
@@ -566,8 +565,10 @@ rclone?</li>
 connection.</li>
 <li>Distinguish a local filesystem path from a remote path in the form
 <code>remote:path</code>.</li>
-<li>Identify common cloud storage services (e.g., Box, Google Drive,
-Amazon S3) and understand their roles as remotes.</li>
+<li>Use <code>rclone config</code> to create a remote connection.</li>
+<li>Use <code>rclone listremotes</code> and
+<code>rclone lsd remote:</code> to confirm a remote is configured and
+reachable.</li>
 </ul>
 </div>
 </div>
@@ -626,98 +627,119 @@ your organization requires it.</p>
 </div>
 </div>
 </div>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<span class="callout-header">Key Points</span>
-<div class="callout-inner">
-<div class="callout-content">
-<ul>
-<li>A remote is any storage location that is not part of your local
-machine but can be accessed via rclone.</li>
-<li>Remotes enable file transfers and synchronization between various
-systems, including cloud services (e.g., Google Drive, Amazon S3, Box)
-and local machines.</li>
-<li>The rclone config command is used to create, manage, and secure
-remote connections.</li>
-<li>Google Drive’s shared client ID is being retired in 2026 and needs
-your own credentials; Box’s client ID can normally stay blank.</li>
-</ul>
-</div>
-</div>
-</div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-configure-rclone"><p>Content from <a href="configure-rclone.html">Rclone config command</a></p>
-<hr>
-<p>Last updated on 2026-08-23 |
-
-        <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/configure-rclone.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>Once installed, how is Rclone set up or configured?</li>
-<li>How do you check for and edit existing configurations?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Use <code>rclone config</code> to create and manage remote
-connections</li>
-<li>Identify useful command flags such as <code>--dry-run</code>,
-<code>--interactive</code>, and <code>--verbose</code>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="rclone-config-command">Rclone config command<a class="anchor" aria-label="anchor" href="#rclone-config-command"></a>
+</section><section><h2 class="section-heading" id="configuring-a-remote-with-rclone-config">Configuring a remote with <code>rclone config</code>
+<a class="anchor" aria-label="anchor" href="#configuring-a-remote-with-rclone-config"></a>
 </h2>
 <hr class="half-width">
-<p>The <code>rclone config</code> command enters an interactive
-configuration session where you can set up new remotes, and edit and
-manage existing ones.</p>
-</section><section><h2 class="section-heading" id="syntax">Syntax<a class="anchor" aria-label="anchor" href="#syntax"></a>
-</h2>
-<hr class="half-width">
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">rclone</span> config <span class="pp">[</span><span class="ss">flags</span><span class="pp">]</span></span></code></pre>
-</div>
+<p>The <code>rclone config</code> command starts an interactive session
+where you create, edit, and manage remotes.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">rclone</span> config</span></code></pre>
 </div>
+<p>The first time you run it, with no remotes configured yet, you’ll
+see:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>2025/04/03 07:25:18 NOTICE: Config file "/Users/timdennis/.config/rclone/rclone.conf" not found - using defaults
-No remotes found, make a new one?
+<pre class="output" tabindex="0"><code>No remotes found, make a new one?
 n) New remote
 s) Set configuration password
 q) Quit config
 n/s/q&gt;</code></pre>
 </div>
+<p>Choose <code>n</code> for a new remote. Rclone asks for a name, then
+the storage type from a long list of supported providers:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Enter name for new remote.
+
+Option Storage.
+Type of storage to configure.
+Choose a number from below, or type in your own value.
+ 1 / 1Fichier
+   \ (fichier)
+ 2 / Akamai NetStorage
+   \ (netstorage)
+...
+ 7 / Box
+   \ (box)
+...
+36 / Local Disk
+   \ (local)
+...</code></pre>
+</div>
+<p>Type <code>mybox</code> for the name and <code>box</code> for the
+type. Accept the defaults for <code>client_id</code> and
+<code>client_secret</code> unless the callout above tells you otherwise.
+For a remote that needs authorization, like Box or Google Drive, rclone
+will next either open a browser window for you to sign in, or, on a
+machine without a browser available, print a URL and code to enter on
+another device — see <a href="https://rclone.org/remote_setup/#configuring-using-rclone-authorize" class="external-link">Configuring
+using rclone authorize</a> in the rclone documentation for that
+case.</p>
+<p>Once you’ve stepped through the provider-specific prompts, rclone
+shows a summary and asks you to confirm:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Configuration complete.
+Options:
+- type: box
+Keep this "mybox" remote?
+y) Yes this is OK (default)
+e) Edit this remote
+d) Delete this remote</code></pre>
+</div>
+<p>Answer <code>y</code>, then <code>q</code> to quit the config
+session. Your new remote is saved.</p>
+</section><section><h2 class="section-heading" id="checking-your-configuration">Checking your configuration<a class="anchor" aria-label="anchor" href="#checking-your-configuration"></a>
+</h2>
+<hr class="half-width">
+<p>Once a remote exists, use these commands to confirm it’s there and
+working. None of them transfer or change any files, so they’re safe to
+run at any time.</p>
+<p>List every remote rclone knows about:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="ex">rclone</span> listremotes</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>mybox:</code></pre>
+</div>
+<p>Find out where the configuration file itself lives — worth knowing,
+since it’s the file that holds your credentials (see the callout
+above):</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="ex">rclone</span> config file</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Configuration file is stored at:
+/Users/you/.config/rclone/rclone.conf</code></pre>
+</div>
+<p>List the contents of the remote itself:</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="ex">rclone</span> lsd mybox:</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>          64 2026-08-23 13:27:28        -1 rclone-workshop</code></pre>
+</div>
+<p><code>lsd</code> lists directories only and never transfers a file,
+which makes it a safe way to confirm a remote is reachable before you
+run a real transfer command.</p>
 </section><section><h2 class="section-heading" id="rclone-command-flags">Rclone command flags<a class="anchor" aria-label="anchor" href="#rclone-command-flags"></a>
 </h2>
 <hr class="half-width">
@@ -732,25 +754,92 @@ changes</li>
 <li>
 <strong>-v, –verbose count</strong> Print lots more stuff (repeat
 for more) - useful when debugging</li>
-</ul></section><section><h2 class="section-heading" id="documentation-specific-to-each-remote">Documentation specific to each remote<a class="anchor" aria-label="anchor" href="#documentation-specific-to-each-remote"></a>
+</ul>
+<div id="configure-and-verify-your-own-remote" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="configure-and-verify-your-own-remote" class="callout-inner">
+<h3 class="callout-title">Configure and verify your own remote</h3>
+<div class="callout-content">
+<p>Using <code>rclone config</code>, create a remote connected to your
+own Box account (or whichever storage your instructor has set up for
+this workshop). Then:</p>
+<ol style="list-style-type: decimal">
+<li>Confirm it appears in <code>rclone listremotes</code>.</li>
+<li>Run <code>rclone lsd remote:</code> to see its contents.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>If <code>rclone lsd</code> returns an error, run
+<code>rclone listremotes</code> first — a typo in the remote name is the
+most common cause.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">rclone</span> config</span></code></pre>
+</div>
+<p>Follow the prompts: <code>n</code> for a new remote, a name such as
+<code>mybox</code>, <code>box</code> for the type, defaults for the
+client ID and secret, and complete the authorization step. Confirm with
+<code>y</code>, then <code>q</code> to quit.</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">rclone</span> listremotes</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>mybox:</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">rclone</span> lsd mybox:</span></code></pre>
+</div>
+<p>If your Box account has no folders yet, this returns nothing — that’s
+expected, and still confirms the remote is reachable.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="documentation-specific-to-each-remote">Documentation specific to each remote<a class="anchor" aria-label="anchor" href="#documentation-specific-to-each-remote"></a>
 </h2>
 <hr class="half-width">
 <p>Rclone includes extensive documentation that is specific to
 particular remotes.</p>
 <p>Examples:</p>
 <ul>
-<li>Box: <a href="https://rclone.org/box/" class="external-link">https://rclone.org/box/</a><br>
+<li>Box: <a href="https://rclone.org/box/" class="external-link">rclone.org/box/</a>
 </li>
-<li>Google Drive: <a href="https://rclone.org/drive/" class="external-link">https://rclone.org/drive/</a><br>
+<li>Google Drive: <a href="https://rclone.org/drive/" class="external-link">https://rclone.org/drive/</a>
 </li>
 <li>S3 bucket: <a href="https://rclone.org/s3/" class="external-link">https://rclone.org/s3/</a>
 </li>
-</ul></section><section><h2 class="section-heading" id="reference">Reference<a class="anchor" aria-label="anchor" href="#reference"></a>
-</h2>
-<hr class="half-width">
-<p><a href="https://rclone.org/remote_setup/" class="external-link">https://rclone.org/remote_setup/</a></p>
-<p><a href="https://rclone.org/commands/rclone_config/" class="external-link">https://rclone.org/commands/rclone_config/</a></p>
-<p><a href="https://rclone.org/flags/#important" class="external-link">https://rclone.org/flags/#important</a></p>
+</ul>
+<p>See the <a href="reference.html">Learner Reference</a> page for a
+full command and documentation reference.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -759,12 +848,16 @@ particular remotes.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>Understand how configuration is used.<br>
-</li>
-<li>Familiar with useful command flags: dry-run, interactive and
-verbose.</li>
-<li>Use config to create remote connections</li>
-<li>Know where to get help.</li>
+<li>A remote is a named storage configuration; a local path has no
+<code>remote:</code> prefix.</li>
+<li>Use <code>rclone config</code> to create, edit, and manage
+remotes.</li>
+<li>Use <code>rclone listremotes</code>,
+<code>rclone config file</code>, and <code>rclone lsd remote:</code> to
+confirm a remote is set up and reachable, without transferring
+anything.</li>
+<li>Google Drive’s shared client ID is being retired in 2026 and needs
+your own credentials; Box’s client ID can normally stay blank.</li>
 </ul>
 </div>
 </div>
@@ -892,42 +985,133 @@ Checks:                 3 / 3, 100%
 Transferred:            8 / 8, 100%
 Elapsed time:         2.0s</code></pre>
 </div>
+<div id="predict-then-verify" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="predict-then-verify" class="callout-inner">
+<h3 class="callout-title">Predict, then verify</h3>
+<div class="callout-content">
+<p>You have a disposable <code>rclone-workshop</code> folder with these
+files:</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">source</span><span class="op">/</span><span class="va">notes.txt</span></span>
+<span><span class="va">source</span><span class="op">/</span><span class="va">data.csv</span></span>
+<span><span class="va">source</span><span class="op">/</span><span class="va">photo.jpg</span></span>
+<span><span class="va">dest</span><span class="op">/</span><span class="va">old</span><span class="op">-</span><span class="va">report.pdf</span></span></code></pre>
+</div>
+<p><code>dest/old-report.pdf</code> does not exist in
+<code>source</code>.</p>
+<p>Before running anything, predict the answers:</p>
+<ol style="list-style-type: decimal">
+<li>Will
+<code>rclone copy source dest --include "*.txt" --dry-run</code> touch
+<code>old-report.pdf</code>?</li>
+<li>Will <code>rclone sync source dest --dry-run</code> touch
+<code>old-report.pdf</code>? If so, how?</li>
+</ol>
+<p>Then run both commands against your own disposable folder and check
+your predictions against the real output.</p>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p><code>--dry-run</code> never changes anything on disk — it only
+reports what <em>would</em> happen, which makes it safe to run as many
+times as you like while you’re predicting.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="ex">rclone</span> copy source dest <span class="at">--include</span> <span class="st">"*.txt"</span> <span class="at">--dry-run</span> <span class="at">-v</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>2026/08/23 13:37:13 NOTICE: notes.txt: Skipped copy as --dry-run is set (size 14)
+2026/08/23 13:37:13 NOTICE:
+Transferred:   	         14 B / 14 B, 100%, 0 B/s, ETA -
+Checks:                 0 / 0, -, Listed 1
+Transferred:            1 / 1, 100%
+Elapsed time:         0.0s</code></pre>
+</div>
+<p><code>copy</code> never mentions <code>old-report.pdf</code> — it
+only ever adds or updates files, so anything already at the destination
+but missing from the source is simply left alone.</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">rclone</span> sync source dest <span class="at">--dry-run</span> <span class="at">-v</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>2026/08/23 13:37:14 NOTICE: notes.txt: Skipped copy as --dry-run is set (size 14)
+2026/08/23 13:37:14 NOTICE: photo.jpg: Skipped copy as --dry-run is set (size 6)
+2026/08/23 13:37:14 NOTICE: data.csv: Skipped copy as --dry-run is set (size 6)
+2026/08/23 13:37:14 NOTICE: old-report.pdf: Skipped delete as --dry-run is set (size 34)
+2026/08/23 13:37:14 NOTICE:
+Transferred:   	         26 B / 26 B, 100%, 0 B/s, ETA -
+Checks:                 1 / 1, 100%, Listed 4
+Deleted:                1 (files), 0 (dirs), 34 B (freed)
+Transferred:            3 / 3, 100%
+Elapsed time:         0.0s</code></pre>
+</div>
+<p><code>sync</code> reports <code>old-report.pdf</code> as a file it
+would <strong>delete</strong>, because sync makes the destination an
+exact mirror of the source — this is exactly why sync exercises always
+need <code>--dry-run</code> or <code>--interactive</code> first.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="different-operating-systems-have-slightly-different-syntax">Different operating systems have <strong>slightly</strong> different
 syntax<a class="anchor" aria-label="anchor" href="#different-operating-systems-have-slightly-different-syntax"></a>
 </h2>
 <hr class="half-width">
 <p>Windows syntax:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">rclone</span> ls C:<span class="dt">\U</span>sers<span class="dt">\j</span>jamison<span class="dt">\r</span>clone</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="ex">rclone</span> ls <span class="st">"C:\Users\jjamison\My Documents\rclone-workshop"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">rclone</span> ls C:<span class="dt">\U</span>sers<span class="dt">\j</span>jamison<span class="dt">\r</span>clone</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="ex">rclone</span> ls <span class="st">"C:\Users\jjamison\My Documents\rclone-workshop"</span></span></code></pre>
 </div>
 <ul>
 <li>Linux and macOS:</li>
 </ul>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="ex">rclone</span> copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google    </span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="ex">rclone</span> copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google <span class="at">-n</span>   </span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">rclone</span> copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google    </span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="ex">rclone</span> copy rclone-intro-box:rclone-intro rclone-intro-google:rclone-intro-google <span class="at">-n</span>   </span></code></pre>
 </div>
 <p>Windows Subsystem for Linux (WSL2) syntax:</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="ex">rclone</span> ls /mnt/c/Users/jjamison/rclone   </span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="ex">rclone</span> ls /mnt/c/Users/jjamison/rclone   </span></code></pre>
 </div>
-</section><section><h2 class="section-heading" id="valid-remote-names">Valid remote names<a class="anchor" aria-label="anchor" href="#valid-remote-names"></a>
-</h2>
-<hr class="half-width">
-<p><a href="https://rclone.org/docs/#valid-remote-names" class="external-link">https://rclone.org/docs/#valid-remote-names</a></p>
-</section><section><h2 class="section-heading" id="reference">Reference:<a class="anchor" aria-label="anchor" href="#reference"></a>
-</h2>
-<hr class="half-width">
-<p><a href="https://rclone.org/docs/#subcommands" class="external-link">https://rclone.org/docs/#subcommands</a></p>
-<p>Windows <a href="https://rclone.org/docs/#windows" class="external-link">https://rclone.org/docs/#windows</a></p>
-<p>Linux <a href="https://rclone.org/docs/#linux-osx" class="external-link">https://rclone.org/docs/#linux-osx</a></p>
+<p>See the <a href="reference.html">Learner Reference</a> page for valid
+remote names, subcommand syntax, and platform-specific notes.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -939,6 +1123,9 @@ syntax<a class="anchor" aria-label="anchor" href="#different-operating-systems-h
 <li>Difference between Copy and Sync<br>
 </li>
 <li>See what is already in the destination</li>
+<li>
+<code>--dry-run</code> shows what a command would do, including
+deletions, without changing anything on disk</li>
 </ul>
 </div>
 </div>
@@ -991,6 +1178,46 @@ commands: <strong>copy</strong>, <strong>sync</strong>, and
 <strong>move</strong>. Each command handles your data differently, so
 it’s important to know their unique behaviors to choose the right one
 for your task.</p>
+<table class="table">
+<colgroup>
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+<col width="20%">
+</colgroup>
+<thead><tr>
+<th>Command</th>
+<th>Changes source</th>
+<th>Adds/updates at destination</th>
+<th>Deletes at destination</th>
+<th>Safest for…</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>copy</code></td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>Adding or updating files without any risk of deleting something</td>
+</tr>
+<tr>
+<td><code>sync</code></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes — removes anything not in the source</td>
+<td>Making the destination an exact, up-to-date mirror of the
+source</td>
+</tr>
+<tr>
+<td><code>move</code></td>
+<td>Removes files after a successful transfer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Relocating files to free up space at the source</td>
+</tr>
+</tbody>
+</table>
 <div class="section level3">
 <h3 id="copy">Copy<a class="anchor" aria-label="anchor" href="#copy"></a>
 </h3>
@@ -1045,11 +1272,67 @@ first with the –dry-run or the –interactive/-i flag.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">rclone</span> move source:path dest:path <span class="pp">[</span><span class="ss">flags</span><span class="pp">]</span></span></code></pre>
 </div>
+<div id="choose-the-right-command" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-</section><section><h2 class="section-heading" id="reference-httpsrclone-orgcommandsrclone_move">Reference: <a href="https://rclone.org/commands/rclone_move/" class="external-link">https://rclone.org/commands/rclone_move/</a>
-<a class="anchor" aria-label="anchor" href="#reference-httpsrclone-orgcommandsrclone_move"></a>
-</h2>
-<hr class="half-width">
+<span class="callout-header">Challenge</span>
+<div id="choose-the-right-command" class="callout-inner">
+<h3 class="callout-title">Choose the right command</h3>
+<div class="callout-content">
+<p>For each scenario, decide whether <code>copy</code>,
+<code>sync</code>, or <code>move</code> is the safest choice, and
+explain why.</p>
+<ol style="list-style-type: decimal">
+<li>You want your Box <code>photos</code> folder to always exactly match
+a folder on your laptop, including removing anything you’ve deleted
+locally.</li>
+<li>You’ve finished a project and want to free up space on your laptop
+by relocating the files to the cloud.</li>
+<li>You want to hand a colleague a copy of your files without touching
+anything already in their folder, or removing anything from yours.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div class="accordion-body">
+<p>Ask two questions for each scenario: should anything be deleted
+anywhere, and should the files still exist in both places afterward?</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>
+<strong>sync</strong> — an exact mirror, including deletions, is
+exactly what sync does. Run it with <code>--dry-run</code> or
+<code>--interactive</code> first, since it can delete files.</li>
+<li>
+<strong>move</strong> — moves the files and removes them from your
+laptop only after the transfer to the cloud succeeds.</li>
+<li>
+<strong>copy</strong> — adds and updates files at the destination
+without deleting anything at either end.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<p>See the <a href="reference.html">Learner Reference</a> page for a
+full command and documentation reference.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1062,6 +1345,164 @@ first with the –dry-run or the –interactive/-i flag.</p>
 </li>
 <li>Understand the difference between copy and sync<br>
 </li>
+<li>
+<code>sync</code> is the only one of the three that can delete files
+at the destination</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</div>
+</section></section><section id="aio-headless-configuration"><p>Content from <a href="headless-configuration.html">Optional: Configuring rclone on a Headless Machine</a></p>
+<hr>
+<p>Last updated on 2026-08-23 |
+
+        <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/headless-configuration.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What is a headless machine, and why does it need special
+configuration?</li>
+<li>How do you authorize a remote when no browser is available?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Identify when a machine is headless and needs a browser-free
+authorization flow.</li>
+<li>Use <code>rclone authorize</code> to complete configuration on a
+headless machine.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="this-episode-is-optional" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="this-episode-is-optional" class="callout-inner">
+<h3 class="callout-title">This episode is optional</h3>
+<div class="callout-content">
+<p>Skip this episode if you’re setting up rclone on your own laptop or
+desktop — you have a browser, and the standard
+<code>rclone config</code> flow from <a href="creating-connections.html">Creating and Configuring Remote
+Connections</a> is all you need. Come back to this episode only if you
+need to configure rclone on a machine with no browser available, such as
+an HPC cluster, a cloud VM, or the Windows Subsystem for Linux
+(WSL2).</p>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="what-is-a-headless-machine">What is a headless machine?<a class="anchor" aria-label="anchor" href="#what-is-a-headless-machine"></a>
+</h2>
+<hr class="half-width">
+<p>A <em>headless</em> machine is one with no browser available to
+complete authorization in. For example, you might be using the Windows
+Subsystem for Linux (WSL2), or you’ve logged into a remote machine (an
+HPC cluster, a cloud VM, etc.) over SSH.</p>
+<p>Some rclone configurations — those involving OAuth2, such as Box and
+Google Drive — normally open a browser to complete authorization. On a
+headless machine, there’s no browser to open, so rclone offers an
+alternative: authorize from a <em>different</em> machine that does have
+a browser.</p>
+</section><section><h2 class="section-heading" id="authorizing-without-a-browser">Authorizing without a browser<a class="anchor" aria-label="anchor" href="#authorizing-without-a-browser"></a>
+</h2>
+<hr class="half-width">
+<p>When <code>rclone config</code> reaches the authorization step on a
+headless machine, it prints a command to run instead of opening a
+browser, using <code>rclone authorize</code>:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">rclone</span> authorize box</span></code></pre>
+</div>
+<p>Run that command on a different machine — one that <em>does</em> have
+a browser, such as your laptop — and it walks you through the same
+sign-in flow, then prints a token to paste back into the headless
+machine’s <code>rclone config</code> session.</p>
+<p>Rclone’s documentation includes a full walkthrough of this exact
+process: <a href="https://rclone.org/remote_setup/#configuring-using-rclone-authorize" class="external-link">Configuring
+using rclone authorize</a>.</p>
+<div id="headless-or-not" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="headless-or-not" class="callout-inner">
+<h3 class="callout-title">Headless or not?</h3>
+<div class="callout-content">
+<p>For each situation, decide whether you’d need
+<code>rclone authorize</code>, or whether the standard
+<code>rclone config</code> flow is enough.</p>
+<ol style="list-style-type: decimal">
+<li>Configuring rclone on your own laptop, which has a web browser
+installed.</li>
+<li>Configuring rclone after logging into a university HPC cluster over
+SSH.</li>
+<li>Configuring rclone inside the Windows Subsystem for Linux (WSL2) on
+your own PC.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<ol style="list-style-type: decimal">
+<li>Standard <code>rclone config</code> — your laptop has a browser, so
+authorization happens automatically.</li>
+<li>
+<code>rclone authorize</code> — an HPC cluster accessed over SSH has
+no browser of its own.</li>
+<li>
+<code>rclone authorize</code> — WSL2 is a separate Linux environment
+with no browser, even though it’s running on a PC that has one.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<p>See the <a href="reference.html">Learner Reference</a> page for a
+full command and documentation reference.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>A headless machine has no browser, so OAuth-based remotes (Box,
+Google Drive) need a separate authorization step.</li>
+<li>Run <code>rclone authorize &lt;backend&gt;</code> on a machine with
+a browser, then paste the resulting token back into the headless
+machine’s config session.</li>
+<li>Most learners working on their own laptop can skip this episode
+entirely.</li>
 </ul>
 </div>
 </div>
@@ -1072,7 +1513,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-getting-help"><p>Content from <a href="getting-help.html">Getting Help</a></p>
 <hr>
-<p>Last updated on 2025-04-03 |
+<p>Last updated on 2026-08-23 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/getting-help.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1138,11 +1579,54 @@ to ask questions and find answers from experienced users.</li>
 <div class="section level3">
 <h3 id="command-help">Command Help<a class="anchor" aria-label="anchor" href="#command-help"></a>
 </h3>
-<p>For quick help on specific commands, you can run:
-<code>bash   rclone help</code> or get details on a particular command
-by appending the command name: <code>bash   rclone help copy</code></p>
+<p>For a list of every available command, run:
+<code>bash   rclone help</code> or get details on a particular command,
+including its flags, by adding <code>--help</code> after the command
+name: <code>bash   rclone copy --help</code></p>
 <p>These resources are invaluable whether you’re troubleshooting an
 issue or looking to explore advanced functionality.</p>
+<div id="find-a-flag" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="find-a-flag" class="callout-inner">
+<h3 class="callout-title">Find a flag</h3>
+<div class="callout-content">
+<p>Run <code>rclone sync --help</code> and find the flag that lets you
+preview what a sync would do without actually deleting or transferring
+anything.</p>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>You’ve already used this flag several times earlier in the
+lesson.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p><code>-n, --dry-run</code> — the same flag introduced in <a href="creating-connections.html">Creating and Configuring Remote
+Connections</a> and used throughout the transfer episodes.
+<code>rclone &lt;command&gt; --help</code> is the fastest way to
+rediscover a flag you’ve forgotten, without leaving the terminal.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>

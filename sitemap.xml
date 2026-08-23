@@ -52,6 +52,9 @@
     <loc>https://ucla-data-science-center.github.io/rclone-intro/getting-help.html</loc>
   </url>
   <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro/headless-configuration.html</loc>
+  </url>
+  <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro/images.html</loc>
   </url>
   <url>
@@ -107,6 +110,9 @@
   </url>
   <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro/instructor/getting-help.html</loc>
+  </url>
+  <url>
+    <loc>https://ucla-data-science-center.github.io/rclone-intro/instructor/headless-configuration.html</loc>
   </url>
   <url>
     <loc>https://ucla-data-science-center.github.io/rclone-intro/instructor/images.html</loc>

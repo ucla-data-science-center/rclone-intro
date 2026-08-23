@@ -248,7 +248,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="creating-connections.html">2. Creating Remote Connections</a>
+        <a href="creating-connections.html">2. Creating and Configuring Remote Connections</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -260,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="configure-rclone.html">3. Rclone config command</a>
+        <a href="moving-files.html">3. File Transfers, Listing, and Verification</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -272,7 +272,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="moving-files.html">4. File Transfers, Listing, and Verification</a>
+        <a href="copy-sync-or-move.html">4. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -284,7 +284,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="copy-sync-or-move.html">5. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
+        <a href="headless-configuration.html">5. Optional: Configuring rclone on a Headless Machine</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -359,15 +359,41 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Instructor Notes</h1>
         
-
-<p>This is a placeholder file. Please add content here.</p>
+<section><h2 class="section-heading" id="demoing-headless-configuration-optional-configuring-rclone-on-a-headless-machine">Demoing headless configuration (<a href="headless-configuration.html">Optional: Configuring rclone on a
+Headless Machine</a>)<a class="anchor" aria-label="anchor" href="#demoing-headless-configuration-optional-configuring-rclone-on-a-headless-machine"></a>
+</h2>
+<hr class="half-width">
+<p>Most learners won’t touch this episode, but if you want to demo the
+headless authorization flow live without a real remote machine on hand,
+you can simulate one locally with SSH:</p>
+<ol style="list-style-type: decimal">
+<li>Enable an SSH server on your own machine (macOS: <strong>System
+Settings &gt; General &gt; Sharing &gt; Remote Login</strong>; Linux:
+<code>sudo systemctl enable --now ssh</code>; Windows: enable the
+optional OpenSSH Server feature, then
+<code>Start-Service sshd</code>).</li>
+<li>Open a second terminal and SSH into yourself:
+<code>ssh your_username@localhost</code>. That second terminal now
+behaves like a headless remote session — no browser available to it,
+even though you’re still on your own machine.</li>
+<li>In that second terminal, run <code>rclone config</code> and start
+creating a remote that needs OAuth (Box or Google Drive). When it
+reaches the authorization step, it prints an
+<code>rclone authorize &lt;backend&gt;</code> command instead of opening
+a browser.</li>
+<li>Copy that command into your <em>first</em> terminal (which does have
+a browser) and run it there. Complete the sign-in flow, then paste the
+token it prints back into the headless (second-terminal) session to
+finish.</li>
+</ol>
+<p>This gives learners a real, live look at the headless flow without
+needing a spare HPC account or cloud VM in the room. (Source: <a href="https://github.com/ucla-data-science-center/rclone-intro/issues/8" class="external-link">issue
+#8</a>.)</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-
-
-      <section id="aggregate-instructor-notes"></section>
+</section><section id="aggregate-instructor-notes"></section>
 </div>
     </main>
 </div>

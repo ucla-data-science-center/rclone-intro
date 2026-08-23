@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">65%</div>
+    <div class="progress-bar incubator" role="progressbar" style="width: 54%" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">54%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -208,7 +208,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="creating-connections.html">2. Creating Remote Connections</a>
+        <a href="creating-connections.html">2. Creating and Configuring Remote Connections</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -217,16 +217,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="configure-rclone.html">3. Rclone config command</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush5">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading5">
-        <a href="moving-files.html">4. File Transfers, Listing, and Verification</a>
+        <a href="moving-files.html">3. File Transfers, Listing, and Verification</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -238,7 +229,7 @@
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
-        5. Choosing the Right Rclone Command: Copy, Sync, or Move
+        4. Choosing the Right Rclone Command: Copy, Sync, or Move
         </span>
       </button>
     </div><!--/div.accordion-header-->
@@ -246,9 +237,17 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#copy-sync-or-move">Copy, Sync, or Move</a></li>
-<li><a href="#reference-httpsrclone.orgcommandsrclone_move">Reference: </a><a href="https://rclone.org/commands/rclone_move/" class="external-link">https://rclone.org/commands/rclone_move/</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="headless-configuration.html">5. Optional: Configuring rclone on a Headless Machine</a>
+    </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -305,7 +304,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/moving-files.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/getting-help.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/headless-configuration.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -313,8 +312,8 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: File Transfers,
         </a>
-        <a class="chapter-link float-end" href="../instructor/getting-help.html" rel="next">
-          Next: Getting Help...
+        <a class="chapter-link float-end" href="../instructor/headless-configuration.html" rel="next">
+          Next: Optional:...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -364,7 +363,28 @@ commands: <strong>copy</strong>, <strong>sync</strong>, and
 <strong>move</strong>. Each command handles your data differently, so
 it’s important to know their unique behaviors to choose the right one
 for your task.</p>
-<div class="section level3">
+<table class="table"><colgroup><col width="20%"><col width="20%"><col width="20%"><col width="20%"><col width="20%"></colgroup><thead><tr><th>Command</th>
+<th>Changes source</th>
+<th>Adds/updates at destination</th>
+<th>Deletes at destination</th>
+<th>Safest for…</th>
+</tr></thead><tbody><tr><td><code>copy</code></td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>Adding or updating files without any risk of deleting something</td>
+</tr><tr><td><code>sync</code></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes — removes anything not in the source</td>
+<td>Making the destination an exact, up-to-date mirror of the
+source</td>
+</tr><tr><td><code>move</code></td>
+<td>Removes files after a successful transfer</td>
+<td>Yes</td>
+<td>No</td>
+<td>Relocating files to free up space at the source</td>
+</tr></tbody></table><div class="section level3">
 <h3 id="copy">Copy<a class="anchor" aria-label="anchor" href="#copy"></a></h3>
 <p>The <code>copy</code> command copies files from the source to the
 destination. It compares files by size, modification time, or checksum,
@@ -413,10 +433,64 @@ first with the –dry-run or the –interactive/-i flag.</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">rclone</span> move source:path dest:path <span class="pp">[</span><span class="ss">flags</span><span class="pp">]</span></span></code></pre>
 </div>
+<div id="choose-the-right-command" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-</section><section><h2 class="section-heading" id="reference-httpsrclone-orgcommandsrclone_move">Reference: <a href="https://rclone.org/commands/rclone_move/" class="external-link">https://rclone.org/commands/rclone_move/</a>
-<a class="anchor" aria-label="anchor" href="#reference-httpsrclone-orgcommandsrclone_move"></a></h2>
-<hr class="half-width"><div id="keypoints1" class="callout keypoints">
+<span class="callout-header">Challenge</span>
+<div id="choose-the-right-command" class="callout-inner">
+<h3 class="callout-title">Choose the right command</h3>
+<div class="callout-content">
+<p>For each scenario, decide whether <code>copy</code>,
+<code>sync</code>, or <code>move</code> is the safest choice, and
+explain why.</p>
+<ol style="list-style-type: decimal"><li>You want your Box <code>photos</code> folder to always exactly match
+a folder on your laptop, including removing anything you’ve deleted
+locally.</li>
+<li>You’ve finished a project and want to free up space on your laptop
+by relocating the files to the cloud.</li>
+<li>You want to hand a colleague a copy of your files without touching
+anything already in their folder, or removing anything from yours.</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div class="accordion-body">
+<p>Ask two questions for each scenario: should anything be deleted
+anywhere, and should the files still exist in both places afterward?</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<ol style="list-style-type: decimal"><li>
+<strong>sync</strong> — an exact mirror, including deletions, is
+exactly what sync does. Run it with <code>--dry-run</code> or
+<code>--interactive</code> first, since it can delete files.</li>
+<li>
+<strong>move</strong> — moves the files and removes them from your
+laptop only after the transfer to the cloud succeeds.</li>
+<li>
+<strong>copy</strong> — adds and updates files at the destination
+without deleting anything at either end.</li>
+</ol></div>
+</div>
+</div>
+</div>
+<p>See the <a href="reference.html">Learner Reference</a> page for a
+full command and documentation reference.</p>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -425,6 +499,9 @@ first with the –dry-run or the –interactive/-i flag.</p>
 <div class="callout-content">
 <ul><li>Different ways to move or copy files: copy, sync, move<br></li>
 <li>Understand the difference between copy and sync<br></li>
+<li>
+<code>sync</code> is the only one of the three that can delete files
+at the destination</li>
 </ul></div>
 </div>
 </div>
@@ -432,10 +509,11 @@ first with the –dry-run or the –interactive/-i flag.</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/moving-files.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/getting-help.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/headless-configuration.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -443,8 +521,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: File Transfers,
         </a>
-        <a class="chapter-link float-end" href="../instructor/getting-help.html" rel="next">
-          Next: Getting Help...
+        <a class="chapter-link float-end" href="../instructor/headless-configuration.html" rel="next">
+          Next: Optional:...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>

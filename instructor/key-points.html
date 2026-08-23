@@ -249,7 +249,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="creating-connections.html">2. Creating Remote Connections</a>
+        <a href="creating-connections.html">2. Creating and Configuring Remote Connections</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -261,7 +261,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="configure-rclone.html">3. Rclone config command</a>
+        <a href="moving-files.html">3. File Transfers, Listing, and Verification</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -273,7 +273,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="moving-files.html">4. File Transfers, Listing, and Verification</a>
+        <a href="copy-sync-or-move.html">4. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -285,7 +285,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="copy-sync-or-move.html">5. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
+        <a href="headless-configuration.html">5. Optional: Configuring rclone on a Headless Machine</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -367,33 +367,28 @@
 <li>Uses for Rclone</li>
 <li>Where to find versions for specific operating systems</li>
 <li>Where to get help</li>
-</ul></section><section id="creating-connections"><h2 class="section-heading"><a href="creating-connections.html">Creating Remote Connections</a></h2>
+</ul></section><section id="creating-connections"><h2 class="section-heading"><a href="creating-connections.html">Creating and Configuring Remote Connections</a></h2>
 <hr class="half-width">
 <ul>
-<li>A remote is any storage location that is not part of your local
-machine but can be accessed via rclone.</li>
-<li>Remotes enable file transfers and synchronization between various
-systems, including cloud services (e.g., Google Drive, Amazon S3, Box)
-and local machines.</li>
-<li>The rclone config command is used to create, manage, and secure
-remote connections.</li>
+<li>A remote is a named storage configuration; a local path has no
+<code>remote:</code> prefix.</li>
+<li>Use <code>rclone config</code> to create, edit, and manage
+remotes.</li>
+<li>Use <code>rclone listremotes</code>,
+<code>rclone config file</code>, and <code>rclone lsd remote:</code> to
+confirm a remote is set up and reachable, without transferring
+anything.</li>
 <li>Google Drive’s shared client ID is being retired in 2026 and needs
 your own credentials; Box’s client ID can normally stay blank.</li>
-</ul></section><section id="configure-rclone"><h2 class="section-heading"><a href="configure-rclone.html">Rclone config command</a></h2>
-<hr class="half-width">
-<ul>
-<li>Understand how configuration is used.<br>
-</li>
-<li>Familiar with useful command flags: dry-run, interactive and
-verbose.</li>
-<li>Use config to create remote connections</li>
-<li>Know where to get help.</li>
 </ul></section><section id="moving-files"><h2 class="section-heading"><a href="moving-files.html">File Transfers, Listing, and Verification</a></h2>
 <hr class="half-width">
 <ul>
 <li>Difference between Copy and Sync<br>
 </li>
 <li>See what is already in the destination</li>
+<li>
+<code>--dry-run</code> shows what a command would do, including
+deletions, without changing anything on disk</li>
 </ul></section><section id="copy-sync-or-move"><h2 class="section-heading"><a href="copy-sync-or-move.html">Choosing the Right Rclone Command: Copy, Sync, or Move</a></h2>
 <hr class="half-width">
 <ul>
@@ -401,6 +396,19 @@ verbose.</li>
 </li>
 <li>Understand the difference between copy and sync<br>
 </li>
+<li>
+<code>sync</code> is the only one of the three that can delete files
+at the destination</li>
+</ul></section><section id="headless-configuration"><h2 class="section-heading"><a href="headless-configuration.html">Optional: Configuring rclone on a Headless Machine</a></h2>
+<hr class="half-width">
+<ul>
+<li>A headless machine has no browser, so OAuth-based remotes (Box,
+Google Drive) need a separate authorization step.</li>
+<li>Run <code>rclone authorize &lt;backend&gt;</code> on a machine with
+a browser, then paste the resulting token back into the headless
+machine’s config session.</li>
+<li>Most learners working on their own laptop can skip this episode
+entirely.</li>
 </ul></section><section id="getting-help"><h2 class="section-heading"><a href="getting-help.html">Getting Help</a></h2>
 <hr class="half-width">
 <ul>

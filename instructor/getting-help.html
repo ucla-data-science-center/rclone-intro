@@ -118,7 +118,7 @@
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
 </nav><aside class="col-md-12 lesson-progress"><div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">87%</div>
+    <div class="progress-bar incubator" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson Progress">88%</div>
   </div>
 </aside><div class="container">
       <div class="row">
@@ -208,7 +208,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="creating-connections.html">2. Creating Remote Connections</a>
+        <a href="creating-connections.html">2. Creating and Configuring Remote Connections</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -217,7 +217,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="configure-rclone.html">3. Rclone config command</a>
+        <a href="moving-files.html">3. File Transfers, Listing, and Verification</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -226,7 +226,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="moving-files.html">4. File Transfers, Listing, and Verification</a>
+        <a href="copy-sync-or-move.html">4. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -235,7 +235,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="copy-sync-or-move.html">5. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
+        <a href="headless-configuration.html">5. Optional: Configuring rclone on a Headless Machine</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -303,14 +303,14 @@
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/copy-sync-or-move.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="../instructor/headless-configuration.html" rel="prev"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="../instructor/copy-sync-or-move.html" rel="prev">
+        <a class="chapter-link" href="../instructor/headless-configuration.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Choosing the Right
+          Previous: Optional:
         </a>
         <a class="chapter-link float-end" href="../instructor/index.html" rel="next">
           Home
@@ -319,7 +319,7 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Getting Help</h1>
-        <p>Last updated on 2025-04-03 |
+        <p>Last updated on 2026-08-23 |
 
         <a href="https://github.com/ucla-data-science-center/rclone-intro/edit/main/episodes/getting-help.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -382,11 +382,54 @@ to ask questions and find answers from experienced users.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="command-help">Command Help<a class="anchor" aria-label="anchor" href="#command-help"></a></h3>
-<p>For quick help on specific commands, you can run:
-<code>bash   rclone help</code> or get details on a particular command
-by appending the command name: <code>bash   rclone help copy</code></p>
+<p>For a list of every available command, run:
+<code>bash   rclone help</code> or get details on a particular command,
+including its flags, by adding <code>--help</code> after the command
+name: <code>bash   rclone copy --help</code></p>
 <p>These resources are invaluable whether you’re troubleshooting an
 issue or looking to explore advanced functionality.</p>
+<div id="find-a-flag" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="find-a-flag" class="callout-inner">
+<h3 class="callout-title">Find a flag</h3>
+<div class="callout-content">
+<p>Run <code>rclone sync --help</code> and find the flag that lets you
+preview what a sync would do without actually deleting or transferring
+anything.</p>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>You’ve already used this flag several times earlier in the
+lesson.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p><code>-n, --dry-run</code> — the same flag introduced in <a href="creating-connections.html">Creating and Configuring Remote
+Connections</a> and used throughout the transfer episodes.
+<code>rclone &lt;command&gt; --help</code> is the fastest way to
+rediscover a flag you’ve forgotten, without leaving the terminal.</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -408,14 +451,14 @@ any links that you are not going to use.
 </div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link" href="../instructor/copy-sync-or-move.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
+        <a class="chapter-link" href="../instructor/headless-configuration.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link" href="../instructor/copy-sync-or-move.html" rel="prev">
+        <a class="chapter-link" href="../instructor/headless-configuration.html" rel="prev">
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
-          Previous: Choosing the Right
+          Previous: Optional:
         </a>
         <a class="chapter-link float-end" href="../instructor/index.html" rel="next">
           Home
@@ -466,7 +509,7 @@ any links that you are not going to use.
   "url": "https://ucla-data-science-center.github.io/rclone-intro/instructor/getting-help.html",
   "identifier": "https://ucla-data-science-center.github.io/rclone-intro/instructor/getting-help.html",
   "dateCreated": "2025-01-16",
-  "dateModified": "2025-04-03",
+  "dateModified": "2026-08-23",
   "datePublished": "2026-08-23"
 }
 

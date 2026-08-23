@@ -216,7 +216,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="creating-connections.html">2. Creating Remote Connections</a>
+        <a href="creating-connections.html">2. Creating and Configuring Remote Connections</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -225,7 +225,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="configure-rclone.html">3. Rclone config command</a>
+        <a href="moving-files.html">3. File Transfers, Listing, and Verification</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -234,7 +234,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="moving-files.html">4. File Transfers, Listing, and Verification</a>
+        <a href="copy-sync-or-move.html">4. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -243,7 +243,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="copy-sync-or-move.html">5. Choosing the Right Rclone Command: Copy, Sync, or Move</a>
+        <a href="headless-configuration.html">5. Optional: Configuring rclone on a Headless Machine</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -369,27 +369,19 @@ Rclone help you manage your data?<br>::::::
 <span class="visually-hidden">Duration: </span>00h 15m
 </td>
 <td>
- 2. <a href="creating-connections.html">Creating Remote Connections</a>
+ 2. <a href="creating-connections.html">Creating and Configuring Remote
+Connections</a>
 </td>
 <td>
-What are Rclone remotes?<br>How are they used?<br>How do remotes
-facilitate file transfers and synchronization in rclone?<br>::::::
+What is an rclone remote, and how is it different from a local
+path?<br>How do you create, list, and verify a remote
+connection?<br>::::::
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 30m
+<span class="visually-hidden">Duration: </span>00h 40m
 </td>
 <td>
- 3. <a href="configure-rclone.html">Rclone config command</a>
-</td>
-<td>
-Once installed, how is Rclone set up or configured?<br>How do you check
-for and edit existing configurations?<br>::::::
-</td>
-</tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 50m
-</td>
-<td>
- 4. <a href="moving-files.html">File Transfers, Listing, and
+ 3. <a href="moving-files.html">File Transfers, Listing, and
 Verification</a>
 </td>
 <td>
@@ -397,10 +389,10 @@ How are files moved or copied?<br>What does the <em>rclone sync</em>
 do?<br>How do you see what is already in the destination?
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 15m
+<span class="visually-hidden">Duration: </span>01h 05m
 </td>
 <td>
- 5. <a href="copy-sync-or-move.html">Choosing the Right Rclone Command:
+ 4. <a href="copy-sync-or-move.html">Choosing the Right Rclone Command:
 Copy, Sync, or Move</a>
 </td>
 <td>
@@ -408,7 +400,19 @@ What is the difference between copy, sync and move?<br>When should you
 choose one command over the others?<br>::::::
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 40m
+<span class="visually-hidden">Duration: </span>01h 30m
+</td>
+<td>
+ 5. <a href="headless-configuration.html">Optional: Configuring rclone
+on a Headless Machine</a>
+</td>
+<td>
+What is a headless machine, and why does it need special
+configuration?<br>How do you authorize a remote when no browser is
+available?<br>::::::
+</td>
+</tr><tr><td>
+<span class="visually-hidden">Duration: </span>01h 45m
 </td>
 <td>
  6. <a href="getting-help.html">Getting Help</a>
@@ -418,7 +422,7 @@ Where do I get help using rclone?<br>What are some key resources for
 troubleshooting and learning advanced features?<br>::::::
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>01h 55m
+<span class="visually-hidden">Duration: </span>02h 00m
 </td>
 <td>
 Finish
@@ -455,7 +459,7 @@ operating system. For more details or alternative methods, visit the <a href="ht
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
 <ol style="list-style-type: decimal"><li>Visit the <a href="https://rclone.org/install/#windows" class="external-link">Windows
 installation page</a>.</li>
 <li>Download the appropriate zip file for your system.</li>
@@ -470,7 +474,7 @@ for easy command-line access.</li>
 </div>
 <p>to verify the installation.</p>
 </div>
-<div id="nav-tabpanel-1-macOS" class="tab-pane" aria-labelledby="nav-tab-1-macOS" role="tabpanel">
+<div id="nav-tabpanel-1-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-macOS">
 <ol style="list-style-type: decimal"><li>Go to the <a href="https://rclone.org/install/#macos" class="external-link">macOS
 installation page</a>.</li>
 <li>You can install rclone using Homebrew by running:</li>
@@ -487,7 +491,7 @@ installation page</a>.</li>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="ex">rclone</span> version</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
 <ol style="list-style-type: decimal"><li>Visit the <a href="https://rclone.org/install/#linux" class="external-link">Linux
 installation page</a> for detailed instructions.</li>
 <li>The easiest installation method is using the provided script. Open
