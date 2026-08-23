@@ -10,7 +10,7 @@ exercises: 10
 ::::::
 
 :::::: objectives
-- Be able to pick the most appropriate command to mvoe file(s)
+- Be able to pick the most appropriate command to move file(s)
 - Determine which command is most appropriate for different file management scenarios.
 ::::::::::::
 
@@ -20,7 +20,7 @@ When managing your files with rclone, you have three primary commands: **copy**,
 
 ### Copy 
 
-The `copy` command duplicates files from the source to the destination. It compares files (by size, modification time, or MD5 checksum) and transfers only those that are new or have changed. Copying does not delete any files at the destination, making it safe when you simply want to update or add files.
+The `copy` command copies files from the source to the destination. It compares files by size, modification time, or checksum, and transfers only those that are new or have changed. Existing destination files that aren't present at the source are left in place — `copy` does not delete them. Because of this, `copy` does not guarantee the destination matches the source, so running it once is not, by itself, a complete backup strategy.
 
 **Syntax:** 
 
