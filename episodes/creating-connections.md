@@ -10,7 +10,7 @@ exercises: 10
 ::::::
 
 :::::: objectives
- - Understand what a remote is and how it differs from a local connection.
+ - Define a remote connection and distinguish it from a local connection. 
  - Distinguish a local filesystem path from a remote path in the form `remote:path`.
  - Use `rclone config` to create a remote connection.
  - Use `rclone listremotes` and `rclone lsd remote:` to confirm a remote is configured and reachable.
