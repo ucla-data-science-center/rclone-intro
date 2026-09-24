@@ -10,7 +10,7 @@ exercises: 5
 ::::::
 
 :::::: objectives
-- Know where to find comprehensive documentation and support for rclone.
+- Locate comprehensive rclone documentation and support resources. 
 - Identify community resources and forums that can assist with troubleshooting.
 ::::::
 

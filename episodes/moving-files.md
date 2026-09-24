@@ -13,7 +13,7 @@ exercises: 10
 ::::::
 
 :::::: objectives
- - Understand the difference between copy and sync
+ - Distinguish between the copy and sync commands and describe when to use each.  
  - Be able to list what is already in the destination
  - Compare rclone command syntax between Linux/macOS and Windows (including WSL2)
 ::::::
