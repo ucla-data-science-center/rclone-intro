@@ -13,7 +13,7 @@ exercises: 5
 
 :::::: objectives  
 -   Basic understanding of Rclone usage 
--   Know where to download the software and documentation
+-   Identify sources of help and examples for using rclone.
 -   Know where to get help and examples 
 ::::::
 
